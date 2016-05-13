@@ -1,0 +1,99 @@
+
+header .navbar-inverse .navbar-nav>.active>a:focus {
+	color: #000000;
+	background-color: #66be2c;
+}
+
+header .navbar-inverse .navbar-nav>.active>a {
+	color: #ffffff;
+	background-color: #66be2c;
+}
+
+header .navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: #66be2c;
+	color: #000000;
+}
+
+header .navbar-form {
+	padding: 0px 0px;
+	margin-top: 0px;
+}
+
+header .btn-default {
+	padding: 5px 10px 5px 10px;
+	height: 30px;
+	border-radius: 10px;
+	border-color: #b3d1ff;
+	color: #ffffff;
+	background-color: #3385ff;
+}
+
+header .btn-default:hover {
+	color: #b3d1ff;
+	border-color: #b3d1ff;
+	background-color: #0052cc;
+}
+
+header .btn-default:focus {
+	outline-color: #0f101a;
+	color: #ffffff;
+	border-color: #b3d1ff;
+	background-color: #3385ff;
+}
+
+header .btn-default:active {
+	outline-color: #0f101a !important;
+	color: #ffffff !important;
+	border-color: #b3d1ff !important;
+	background-color: #3385ff !important;
+}
+
+header input {
+	width: 200px !important;
+	height: 30px !important;
+	border-radius: 10px !important;
+	border-color: #3385ff !important;
+	-webkit-transition: width 0.8s ease-in-out !important;
+    -moz-transition: width 0.8s ease-in-out !important;
+    -o-transition: width 0.8s ease-in-out !important;
+    transition: width 0.8s ease-in-out !important;
+}
+
+header input:focus {
+	width: 300px !important;
+}
+
+#inline li {
+	margin: 10px;
+	display: inline-block;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif !important;
+	background: url("img/main-bg.png");
+}
+
+header a:hover {
+	color: #ceefb8;
+	text-decoration: none;
+}
+
+header a {
+	color: #66be2c;
+}
+
+
+header ul li a:hover i {
+	color: #ceefb8;
+}
+
+nav.navbar {
+	border-radius: 0px;
+}
+ 
+.topbar-nav {
+	background: #0f101a;
+    height: 40px;
+    position: relative;
+    top: 0;
+}
