@@ -1,6 +1,3 @@
-
-
-
 header .navbar-brand {
 	position: relative;
 	padding-top: 3px;
@@ -81,7 +78,7 @@ header input:focus {
 
 body {
 	font-family: 'Open Sans', sans-serif !important;
-	background: url("img/main-bg.png");
+	background: url("../img/main-bg.png");
   /*	margin-bottom: 60px; /* for footer */
 }
 
