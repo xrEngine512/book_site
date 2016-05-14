@@ -10,7 +10,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body id="Page">
 	
 	<header>
 		<nav class="topbar-nav">
@@ -76,7 +76,28 @@
 	
 
 
+
+	<footer class="text-center">
+		<a class="up-arrow" href="#Page" data-toggle="tooltip" data-placement="top" title="Наверх">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a><br><br>
+
+		<div class="col-md-12">
+			<small>Copyright 2016 @ Library 2.1. All Rights Reserved.</small>
+		</div>
+		
+	</footer>
+	
+	
+
     <script src="js/jquery-2.2.3.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+    	// Initialize Tooltip
+    	$('[data-toggle="tooltip"]').tooltip(); 
+		})
+	</script>
 </body>
 </html>
