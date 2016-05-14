@@ -1,4 +1,15 @@
 
+
+
+header .navbar-brand {
+	position: relative;
+	padding-top: 3px;
+}
+
+nav.navbar {
+	border-radius: 0px;
+}
+
 header .navbar-inverse .navbar-nav>.active>a:focus {
 	color: #000000;
 	background-color: #66be2c;
@@ -88,10 +99,6 @@ header ul li a:hover i {
 	color: #ceefb8;
 }
 
-nav.navbar {
-	border-radius: 0px;
-}
- 
 .topbar-nav {
 	background: #0f101a;
     height: 40px;
