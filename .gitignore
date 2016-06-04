@@ -1,1 +1,3 @@
-/.idea/
+book_site/__pycache__/
+main_app/__pycache__/
+.idea/
