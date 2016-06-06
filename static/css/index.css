@@ -104,12 +104,22 @@ header ul li a:hover i {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 100px;
-  background-color: #0f101a;
+	position: relative !important;
+	bottom: 0px !important;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 100px;
+	background-color: #0f101a;
+	flex: 0 0 auto;
+}
+
+html,body {
+	height: 100%;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 footer a {

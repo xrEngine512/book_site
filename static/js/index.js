@@ -22,7 +22,12 @@ app.config(function ($routeProvider) {
     }).when('/blog', {
         templateUrl: '/static/pages/blog.html',
         controller: 'blogController'
-    }).when('/Page', {});
+    }).when('/about-us', {
+        templateUrl: '/static/pages/about-us.html',
+        controller: 'aboutUsController'
+    }).otherwise({
+        redirectTo: '/home'
+    });
 });
 function resetAllTabs() {
     var tabs = document.getElementById('navbar-tabs').getElementsByTagName('li');
@@ -38,19 +43,9 @@ app.controller('homeController', function($scope, $http) {
     });
 });
 
-app.controller('contactsController', function($scope) {
-    resetAllTabs();
-    document.getElementById('navbar-tab-contacts').className = 'active';
-});
-
 app.controller('qnaController', function($scope) {
     resetAllTabs();
     document.getElementById('navbar-tab-qna').className = 'active';
-});
-
-app.controller('shopController', function($scope) {
-    resetAllTabs();
-    document.getElementById('navbar-tab-shop').className = 'active';
 });
 
 app.controller('supportController', function($scope) {

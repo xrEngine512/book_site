@@ -1,0 +1,52 @@
+main i {
+	margin-right: 10px;
+}
+
+main #vk, #youtube, #instagram, #google-plus {
+	color: #34A853;
+}
+
+main #vk:hover {
+	color: #2B587A;
+}
+
+main #youtube:hover {
+	color: #cc181e;
+
+}
+
+main #instagram:hover {
+	color: #111111;
+
+}
+
+main #google-plus:hover {
+	color: #EA4335;
+
+}
+
+main .col-sm-6 {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+main #input-name {
+	padding-right: 15px;
+}
+
+main #input-email {
+	padding-left: 15px;
+}
+
+.col-md-9 {
+	background-color: #ff00ff;
+}
+
+.col-md-3 {
+	background-color: #ff0000;
+}
+
+#googleMap {
+    width: 100%; /* Span the entire width of the screen */
+    height: 400px; /* Set the height to 400 pixels */
+}
