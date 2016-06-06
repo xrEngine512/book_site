@@ -1,0 +1,137 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*header style*/
+header {
+	background-color: #ffccff;
+	text-align: center;
+}
+
+/*main style*/
+main {
+
+}
+
+/*карусель*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+}
+
+.carousel-control.right {
+	background-image: linear-gradient(to 
+		right,
+		#ffffff,
+		#ccff66);
+}
+
+.carousel-control.left {
+	background-image: linear-gradient(to 
+		left,
+		#ffffff,
+		#ccff66);
+}
+
+/*навигационная цепочка*/
+.breadcrumb {
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+	background-color: #fbc02d;
+}
+
+.breadcrumb > .active {
+	color: #ffffff;
+}
+
+.breadcrumb > .active > span {
+    color: #7b31ef;
+}
+
+.nav-helper {
+    background-color: #fbc02d;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/*новинки*/
+
+/*книги*/
+.caption {
+    height: 120px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.caption p {
+	height: 100%;
+	margin-bottom: 10px;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+	margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+	position: relative;
+	overflow: hidden;
+    padding: 0;
+}
+
+.thumbnail:hover {
+	box-shadow: 0 0 40px #ffff00;
+}
+
+#newbook {
+    background-color: rgb(244, 234, 255);
+}
+
+#newbook > .container {
+    padding-left: 15px;
+    padding-right: 45px; 
+}
+
+/*уголок над книгой*/
+.sale-tag {
+	width: 52px;
+    height: 78px;
+    background: #a0ce4e;
+    position: absolute;
+    top: -30px;
+    right: -16px;  
+    transform: rotate(-45deg);
+}
+
+.sale-tag span {
+    position: absolute;
+    top: 32px;
+    left: 3px;
+    font-size: 12px;
+    color: #ffffff;
+    transform: rotate(45deg);
+}
+
+/*новости сайта*/
+
+.media-body > p {
+    color: #ff8206;
+}
+
+/*footer style*/
+footer {
+	background-color: #ffd11a;
+	text-align: center;
+}
