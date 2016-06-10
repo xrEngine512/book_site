@@ -85,6 +85,10 @@ body {
   /*	margin-bottom: 60px; /* for footer */
 }
 
+#main {
+	margin-bottom: 105px;
+}
+
 header a:hover {
 	color: #ceefb8;
 	text-decoration: none;

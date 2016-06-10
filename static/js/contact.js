@@ -1,7 +1,7 @@
 /* Add Google Maps */
 
-angular.module('BookStoreApp').controller('contactsController', function($scope) {
-    resetAllTabs();
+angular.module('BookStoreApp').controller('contactsController', function($scope, initialize) {
+    initialize($scope);
     document.getElementById('navbar-tab-contacts').className = 'active';
 
     $scope.vladimir = new google.maps.LatLng(56.133333, 40.416667);
