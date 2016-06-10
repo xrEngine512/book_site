@@ -1,13 +1,3 @@
-body {
-	font-family: 'Open Sans', sans-serif;
-}
-
-/*header style*/
-header {
-	background-color: #ffccff;
-	text-align: center;
-}
-
 /*main style*/
 main {
 
@@ -128,10 +118,4 @@ main {
 
 .media-body > p {
     color: #ff8206;
-}
-
-/*footer style*/
-footer {
-	background-color: #ffd11a;
-	text-align: center;
 }

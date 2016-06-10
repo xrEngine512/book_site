@@ -4,20 +4,20 @@ angular.module('BookStoreApp').controller('contactsController', function($scope)
     resetAllTabs();
     document.getElementById('navbar-tab-contacts').className = 'active';
 
-    var vladimir = new google.maps.LatLng(56.133333, 40.416667);
+    $scope.vladimir = new google.maps.LatLng(56.133333, 40.416667);
 
-    var mapProp = {
-        center:vladimir,
+    $scope.mapProp = {
+        center: $scope.vladimir,
         zoom:10,
         scrollwheel:false, // изменение масштаба прокруткой
         draggable:true,    // перемещаться по карте с помощью зажатия ЛКМ
         mapTypeId:google.maps.MapTypeId.ROADMAP
     };
 
-    var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    $scope.map = new google.maps.Map(document.getElementById("googleMap"), $scope.mapProp);
 
-    var city = new google.maps.Circle({
-        center:vladimir,
+    $scope.city = new google.maps.Circle({
+        center: $scope.vladimir,
         radius:1000,
         strokeColor:"#0000ff",
         strokeOpacity:0.5,
@@ -26,12 +26,12 @@ angular.module('BookStoreApp').controller('contactsController', function($scope)
         fillOpacity:0.3
     });
 
-    city.setMap(map);
+    $scope.city.setMap($scope.map);
 
-    var infowindow = new google.maps.InfoWindow({
+    $scope.infowindow = new google.maps.InfoWindow({
         content:"Привет!",
     });
 
-    infowindow.setPosition({lat: 56.133333, lng: 40.416667});
-    infowindow.open(map,city);
+    $scope.infowindow.setPosition({lat: 56.133333, lng: 40.416667});
+    $scope.infowindow.open($scope.map, $scope.city);
 });

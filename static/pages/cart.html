@@ -1,0 +1,44 @@
+<link href="/static/css/cart.css" rel="stylesheet">
+
+<div class="modal-header">
+    <h3 class="modal-title">Ваша корзина</h3>
+</div>
+<div class="modal-body">
+    <!--<ul>
+        <li ng-repeat="item in items">
+            <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+        </li>
+    </ul>-->
+
+    <table class="table">
+        <thread><tr>
+            <th></th>
+            <th>Название</th>
+            <th>Количество</th>
+            <th>Цена за штуку</th>
+            <th>Цена</th>
+        </tr></thread>
+        <tbody>
+            <tr ng-repeat="item in items">
+                <td><img class="img-rounded" width="50px" height="50px" src="/static/img/logo-flag.png"></td>
+                <td >{{ item.title }}</td>
+                <td align="center">{{ item.quantity }}</td>
+                <td align="center">{{ item.price }}</td>
+                <td align="center">{{ item.quantity*item.price }}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th style="text-align: center">Итого:</th>
+                <td align="center">{{ getSummary() }}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" >Оформить заказ</button>
+    <button class="btn btn-warning" type="button" ng-click="close()">Закрыть</button>
+</div>
