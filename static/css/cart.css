@@ -5,3 +5,16 @@
 .table > tbody > tr > td {
     vertical-align: middle;
 }
+
+.cart-item {
+    transition: all 0.5s linear;
+}
+
+.cart-item.ng-leave {
+    animation: 0.5s fadeout;
+}
+
+@keyframes fadeout {
+  from { opacity:1; }
+  to { opacity:0; }
+}

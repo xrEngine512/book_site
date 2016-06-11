@@ -9,6 +9,10 @@ angular.module('BookStoreApp').controller('cartController', function ($scope, $u
         return sum;
     };
     
+    $scope.removeItem = function (index) {
+        $scope.items.splice(index, 1);
+    };
+
     $scope.close = function() {
         $uibModalInstance.dismiss('close');
     }

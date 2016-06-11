@@ -4,12 +4,6 @@
     <h3 class="modal-title">Ваша корзина</h3>
 </div>
 <div class="modal-body">
-    <!--<ul>
-        <li ng-repeat="item in items">
-            <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
-        </li>
-    </ul>-->
-
     <table class="table">
         <thread><tr>
             <th></th>
@@ -19,12 +13,13 @@
             <th>Цена</th>
         </tr></thread>
         <tbody>
-            <tr ng-repeat="item in items">
+            <tr ng-repeat="item in items" class="cart-item">
                 <td><img class="img-rounded" width="50px" height="50px" src="/static/img/logo-flag.png"></td>
                 <td >{{ item.title }}</td>
                 <td align="center">{{ item.quantity }}</td>
                 <td align="center">{{ item.price }}</td>
                 <td align="center">{{ item.quantity*item.price }}</td>
+                <td><button class="btn" type="button" ng-click="removeItem($index)">X</button></td>
             </tr>
         </tbody>
         <tfoot>

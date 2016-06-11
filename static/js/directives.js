@@ -37,7 +37,7 @@ function handleFooter(footer) {
     }
 }
 
-angular.module('BookStoreApp', ['ngRoute', 'ui.bootstrap'])
+angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 
 .directive('siteDynamicContent', function ($interval) {
     return function (scope, element) {
