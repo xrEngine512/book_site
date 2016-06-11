@@ -1,7 +1,7 @@
 /**
  * Created by islam on 29.05.16.
  */
-var app = angular.module('BookStoreApp', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('BookStoreApp');
 app.config(function ($routeProvider) {
     $routeProvider
       .when('/contact',{
@@ -37,42 +37,6 @@ function resetAllTabs() {
     }
 }
 
-function scrolltop() {
-    var top = 0;
-    if (typeof(window.pageYOffset) == "number") {
-        top = window.pageYOffset;
-    } else if (document.body && document.body.scrollTop) {
-        top = document.body.scrollTop;
-    } else if (document.documentElement && document.documentElement.scrollTop) {
-        top = document.documentElement.scrollTop;
-    }
-    return top;
-}
-
-function fixNavControls() {
-    if (scrolltop() > 40) {
-        document.getElementById("main").style.paddingTop = "72px";
-        document.getElementById("topnav").style.position = "fixed";
-        document.getElementById("topnav").style.top = "0";
-        document.getElementById("search-bar").style.marginTop = "1%";
-    } else {
-        document.getElementById("main").style.paddingTop = "0";
-        document.getElementById("topnav").style.position = "relative";
-        document.getElementById("search-bar").style.marginTop = "0";
-    }
-    console.log($(document).height());
-    var footerFactor = ($(window).scrollTop() + $(window).height()) - ($(document).height() - 75);
-
-    if(footerFactor > 25) {
-        document.getElementById("footer").style.top = "{}px".format($(window).height() - footerFactor);
-    }
-    else {
-        document.getElementById("footer").style.top = "";
-        document.getElementById("footer").style.position = "fixed";
-        document.getElementById("footer").style.bottom = "-75px";
-    }
-}
-
 app.controller('rootController', function ($scope, $uibModal, $location, $anchorScroll) {
     $scope.animationsEnabled = true;
     var testItems = [
@@ -104,28 +68,17 @@ app.controller('rootController', function ($scope, $uibModal, $location, $anchor
         $location.hash('main');
         $anchorScroll();
     };
-    
-    window.addEventListener("scroll", fixNavControls);
 
     $scope.toggleAnimation = function () {
         $scope.animationsEnabled = !$scope.animationsEnabled;
     };
 })
 
-.factory('initialize', function ($timeout) {
-    return function ($scope) {
+.factory('initialize', function () {
+    return function () {
         resetAllTabs();
-        $scope.$on('$viewContentLoaded', function() {
-            $timeout(function() {
-                fixNavControls();
-            }, 500);
-        });
     }
 })
-    
-.directive('super', function () {
-    
-})    
     
 .controller('homeController', function($scope, $http, initialize) {
     initialize($scope);
