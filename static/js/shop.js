@@ -1,6 +1,6 @@
 
-angular.module('BookStoreApp').controller('shopController', function($scope) {
-    resetAllTabs();
+angular.module('BookStoreApp').controller('shopController', function($scope, initialize) {
+    initialize($scope);
     document.getElementById('navbar-tab-shop').className = 'active';
     $(function() {
         $("#slider-range").slider({

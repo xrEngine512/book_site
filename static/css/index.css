@@ -5,6 +5,8 @@ header .navbar-brand {
 
 nav.navbar {
 	border-radius: 0px;
+	z-index: 100;
+	width: 100%;
 }
 
 header .navbar-inverse .navbar-nav>.active>a:focus {
@@ -25,6 +27,7 @@ header .navbar-inverse .navbar-nav>.active>a:hover {
 header .navbar-form {
 	padding: 0px 0px;
 	margin-top: 0px;
+	vertical-align: middle;
 }
 
 header .btn-default {
@@ -82,6 +85,10 @@ body {
   /*	margin-bottom: 60px; /* for footer */
 }
 
+#main {
+	margin-bottom: 105px;
+}
+
 header a:hover {
 	color: #ceefb8;
 	text-decoration: none;
@@ -104,13 +111,14 @@ header ul li a:hover i {
 }
 
 footer {
-	position: relative !important;
-	bottom: 0px !important;
+	position: fixed !important;
 	width: 100%;
+	bottom: -75px;
 	/* Set the fixed height of the footer here */
 	height: 100px;
 	background-color: #0f101a;
 	flex: 0 0 auto;
+	z-index: 3;
 }
 
 html,body {
