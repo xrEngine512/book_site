@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'book_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'site_db',
-        'USER': 'admin',
-        'PASSWORD': 'default_password',
+        'NAME': 'db_storebook',
+        'USER': 'root',
+        'PASSWORD': 'smolvil48',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
