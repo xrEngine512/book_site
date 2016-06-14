@@ -25,6 +25,8 @@ app.config(function ($routeProvider) {
     }).when('/about-us', {
         templateUrl: '/static/pages/about-us.html',
         controller: 'aboutUsController'
+    }).when('/product-details', {
+        templateUrl: '/static/pages/product-details.html'
     }).otherwise({
         redirectTo: '/home'
     });
@@ -64,6 +66,7 @@ app.controller('rootController', function ($scope, $uibModal, $location, $anchor
             }
         });
     };
+    
     $scope.goUp = function () {
         $location.hash('main');
         $anchorScroll();
