@@ -1,3 +1,6 @@
 book_site/__pycache__/
 main_app/__pycache__/
 .idea/
+logs/
+uwsgi.ini
+uwsgi_params
