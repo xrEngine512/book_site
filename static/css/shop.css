@@ -6,6 +6,28 @@ minicart-button {
 	margin-bottom: 10px;
 }
 
+.container {
+	margin-top: 20px;
+}
+
+.pagination {
+	display: inline-block;
+}
+
+.pagination:after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+.pagination li {
+	cursor: pointer;
+}
+
+.pagination-wrap {
+	text-align: center;
+}
+
 .btn-primary {
 	background-color: #a0ce4e;
 	border: none;
