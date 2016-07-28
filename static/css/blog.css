@@ -1,0 +1,47 @@
+.bs-blog-entry {
+    height: 80px;
+    background: linear-gradient(to right,
+    rgba(115, 115, 115, 1) 0%,
+    rgba(115, 115, 115, 0) 100%);
+    margin: 10px;
+}
+
+.bs-blog-entry img {
+    margin: 5px;
+}
+
+.bs-blog-entry #image {
+    width: 80px;
+    background: #737373;
+}
+
+.bs-blog-entry #header {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: large;
+
+}
+
+.bs-blog-entry #description {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: small;
+    line-height: 1;
+    position: relative;
+}
+
+.bs-blog-entry #description:after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+
+    pointer-events: none; /* so the text is still selectable */
+}
+
+table {
+    margin: 10px;
+    border-collapse:separate;
+    border-spacing:0 10px;
+    width: 100%;
+}

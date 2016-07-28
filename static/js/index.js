@@ -99,10 +99,5 @@ app.controller('rootController', function ($scope, $uibModal, $location, $anchor
 .controller('supportController', function($scope, initialize) {
     initialize($scope);
     document.getElementById('navbar-tab-support').className = 'active';
-})
-
-.controller('blogController', function($scope, initialize) {
-    initialize($scope);
-    document.getElementById('navbar-tab-blog').className = 'active';
 });
 
