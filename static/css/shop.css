@@ -2,8 +2,41 @@ aside div {
 	/*border: 2px solid #ffff11;*/
 }
 
-minicart-button {
+.minicart-button {
 	margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.card {
+	border: none;
+	border-radius: 0;
+	padding: 5px;
+	padding-bottom: 25px;
+	text-align: center;
+} 
+
+.btn-card {
+	padding: 0;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	font-size: 26px;
+	background-color: #ddd;
+	color: #fff;
+	border: 5px solid #fff;
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	margin-left: -30px;
+	transition: background-color 1s;
+}
+
+.btn-card:hover {
+	background-color: #61cf94;
+	border-color: #fff;
 }
 
 .container {
@@ -31,7 +64,6 @@ minicart-button {
 .btn-primary {
 	background-color: #a0ce4e;
 	border: none;
-    padding: 10px 20px;
     box-shadow: 0px 3px #649014;
 }
 
