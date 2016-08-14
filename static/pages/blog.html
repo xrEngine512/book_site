@@ -1,22 +1,38 @@
 <link type="text/css" rel="stylesheet" href="/static/css/blog.css">
 
-<div>
-    <table>
-        <tbody>
-            <tr class="bs-blog-entry">
-                <td id="image"><img src="http://placehold.it/70x70"></td>
-                <td>
-                    <div id="header">Заголовок</div>
-                    <div id="description">Описание поста<br/>очень длинное</div>
-                </td>
-            </tr>
-            <tr class="bs-blog-entry">
-                <td id="image"><img src="http://placehold.it/70x70"></td>
-                <td>
-                    <div id="header">Заголовок</div>
-                    <div id="description">Описание поста<br/>очень длинное</div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container">
+    <div ng-repeat="entry in blog_entries">
+        <article class="col-sm-4 bs-blog-entry bs-blog-entry-item">
+            <header class="bs-blog-entry-header">
+                <h2>
+                    {{ entry.header }}
+                </h2>
+            </header>
+             <section>
+                 <div class="row">
+                     <img class="col-sm-6 bs-blog-entry-preview" src="http://placehold.it/150x150">
+                     <div class="col-sm-6" id="description-container">
+                         <div class="bs-blog-entry-description">
+                             {{ entry.description }}
+                         </div>
+                         <div class="bs-blog-entry-author">
+                             <div class="col-sm-3">
+                                 <img src="http://placehold.it/32x32">
+                             </div>
+                             <div class="col-sm-9">
+                                 <a href="">{{ entry.author.name }}</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row bs-blog-entry-footer">
+                     <a class="bs-blog-entry-read-more" href="">Читать дальше<span class="fa-arrow-right"></span></a>
+                     <section class="bs-blog-entry-date">
+                         <i class="fa-calendar"></i>
+                         <time datetime="{{ entry.creationDate.isoFormat }}">{{ entry.creationDate.humanReadable }}</time>
+                     </section>
+                 </div>
+             </section>
+        </article>
+    </div>
 </div>
