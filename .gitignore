@@ -1,6 +1,10 @@
 book_site/__pycache__/
-main_app/__pycache__/
+blog/__pycache__/
 .idea/
 logs/
 uwsgi.ini
 uwsgi_params
+static/js/libs
+*/migrations/
+runserver.sh
+media/

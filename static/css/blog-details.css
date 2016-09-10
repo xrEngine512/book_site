@@ -1,0 +1,91 @@
+#preview-image {
+    width: 250px;
+    height: 250px;
+}
+
+#btn-edit {
+    border-radius: 15px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+    color: #919191;
+    float: right;
+    text-align: center;
+    background-color: #3f3f3f;
+    cursor: pointer;
+}
+
+#btn-edit:hover {
+    color: #ffffff;
+}
+
+#btn-edit:active {
+    color: #b4b4b4;
+}
+
+#btn-edit:active div {
+    color: #ffffff;
+}
+
+#btn-edit div {
+    margin-right: 10px;
+}
+
+#btn-add-image {
+    width: 250px;
+    height: 250px;
+}
+
+#btn-add-image .overlay {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    visibility: hidden;
+    text-align: center;
+    line-height: 250px;
+    background: radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 0.6), rgba(0, 0, 0, 0));
+}
+
+#btn-add-image .btn {
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #b9b9b9;
+}
+
+#btn-add-image:hover div {
+    visibility: visible;
+}
+
+#btn-add-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.entry-content {
+    /*display: block;*/
+    margin: 10px;
+}
+
+.icon-edit:before {
+    content: "\f044";
+    font-family: FontAwesome;
+}
+
+i.mce-i-icon-save:before {
+    content: "\f0c7";
+    font-family: FontAwesome;
+    position: absolute;
+}
+
+i.mce-i-icon-remove-sign:before {
+    content: "\f057";
+    font-family: FontAwesome;
+    position: absolute;
+}
+
+i.mce-i-fa-eye:before {
+    content: "\f06e";
+    font-family: FontAwesome;
+    position: absolute;
+}

@@ -4,14 +4,20 @@
 <!--TODO: use CDN-->
 <script src="{% static "js/libs/jquery-2.2.3.min.js" %}"></script>
 <script src="{% static "js/libs/jquery-ui.min.js" %}"></script>
-<script src="{% static "js/libs/angular.min.js" %}"></script>
-<script src="{% static "js/libs/angular-route.min.js" %}"></script>
-<script src="{% static "js/libs/angular-animate.min.js" %}"></script>
-<script src="{% static "js/libs/angular-touch.min.js" %}"></script>
+<script src="{% static "js/libs/tinymce-dist/tinymce.min.js" %}"></script>
+<script src="{% static "js/libs/angular/angular.js" %}"></script>
+<script src="{% static "js/libs/angular-locale-ru/angular-locale_ru.js" %}"></script>
+<script src="{% static "js/libs/angular-route/angular-route.min.js" %}"></script>
+<script src="{% static "js/libs/angular-animate/angular-animate.min.js" %}"></script>
+<script src="{% static "js/libs/angular-touch/angular-touch.min.js" %}"></script>
+<script src="{% static "js/libs/angular-sanitize/angular-sanitize.min.js" %}"></script>
+<script src="{% static "js/libs/angular-resource/angular-resource.js" %}"></script>
+<script src="{% static "js/libs/angular-ui-tinymce/src/tinymce.js" %}"></script>
 <script src="{% static "js/libs/ui-bootstrap-tpls-1.3.3.min.js" %}"></script>
 <script src="{% static "js/libs/bootstrap.min.js" %}"></script>
 <script src="{% static "js/lang-extensions.js" %}"></script>
 <script src="{% static "js/directives.js" %}"></script>
+<script src="{% static "js/resources.js" %}"></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <link href="{% static "css/index.css" %}" rel="stylesheet">
 <link href="{% static "css/jquery-ui.min.css" %}" rel="stylesheet">
@@ -19,7 +25,7 @@
 <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-<html>
+<html lang="ru">
     <head>
         <title>Book Store</title>
         <meta charset="utf-8">
@@ -58,7 +64,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#"><img alt="Brand" src="../static/img/logo-flag.png" width="60" height="55"></a>
+                        <a class="navbar-brand" href="#"><img alt="Brand" src="../static/img/logo-flag.png"></a>
                     </div>
                     <div class="collapse navbar-collapse" id="Navbar">
                         <ul id="navbar-tabs" class="nav navbar-nav">
@@ -106,5 +112,6 @@
         <script src="/static/js/cart.js"></script>
         <script src="/static/js/product-details.js"></script>
         <script src="/static/js/blog.js"></script>
+        <script src="/static/js/blog-details.js"></script>
     </body>
 </html>

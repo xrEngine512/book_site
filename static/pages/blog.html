@@ -1,6 +1,7 @@
 <link type="text/css" rel="stylesheet" href="/static/css/blog.css">
 
 <div class="container">
+    <div class="row">
     <div ng-repeat="entry in blog_entries">
         <article class="col-sm-4 bs-blog-entry bs-blog-entry-item">
             <header class="bs-blog-entry-header">
@@ -10,29 +11,30 @@
             </header>
              <section>
                  <div class="row">
-                     <img class="col-sm-6 bs-blog-entry-preview" src="http://placehold.it/150x150">
+                     <img class="col-sm-6 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
                      <div class="col-sm-6" id="description-container">
-                         <div class="bs-blog-entry-description">
-                             {{ entry.description }}
-                         </div>
+                         <div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
                          <div class="bs-blog-entry-author">
                              <div class="col-sm-3">
                                  <img src="http://placehold.it/32x32">
                              </div>
                              <div class="col-sm-9">
-                                 <a href="">{{ entry.author.name }}</a>
+                                 <a href="">{{ entry.author.username }}</a>
                              </div>
                          </div>
                      </div>
                  </div>
                  <div class="row bs-blog-entry-footer">
-                     <a class="bs-blog-entry-read-more" href="">Читать дальше<span class="fa-arrow-right"></span></a>
+                     <a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}"">Читать дальше<span class="fa-arrow-right"></span></a>
                      <section class="bs-blog-entry-date">
                          <i class="fa-calendar"></i>
-                         <time datetime="{{ entry.creationDate.isoFormat }}">{{ entry.creationDate.humanReadable }}</time>
+                         <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
+                             {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
+                         </time>
                      </section>
                  </div>
              </section>
         </article>
+    </div>
     </div>
 </div>

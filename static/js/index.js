@@ -1,8 +1,8 @@
 /**
  * Created by islam on 29.05.16.
  */
-var app = angular.module('BookStoreApp');
-app.config(function ($routeProvider) {
+
+gApp.config(function ($routeProvider) {
     $routeProvider
       .when('/contact',{
         templateUrl: '/static/pages/contact.html',
@@ -27,9 +27,23 @@ app.config(function ($routeProvider) {
         controller: 'aboutUsController'
     }).when('/product-details', {
         templateUrl: '/static/pages/product-details.html'
+    }).when('/blog/:id', {
+        templateUrl: '/static/pages/blog-details.html',
+        controller: 'blogDetailsController'
     }).otherwise({
         redirectTo: '/home'
     });
+})
+
+.config(function ($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+})
+
+.config(function ($resourceProvider) {
+    $resourceProvider.defaults.actions.update = {
+        method: 'PUT'
+    };
 });
 
 function resetAllTabs() {
@@ -39,7 +53,7 @@ function resetAllTabs() {
     }
 }
 
-app.controller('rootController', function ($scope, $uibModal, $location, $anchorScroll) {
+gApp.controller('rootController', function ($scope, $uibModal, $location, $anchorScroll) {
     $scope.animationsEnabled = true;
     var testItems = [
         {
@@ -99,5 +113,19 @@ app.controller('rootController', function ($scope, $uibModal, $location, $anchor
 .controller('supportController', function($scope, initialize) {
     initialize($scope);
     document.getElementById('navbar-tab-support').className = 'active';
+});
+
+gApp.run(function ($route, $rootScope, $location) {
+    var original = $location.path;
+    $location.path = function (path, reload) {
+        if (reload === false) {
+            var lastRoute = $route.current;
+            var un = $rootScope.$on('$locationChangeSuccess', function () {
+                $route.current = lastRoute;
+                un();
+            });
+        }
+        return original.apply($location, [path]);
+    };
 });
 
