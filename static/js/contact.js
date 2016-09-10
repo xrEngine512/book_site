@@ -1,6 +1,6 @@
 /* Add Google Maps */
 
-angular.module('BookStoreApp').controller('contactsController', function($scope, initialize) {
+gApp.controller('contactsController', function($scope, initialize) {
     initialize($scope);
     document.getElementById('navbar-tab-contacts').className = 'active';
 

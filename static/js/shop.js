@@ -1,5 +1,5 @@
 
-angular.module('BookStoreApp').controller('shopController', function($scope, $http, initialize, pagination) {
+gApp.controller('shopController', function($scope, $http, initialize, pagination) {
     initialize($scope);
     document.getElementById('navbar-tab-shop').className = 'active';
     $(function() {

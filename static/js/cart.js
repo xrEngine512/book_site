@@ -1,4 +1,4 @@
-angular.module('BookStoreApp').controller('cartController', function ($scope, $uibModalInstance, items){
+gApp.controller('cartController', function ($scope, $uibModalInstance, items){
     $scope.items = items;       //translate items from outer scope
     
     $scope.getSummary = function () {

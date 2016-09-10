@@ -1,0 +1,60 @@
+#preview-image {
+    display: inline-block !important;
+}
+
+#btn-edit {
+    border-radius: 15px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 30px;
+    color: #919191;
+    float: right;
+    text-align: center;
+    background-color: #3f3f3f;
+    cursor: pointer;
+}
+
+#btn-edit:hover {
+    color: #ffffff;
+}
+
+#btn-edit:active {
+    color: #b4b4b4;
+}
+
+#btn-edit:active div {
+    color: #ffffff;
+}
+
+#btn-edit div {
+    margin-right: 10px;
+}
+
+.entry-content {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.icon-edit:before {
+    content: "\f044";
+    font-family: FontAwesome;
+}
+
+i.mce-i-icon-save:before {
+    content: "\f0c7";
+    font-family: FontAwesome;
+    position: absolute;
+}
+
+i.mce-i-icon-remove-sign:before {
+    content: "\f057";
+    font-family: FontAwesome;
+    position: absolute;
+}
+
+i.mce-i-fa-eye:before {
+    content: "\f06e";
+    font-family: FontAwesome;
+    position: absolute;
+}

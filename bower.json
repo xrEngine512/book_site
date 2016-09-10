@@ -1,0 +1,27 @@
+{
+  "name": "book_site",
+  "homepage": "https://github.com/xrEngine512/book_site",
+  "authors": [
+    "islam <g.man.kbr@gmail.com>",
+    "arsen <arsen.utepbergenov@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "static/js/libs",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-ui-tinymce": "^0.0.16",
+    "angular-route": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-sanitize": "^1.5.8"
+  },
+  "dependencies": {}
+}

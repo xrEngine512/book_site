@@ -1,0 +1,97 @@
+.bs-blog-entry-read-more {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: medium;
+    color: #3f3f3f;
+    text-align: center;
+    padding-top: 15px;
+    border-bottom-left-radius: 15px;
+    text-decoration: none;
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.bs-blog-entry-read-more:hover {
+    background: rgba(20, 20, 20, 0.1);
+    text-decoration: none;
+}
+
+.bs-blog-entry-read-more span {
+    margin-left: 10px;
+    visibility: hidden;
+}
+
+.bs-blog-entry-read-more:hover span {
+    visibility: visible;
+}
+
+.bs-blog-entry-date {
+    alignment: right;
+    padding: 15px;
+    float: right;
+}
+
+.bs-blog-entry-preview {
+
+}
+
+.bs-blog-entry-item {
+    background: rgba(120,120,120, 0.1);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+.bs-blog-entry-header {
+    font-family: FreeSerif;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.bs-blog-entry-description {
+    font-family: FreeSerif;
+    font-style: italic;
+    font-size: medium;
+    height: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 0;
+}
+
+.bs-blog-entry-author {
+    font-size: x-small;
+    background: rgba(60, 60, 60, 0.1);
+    height: 32px;
+}
+
+.bs-blog-entry-author div {
+    padding-left: 0;
+}
+
+.bs-blog-entry-author:hover {
+}
+
+.bs-blog-entry-author a {
+    text-decoration: none;
+    height: 100%;
+}
+
+.bs-blog-entry-author:hover a {
+    text-decoration: none;
+}
+
+.bs-blog-entry {
+    border-radius: 15px;
+}
+
+.bs-blog-entry #description-container {
+    padding-left: 0;
+}
+
+.bs-blog-entry-footer {
+    height: 50px;
+    margin-top: 15px;
+    background: rgba(60, 60, 60, 0.1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
