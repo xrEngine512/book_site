@@ -1,5 +1,4 @@
-book_site/__pycache__/
-blog/__pycache__/
+*/__pycache__/
 .idea/
 logs/
 uwsgi.ini

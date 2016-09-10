@@ -3,9 +3,6 @@
  */
 
 gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $sce, $location, initialize, Blog, Files) {
-    initialize($scope);
-    document.getElementById('navbar-tab-blog').className = 'active';
-
     /*----Declarations----*/
     $scope.save = function () {
         if(+$routeParams.id) {
@@ -37,14 +34,10 @@ gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $
         element.style.display = "";
     };
 
+    //TODO: redo switching between modes using angular's $stateProvider
     $scope.setModeEdit = function(edit) {
         (edit ? $scope.showElement : $scope.hideElement)(document.querySelector("#edit-mode"));
         (edit ? $scope.hideElement : $scope.showElement)(document.querySelector("#view-mode"));
-        if(!$scope.image)
-            if(edit)
-                $scope.setDefaultImage();
-            else
-                $scope.showEntryImage();
     };
 
     $scope.htmlContent = function () {
@@ -58,7 +51,6 @@ gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $
             "text": "<p>Загрузка...</p>",
             "image": ""
         };
-        $scope.setLoadingImage();
     };
 
     $scope.setDefaultState = function () {
@@ -68,23 +60,11 @@ gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $
             "text": "",
             "image": ""
         };
-        $scope.setDefaultImage();
     };
-
-    $scope.showEntryImage = function () {
-        $scope.image = $scope.blog_entry.image;
-    };
-
-    $scope.setDefaultImage = function () {
-        $scope.image = "/static/img/add_image.png";
-    };
-
-    $scope.setLoadingImage = function () {
-        $scope.image = "/static/img/loading.gif";
-    };
-
     /*---------------------*/
 
+
+    /*----Initialization---*/
     $scope.file = null;
     $scope.uploadedFilesUrls = [];
 
@@ -147,19 +127,23 @@ gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $
             });
         }
     };
+    /*----------------------*/
+
+
+    /*----Startup actions---*/
+    initialize($scope);
+    document.getElementById('navbar-tab-blog').className = 'active';
 
     if(+$routeParams.id) {   // open existing entry
         $scope.setLoadingState();
         $scope.setModeEdit(false);
         Blog.get({entryID: $routeParams.id}, function (data) {
             $scope.blog_entry = data;
-            if(data.image)
-                $scope.blog_entry.image = $scope.blog_entry.image.replace("%3A", ":");  //Colon escaping workaround
-            $scope.showEntryImage();
         });
     }
     else {                  // create a new one
         $scope.setDefaultState();
         $scope.setModeEdit(true);
     }
+    /*----------------------*/
 });
