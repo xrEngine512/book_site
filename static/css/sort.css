@@ -1,0 +1,83 @@
+/* main group */
+.bs_sortGroup {
+  padding: 7px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  float: right;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+/* dropdowns */
+.dropbtn {
+    background-color: #8bc34a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #3e8e41;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+ display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* если с помощью скриптов */
+/* .show {display:block !important;} */
+
+/* chips */
+.bs_chip {
+    display: inline-block;
+    padding: 0 15px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #c5d20a;
+    color: #ffffff;
+}
+
+.bs_chips {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.bs_iconChip {
+    padding-left: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    float: right;
+    font-size: 16px;
+}
+
+.bs_chipsCategories {
+  margin-bottom: 10px;
+}

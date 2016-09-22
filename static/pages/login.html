@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="/static/css/modal.css">
+
+<div id="modalDialog-bg" ng-cloak>
+	<div id="modalDialog">
+		<div class="bs_modal-header">
+			<button type="button" class="btn btn-outline-info" ng-click="$login.close()">&times;</button>
+		</div>
+		<div class="bs_modal-content">
+			<form>
+				<fieldset>
+					<div class="form-group">
+						<span class="bs-input">
+							<input class="bs-input-field bs-input-account" type="text" id="login" placeholder="логин">					
+							<label class="bs-input-label bs-label-account" for="login">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</label>
+						</span>
+					</div>
+					<div class="form-group">
+						<span class="bs-input">
+							<input class="bs-input-field bs-input-account" type="password" id="userPassword" placeholder="пароль">					
+							<label class="bs-input-label bs-label-account" for="userPassword">
+								<i class="fa fa-key" aria-hidden="true"></i>
+							</label>
+						</span>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox">Запомнить меня
+						</label>
+					</div>
+					<button type="submit" class="btn btn-primary bs_btn">Вход</button>
+				</fieldset>
+			</form>
+		</div>
+		<div class="bs_modal-footer">
+			<a href="">Забыли пароль или логин?</a>
+			<a href="#registration">Не имеете аккаунта?</a>
+		</div>
+	</div>
+</div>
+

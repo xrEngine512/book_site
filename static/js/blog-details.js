@@ -2,7 +2,7 @@
  * Created by islam on 18.08.16.
  */
 
-gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $sce, $location, initialize, Blog, Files) {
+gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $sce, $location, Blog, Files) {
     /*----Declarations----*/
     $scope.save = function () {
         if(+$routeParams.id) {
@@ -131,8 +131,6 @@ gApp.controller('blogDetailsController', function($scope, $http, $routeParams, $
 
 
     /*----Startup actions---*/
-    initialize($scope);
-    document.getElementById('navbar-tab-blog').className = 'active';
 
     if(+$routeParams.id) {   // open existing entry
         $scope.setLoadingState();

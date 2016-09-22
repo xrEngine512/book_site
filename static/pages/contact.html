@@ -1,60 +1,56 @@
-<link href="/static/css/contact.css" rel="stylesheet">
-<main>
-    <div id="contact" class="container">
-    <h3 class="text-center">Наши контакты</h3>
-    <p class="text-center"> <em>Будем рады вам!</em></p>
-
-    <div class="row">
-        <!-- Communication -->
-        <div class="col-md-4">
-              <p>Для связи:</p>
-              <p><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>Россия, г. Владимир</p>
-              <p><i class="fa fa-mobile fa-lg" aria-hidden="true"></i> Телефон: +79043234589</p>
-              <p><i class="fa fa-envelope" aria-hidden="true"></i>Почта: <a href="mainto:library2.1@mail.com">library2.1@mail.com</a></p>
-
-              <ul class="list-inline">
-                <li><a id="vk" href="#"><i class="fa fa-vk fa-2x"></i></a></li>
-                <li><a id="youtube" href="#"><i class="fa fa-youtube-square fa-2x"></i></a></li>
-                <li><a id="instagram" href="#"><i class="fa fa-instagram fa-2x"></i></a></li>
-                <li><a id="google-plus" href="#"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
-              </ul>
-        </div>
-
-
-        <!-- Form -->
-        <div class="col-md-8">
-            <form name="myForm" novalidate>
-
-                <div class="row">
-                    <div id="input-name" class="col-sm-6 form-group">
-                        <input class="form-control" type="text" name="name" ng-model="name" placeholder="Имя..." required>
-                        <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
-                            <span ng-show="myForm.name.$error.required">Имя обязательное поле</span>
-                        </span>
-                    </div>
-
-                    <div id="input-email" class="col-sm-6 form-group">
-                        <input class="form-control" type="email" name="email" ng-model="email" placeholder="Почта..." required>
-                        <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-                            <span ng-show="myForm.email.$error.required">Почта обязательно поле</span>
-                            <span ng-show="myForm.email.$error.email">Некорректная почта</span>
-                        </span>
-                    </div>
-
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Комментарий..." rows="5"></textarea>
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                                <button class="btn pull-right" type="submit">Послать сообщение</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+<link rel="stylesheet" type="text/css" href="/static/css/contact.css">
+<!-- валидация нужна -->
+<div class="bs_contact" ng-controller="contactController">
+	<div class="container">
+		<div class="row bs_paddingTop">
+			<div class="col-sm-6 bs_map">	
+				<div id="googleMap"></div>
+			</div>
+			<div class="col-sm-6">
+				<div>
+					<h3 class="text-center">Контактные данные: </h3>
+					<p class="text-center"> <em>Свяжитесь с нами, если есть вопросы!</em></p>
+					<p> <i class="fa fa-map-marker" aria-hidden="true"></i>
+						Адрес: г. Владимир
+					</p>
+					<p> <i class="fa fa-phone" aria-hidden="true"></i>
+						Телефон: 846289783
+					</p>
+					<p>
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						Почта: library2.1@.com
+					</p>
+				</div>
+			</div>		
+		</div>
+		<hr>
+		<div class="row">	
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<div class="input-group">
+							<span class="input-group-addon" id="nameInput"><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" class="form-control" placeholder="Имя" aria-describedby="nameInput" required>
+						</div>
+					</div>
+					<div class="col-sm-6 form-group">
+						<div class="input-group">
+							<span class="input-group-addon" id="emailInput"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+							<input type="email" class="form-control" placeholder="Почта" aria-describedby="emailInput" required>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<textarea class="form-control" id="comments" name="comments" placeholder="Комментарий" rows="5"></textarea>	
+					</div>			
+				</div>
+				<div class="row bs_paddingTop">
+					<button class="btn btn-small btn-service btn-message br-8 pull-right" type="submit">Послать</button>
+				</div>					
+			</div>
+		</div>
+	</div>
+	
 </div>
-</main>
-
-<hr>
-<div id="googleMap"></div>
-<hr>
 
