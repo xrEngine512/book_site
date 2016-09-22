@@ -387,6 +387,10 @@ button.bs_search-button {
 
 /* конец формы поиска*/
 
+#main {
+	margin-bottom: 105px;
+}
+
 /* начало футера */
 
 footer.bs_footer {
