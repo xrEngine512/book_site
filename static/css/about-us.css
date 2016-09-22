@@ -1,0 +1,61 @@
+.card {
+  border: none;
+  border-radius: 0;
+  text-align: center;
+} 
+
+.img-fluid {
+  width: 100%;
+}
+
+.img-wrp {
+	position: relative;
+}
+
+.img-wrp:hover > .wrp {
+	display: block;
+}
+
+.wrp {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+	opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    background: #000;
+}
+
+ul.overlay-icons {
+	margin-top: -11px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 10;
+    padding: 0px;
+}
+
+ul.overlay-icons a {
+	color: #ffffff;
+}
+
+ul.overlay-icons li {
+	list-style: none;
+    float: left;
+    display: inline;
+    /* это бред !!! 30px !*/
+    margin-right: 30px; 
+}
+
+@media screen and (max-width:543px) {
+    ul.overlay-icons li {
+        margin-right: 80px; 
+    }
+}

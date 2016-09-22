@@ -1,0 +1,18 @@
+<link href="/static/css/blog-details.css" rel="stylesheet">
+
+<div class="container">
+    <div id="edit-mode" style="display: none">
+        <form method="post">
+            <input type="text" class="entry-content" placeholder="Заголовок..." ng-model="blog_entry.header">
+            Превью изображение:
+            <input type="file" file-upload title="Выбрать изображение" accept="image/*" id="preview-image"/>
+            <textarea ui-tinymce="tinymceOptions" ng-model="blog_entry.text"></textarea>
+        </form>
+    </div>
+    <div id="view-mode" style="display: none">
+        <div id="btn-edit" ng-click="setModeEdit(true)"><div class="fa icon-edit"></div>Редактировать</div>
+        <h2>{{ blog_entry.header }}</h2>
+        <form class="entry-content" ng-bind-html="htmlContent()"></form>
+    </div>
+    <input type="file" id="file-picker" file-upload style="display: none"/>
+</div>

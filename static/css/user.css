@@ -1,0 +1,52 @@
+div.bs_bgUserInfo {
+	background-color: #ffffff;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+div.bs_profile {
+	float: left;
+}
+
+div.bs_profileImage {
+	position: relative;
+}
+
+div.bs_profileImage a {
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 1.5em;
+	color: #111111;
+	background-color: #ffffff;
+	display: none;
+}
+
+div.bs_profile img {
+	max-width: 100%;
+	border-radius: 10px;
+}
+
+button.bs_btnLoadImage {
+	margin-top: 10px;
+}
+
+div.bs_infoUser {
+	display: inline-block;
+}
+
+p.description {
+	font-family: 'gabriola', sans-serif;
+	text-align: left;
+	text-indent: 20px;
+}
+
+strong {
+	display: block;
+}
+
+strong.bs_aboutSelf {
+	display: inline-block;
+	float: left;
+}

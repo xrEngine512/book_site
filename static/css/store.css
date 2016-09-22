@@ -1,0 +1,213 @@
+
+/* Книги в виде "card"-элемента */
+
+.card {
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  padding-bottom: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+} 
+
+.btn-card {
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  font-size: 26px;
+  background-color: #ddd;
+  color: #fff;
+  border: 5px solid #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -30px;
+  transition: background-color 1s;
+}
+
+.btn-card:hover, 
+.btn-card:active {
+  outline: none;
+  background-color: #a874b1;
+  border-color: #fff;
+}
+
+.btn-card:focus {
+  outline: none;
+}
+
+.btn-card:visited {
+  /* когда добавлен элемент в корзину */
+}
+
+/* только для визуального эффекта */
+.bs_btnCardActive {
+  color: #2b2b2b;
+}
+
+.img-fluid {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Конец книги в виде "карт"-элемента */
+
+/* Пагинация */
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.pagination li {
+  cursor: pointer;
+}
+
+.pagination-wrap {
+  text-align: center;
+}
+
+.page-item.active .page-link, 
+.page-item.active .page-link:focus, 
+.page-item.active .page-link:hover {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #5ab15a;
+    border-color: #5ab15a;
+}
+
+/* Конец пагинации */
+
+/* Aside: категории, ползунок цены, корзина */
+
+.bg-elements-aside {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.bs_titleForAsideElem > h5 {
+  padding: 8px;
+  border-bottom: 1px solid #989079;
+  letter-spacing: 2px;
+  background-color: #CDDC39;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #323444;
+  margin: 0;
+}
+
+div.bs_bodyAsideElem {
+  border-left: 1px solid #989079;
+  border-right: 1px solid #989079;
+  padding: 10px;
+  margin: 0;
+}
+
+div.bs_bottomBorder {
+  border-top: 1px solid #989079;
+}
+
+/* слайдер цены */
+
+.rzslider .rz-pointer {
+    top: -7px;
+    z-index: 3;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-color: #0db9f0;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    outline: none;
+    background-color: #8bc34a;
+}
+
+.rzslider .rz-bar.rz-selection {
+    z-index: 2;
+    background: #8bc34a;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.rzslider .rz-pointer:after {
+	display: none;
+}
+
+div.bs_priceInputs {
+	display: inline-block;
+}
+
+div.bs_priceInputs input {
+	max-width: 35%;
+}
+
+/* категории */
+
+div.bs_clearFilterCategories {
+  text-align: center;
+  border-left: 1px solid #989079;
+  border-right: 1px solid #989079;
+}
+
+div.bs_clearFilterCategories > a {
+  font-size: 1em;
+  text-decoration: none;
+  color: #989079;
+
+}
+
+label.bs_label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 13px;
+}
+
+label.bs_label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #e0ded5;
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+input.bs_ckeck[type=checkbox]:checked + label.bs_label:before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  font-size: 15px;
+  color: #2b2b2b;
+  text-align: center;
+  line-height: 15px;
+}
+
+.checkbox label.bs_label:before {
+  border-radius: 3px;
+}
+
+input.bs_ckeck[type=checkbox] {
+  display: none;
+}
+
+/* корзина */
+
+
+/* Конец aside: категории, ползунок цены, корзина */

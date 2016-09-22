@@ -1,7 +1,11 @@
-book_site/__pycache__/
+*/__pycache__/
 main_app/__pycache__/
 .idea/
 logs/
 uwsgi.ini
 uwsgi_params
+static/js/libs
+*/migrations/
+runserver.sh
+media/
 nginx.conf

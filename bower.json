@@ -1,0 +1,23 @@
+{
+  "name": "book_site",
+  "homepage": "https://github.com/xrEngine512/book_site",
+  "authors": [
+    "islam <g.man.kbr@gmail.com>",
+    "arsen <arsen.utepbergenov@mail.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "static/js/libs",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-ui-tinymce": "^0.0.16"
+  },
+  "dependencies": {}
+}

@@ -37,9 +37,9 @@ function handleFooter(footer) {
     }
 }
 
-angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
+var gApp = angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.bootstrap', 'ui.tinymce', 'storeModule']);
 
-.directive('siteDynamicContent', function ($interval) {
+gApp.directive('siteDynamicContent', function ($interval) {
     return function (scope, element) {
         $interval(function () {     //FIXME: when images will load from our source, maybe $digest ($watch) method will work, if it doesn't - do on load for every image
             scope.__height = element.height();
@@ -64,4 +64,22 @@ angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
         window.addEventListener("scroll", handler);
         window.addEventListener("resize", handler);
     }
+}).directive('fileUpload', function () {
+    return {
+        scope: true,        //create a new scope
+        link: function (scope, el, attrs) {
+            el.bind('change', function (event) {
+                var files = event.target.files;
+                //iterate files since 'multiple' may be specified on the element
+                for (var i = 0; i < files.length ; i++) {
+                    //emit event upward
+                    scope.$emit("fileSelected", {
+                        target_id: event.currentTarget.id,
+                        file: files[i],
+                        callee_info: event.callee_info
+                    });
+                }
+            });
+        }
+    };
 });

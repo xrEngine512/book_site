@@ -1,0 +1,41 @@
+<!-- пока теже стили -->
+<link rel="stylesheet" type="text/css" href="/static/css/modal.css">
+
+<div id="modalDialog-bg" ng-cloak>
+	<div id="modalDialog">
+		<div class="bs_modal-header">
+			<button type="button" class="btn btn-outline-info" ng-click="$registration.close()">x</button>
+		</div>
+		<div class="bs_modal-content">
+			<form>
+				<fieldset>
+					<div class="form-group">
+						<label for="login">Имя пользователя/Логин:</label>
+						<input type="text" id="login" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="login">Почта:</label>
+						<input type="email" id="login" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="password">Пароль:</label>
+						<input type="password" id="password" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<label for="password">Повторите пароль:</label>
+						<input type="password" id="password" class="form-control">
+					</div>
+
+					<button type="submit" class="btn btn-primary bs_btn">Регистрация</button>
+				</fieldset>
+			</form>
+		</div>
+		<div class="bs_modal-footer">
+			
+		</div>
+	</div>
+</div>
+
