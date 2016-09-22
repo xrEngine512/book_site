@@ -1,4 +1,4 @@
-gApp.controller('cartController', function ($scope, $uibModalInstance, items){
+gApp.controller('cartControllerModal', function ($scope, $uibModalInstance, items) {
     $scope.items = items;       //translate items from outer scope
     
     $scope.getSummary = function () {
@@ -16,4 +16,18 @@ gApp.controller('cartController', function ($scope, $uibModalInstance, items){
     $scope.close = function() {
         $uibModalInstance.dismiss('close');
     }
+});
+
+gApp.controller('cartControllerShowContent', function(cartFactory) {
+    this.books = cartFactory.getBooks();
+
+    this.totalPrice = 0;
+// Ошибка! доделать, вызывается при наведении
+    this.getTotalPrice = function() {
+        if(this.books.length <= 0) return;
+        for (var i = 0; i < this.books.length; i++) {  
+            this.totalPrice += this.books[i].price;
+            console.log(this.totalPrice);
+        }
+    };
 });

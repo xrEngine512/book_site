@@ -1,8 +1,4 @@
-/* Add Google Maps */
-
-gApp.controller('contactsController', function($scope, initialize) {
-    initialize($scope);
-    document.getElementById('navbar-tab-contacts').className = 'active';
+gApp.controller('contactController', function($scope) {
 
     $scope.vladimir = new google.maps.LatLng(56.133333, 40.416667);
 
@@ -29,7 +25,7 @@ gApp.controller('contactsController', function($scope, initialize) {
     $scope.city.setMap($scope.map);
 
     $scope.infowindow = new google.maps.InfoWindow({
-        content:"Привет!",
+        content:"Мы здесь! Привет!",
     });
 
     $scope.infowindow.setPosition({lat: 56.133333, lng: 40.416667});

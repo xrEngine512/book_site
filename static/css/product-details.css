@@ -1,123 +1,52 @@
-#view-book {
-	width: 300px;
-	height: 400px;
-	background-color: #cfe600;
-	margin-right: 50px;
-	margin-bottom: 25px;
-	padding: 5px 5px 5px 5px;
-	box-shadow: 0 0 10px #111111;
-	z-index: 10;
+#bs_product {
+  background-color: #ffffff;
+}
+/*
+img {
+	max-width: 100%;
+}*/
+
+.info-book {
+	margin-top: 40px;
+	text-align: center;
 }
 
-.active-zoom {
-	-webkit-transform: translate(30px, 50px) scale(1.4);
-	transform: translate(110px, 85px) scale(1.4);
+.border {
+	border: 1px solid grey;
 }
 
-/* для затемнения экрана при увеличении книги */
-.backdrop {
-	display: none;
-	min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-	z-index: 5;
-    background: rgba(0,0,0,0.7);
+h6.bs_head-desc {
+	text-align: left;
 }
 
-#view-book > img {
-	position: relative;
-	width: 100%;
-	height: 100%;
+p.description {
+	font-family: 'gabriola', sans-serif;
+	text-align: left;
+	text-indent: 20px;
 }
 
-#view-book > #zoom {
-	position: absolute;
-	right:  0px;
-	bottom: 0px;
-	margin-bottom: 5px;
-	margin-right: 5px;
-	text-decoration: none;
-	background-color: #cfe600;
-	padding: 2px 2px 2px 2px;
-	opacity: 0.5;
-	height: 45px;
-	width: 45px;
+.bs_btn_right {
+	float: right;
 }
 
-#view-book > #zoom > span {
-	font-size: 30pt;
-	opacity: 0.8;
-	color: #ffffff;
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  max-width: 70%;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
 }
 
-#view-book > #zoom:hover, #view-book > #zoom > span:hover {
-	opacity: 1.0;
+th {
+  font-weight: normal;
+  color: #039;
+  border-bottom: 2px solid #6678b1;
+  padding: 10px 8px;
 }
 
-/* описание книги */
-#description-book {
-	width: 500px;
-	height: 400px;
-	background-color: #fbffd5;
-	border: 1px solid black;;
-	box-shadow: 0 0 10px #111111;
-}
-
-#description-book > h3 {
-	color: #034f84;
-}
-
-#author {
-	text-decoration: none;
-	color: #a587e6;
-}
-
-#quantity {
-	border-radius: 0px;
-	width: 15%;
-}
-
-hr {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	border: 0;
-  	border-bottom: 1px dashed #000;
-}
-
-.btn-default {
-	color: #171a00;
-    background-color: #e4b7b7;
-    border-color: #171a00;
-    border-radius: 4px;
-    box-shadow: 0px 2px #171a00;
-}
-
-/* карусель книги */
-#slide-book {
-	width: 300px;
-	height: 100px;
-	background-color: #d9b3ff;
-	padding-right: 0px;
-	padding-left: 0px;
-}
-
-.carousel-indicators {
-	bottom: -30px;
-}
-
-span.glyphicon.glyphicon-chevron-left, span.glyphicon.glyphicon-chevron-right {
-	font-size: 15pt;
-}
-
-.carousel-indicators li {
-	border-color: purple;
-}
-
-.carousel-indicators .active {
-	background-color: orange;
-}
-
-.carousel-control {
-	width: 10%;
-	background-color: green;
+td {
+  color: #669;
+  padding: 9px 8px;
+  transition: .3s linear;
 }
