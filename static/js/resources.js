@@ -7,7 +7,8 @@ function multipartRequest(data) {
     for (var field in data)
         if(data.hasOwnProperty(field)) {
             var value = data[field];
-            formData.append(field, typeof value == 'object' && value.constructor != File ? angular.toJson(value) : value);
+            if(value)
+                formData.append(field, typeof value == 'object' && value.constructor != File ? angular.toJson(value) : value);
         }
 
     return formData;
@@ -40,4 +41,7 @@ gApp.factory('Blog', function ($resource) {
     {
         stripTrailingSlashes: false
     })
+}).config(function ($httpProvider) {
+    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 });
