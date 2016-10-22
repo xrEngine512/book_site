@@ -1,0 +1,28 @@
+/* общие стили асайда для всех страниц */
+
+.bs_bgAside {
+  background-color: #ffffff;
+  box-shadow: 0 8px 10px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+ 
+div.bs_titleAsideElem > h5 {
+  padding: 8px;
+  border-bottom: 1px solid #989079;
+  letter-spacing: 2px;
+  background-color: #CDDC39;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #323444;
+  margin: 0;
+}
+
+div.bs_bodyAsideElem {
+  border-left: 1px solid #989079;
+  border-right: 1px solid #989079;
+  border-bottom: 1px solid #989079;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}

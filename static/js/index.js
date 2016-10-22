@@ -1,7 +1,7 @@
 gApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 	.when("/news", {
-		templateUrl : "/static/pages/news.html",
+		templateUrl : "/static/pages/home.html",
 		controller: "newsController"
 	})
 	.when("/store", {
@@ -32,17 +32,16 @@ gApp.config(['$routeProvider', function($routeProvider) {
 		templateUrl : "/static/pages/about-us.html",
 		controller: "aboutController"
 	})
-	.when("/support", {
-		templateUrl : "/static/pages/support.html",
-		controller: "supportController"
-	})
 	.when("/user", {
 		templateUrl : "/static/pages/user.html",
 		controller: "userController"
 	})
-	.otherwise({
-		templateUrl : "<h1>404 no such page</h1>"
-	 });
+	.when("/404", {
+		templateUrl : "/static/pages/404.html"
+	})
+	.otherwise(
+		{redirectTo:'/404'}
+	);
 }]);
 
 gApp.controller('navbar', function($scope, $location, $uibModal) {
@@ -163,8 +162,7 @@ gApp.controller('breadcrumbController', function($scope, $location) {
 	// хреновый подход!
 	var pages = { 'Новости' : '/news', 'Магазин' : '/store', 'Блог' : '/blog', 
 				  'Контакты' : '/contact', 'Q&A' : '/qna', 
-			      'О нас' : '/about-us', 'Поддержать проект': '/support', 
-			      'Пользователь': '/user'
+			      'О нас' : '/about-us', 'Пользователь': '/user'
 	};
 		
 	$scope.pathStr = function() {

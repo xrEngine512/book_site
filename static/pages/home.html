@@ -1,0 +1,116 @@
+<link rel="stylesheet" type="text/css" href="/static/css/home.css">
+<link rel="stylesheet" type="text/css" href="/static/css/aside.css">
+<link rel="stylesheet" type="text/css" href="/static/css/section.css">
+
+<section class="bs_section">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-3">
+                    <div class="bs_bgAside">
+                        <div class="bs_titleAsideElem">
+                            <h5><i class="fa fa-thumbs-up" aria-hidden="true"> Популярное</i></h5>
+                        </div>
+                        <div class="bs_bodyAsideElem">
+                            книги
+                        </div>
+                        <div class="bs_titleAsideElem">
+                            <h5><i class="fa fa-tags" aria-hidden="true"></i> Теги</h5>
+                        </div>
+                        <div class="bs_bodyAsideElem">
+                            <span class="tag tag-primary">Primary</span>
+                            <span class="tag tag-success">Success</span>
+                            <span class="tag tag-info">Info</span>
+                            <span class="tag tag-warning">Warning</span>
+                            <span class="tag tag-danger">Danger</span>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-sm-9">
+                    <div class="bs_newsBooks">
+                        <div class="bs_newBook">
+                            <img src="http://lorempixel.com/140/160" alt="image book" class="bs_newBookImage">
+                            <p class="bs_newBookTitle">Title</p>
+                            <p class="bs_newBookAuthor">Author</p>
+                        </div>
+                        <div class="bs_newBook">
+                            <img src="http://lorempixel.com/140/160" alt="image book" class="bs_newBookImage">
+                            <p class="bs_newBookTitle">Title</p>
+                            <p class="bs_newBookAuthor">Author</p>
+                        </div>
+                        <div class="bs_newBook">
+                            <img src="http://lorempixel.com/140/160" alt="image book" class="bs_newBookImage">
+                            <p class="bs_newBookTitle">Title</p>
+                            <p class="bs_newBookAuthor">Author</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+             <div class="col-sm-3">
+                <div class="bs_bgAside">
+                    <div class="bs_titleAsideElem">
+                        <h5><i class="fa fa-newspaper-o" aria-hidden="true"></i> Дата новости</h5>
+                    </div>
+                    <div class="bs_bodyAsideElem">
+                        <a href="#" class="bs_dates">&ensp;2016</a>
+                        <a href="#" class="bs_dates">&ensp;2015</a>
+                        <a href="#" class="bs_dates">&ensp;2014</a>
+                    </div>
+                    <div class="bs_titleAsideElem">
+                        <h5><i class="fa fa-thumbs-up" aria-hidden="true"> Популярное</i></h5>
+                    </div>
+                    <div class="bs_bodyAsideElem">
+                        новости
+                    </div>
+                    <div class="bs_titleAsideElem">
+                        <h5><i class="fa fa-tags" aria-hidden="true"></i> Теги</h5>
+                    </div>
+                    <div class="bs_bodyAsideElem">
+                        <span class="tag tag-primary">Primary</span>
+                        <span class="tag tag-success">Success</span>
+                        <span class="tag tag-info">Info</span>
+                        <span class="tag tag-warning">Warning</span>
+                        <span class="tag tag-danger">Danger</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div ng-controller="newsController as posts">
+                    <div class="post bs_news" ng-repeat="post in posts.news">
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">Details</dt>
+                            <dd class="category-name">
+                                Важность:
+                                <span class="tag tag-default">{{post.tags}}</span>
+                                <span class="tag tag-primary">Primary</span>
+                                <span class="tag tag-success">Success</span>
+                                <span class="tag tag-danger">Danger</span>
+                            </dd>
+                            <dd class="published"> <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <time datetime="2016-05-11T13:39:26+00:00" itemprop="datePublished">Опубликовано: {{post.date}}</time>
+                            </dd>
+                        </dl>
+                        <div class="main-post">
+                            <header>
+                                <h3>{{post.title}}</h3>
+                            </header>
+                            <article class="bs_newsArticle">{{post.content}}</article>
+                        </div>
+                        <div class="author-news">
+                            <p class="author">
+                                <span>{{post.author}}</span> <i class="fa fa-user" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

@@ -3,5 +3,5 @@ from django.shortcuts import render
 
 
 def index(request):
-    with open('index.html') as html:
+    with open('index.html', encoding='utf-8') as html:
         return HttpResponse(html.read())

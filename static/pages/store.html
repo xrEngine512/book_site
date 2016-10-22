@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/static/css/store.css">
 <link rel="stylesheet" type="text/css" href="/static/css/sort.css">
+<link rel="stylesheet" type="text/css" href="/static/css/aside.css">
 
 <div class="container" ng-controller="storeController">
 	<div class="row">
@@ -63,10 +64,10 @@
 			<!-- старый -->
 			<!-- <div ng-controller="categoriesController">	
 			</div> -->
-			<div class="bg-elements-aside">
-			<!-- жанр -->
+			<div class="bs_bgAside">
+			    <!-- жанр -->
 				<div ng-controller="asideController as aside">
-					<div class="bs_titleForAsideElem">
+					<div class="bs_titleAsideElem">
 						<h5><i class="fa fa-bookmark" aria-hidden="true"></i> Жанр</h5>			
 					</div>
 					<div class="bs_bodyAsideElem">
@@ -76,23 +77,25 @@
 								<label class="bs_label" for="{{category.id}}">{{category.name}}</label>
 							</div>
 						</div>
+                        <!-- filter -->
+                        <strong>Фильтр:</strong>
+					    <div ng-controller="filtersController as filter">
+                            <div class="bs_chipsCategories" >
+                                <div ng-repeat="chipCategory in filter.listActiveCategories" class="bs_chips">
+                                    <div class="bs_chip">
+                                        {{chipCategory}}
+                                        <span class="bs_iconChip"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+					    </div>
+					    <!-- доработать! -->
+					    <div class="bs_clearFilterCategories"><a href="">Сброс</a></div>
 					</div>
-					<strong>Фильтр:</strong>
-					<div ng-controller="filtersController as filter">
-						<div class="bs_chipsCategories" >
-							<div ng-repeat="chipCategory in filter.listActiveCategories" class="bs_chips">
-								<div class="bs_chip">
-									{{chipCategory}}
-									<span class="bs_iconChip"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- доработать! -->
-					<div class="bs_clearFilterCategories"><a href="">Сброс</a></div>
+
 				</div>
 				<!-- цена -->
-				<div class="bs_titleForAsideElem">
+				<div class="bs_titleAsideElem">
 					<h5><i class="fa fa-rub" aria-hidden="true"></i> Цена</h5>
 				</div>	
 				<div class="bs_bodyAsideElem" ng-controller="sliderController">	
@@ -109,7 +112,7 @@
 					</div>			
 				</div>
 				<!-- теги -->
-				<div class="bs_titleForAsideElem">
+				<div class="bs_titleAsideElem">
 					<h5><i class="fa fa-tags" aria-hidden="true"></i> Теги</h5>
 				</div>
 				<div class="bs_bodyAsideElem">
@@ -119,8 +122,6 @@
 					<span class="tag tag-warning">Warning</span>
 					<span class="tag tag-danger">Danger</span>
 				</div>
-				<!-- нижняя граница -->
-				<div class="bs_bottomBorder"></div>	
 			</div>	
 		</div>
 		<!-- книги -->

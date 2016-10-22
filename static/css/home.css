@@ -1,41 +1,37 @@
-.bs_bgAside {
+.bs_newsBooks {
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
+  pargin-bottom: 10px;
 }
 
-div.bs_titleAsideElem > h5 {
-  padding: 8px;
-  border-bottom: 1px solid #989079;
-  letter-spacing: 2px;
-  background-color: #CDDC39;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  color: #323444;
-  margin: 0;
+.bs_newBook {
+  display: inline-block;
+  border: 1px solid #8bc34a;
 }
 
-div.bs_bodyAsideElem {
-  border-left: 1px solid #989079;
-  border-right: 1px solid #989079;
-  padding: 10px;
-  margin: 0;
+.bs_newBookImage {
+
 }
 
-div.bs_bodyAsideElem > a.bs_dates {
+.bs_newBookTitle {
+  text-align: center;
+}
+
+.bs_newBookAuthor {
+  text-align: center;
+}
+
+a.bs_dates {
   text-align: start;
   outline: none;
   text-decoration: none;
   color: #989079;
 }
 
-div.bs_bodyAsideElem > a.bs_dates:hover {
+a.bs_dates:hover {
   color: #322343;
-}
-
-div.bs_bottomBorder {
-  border-top: 1px solid #989079;
 }
 
 a.bs_dates:before {
@@ -46,14 +42,10 @@ a.bs_dates {
   display: block;
 }
 
-.post {
-  max-height: 250px;
-}
-
 .bs_news {
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
 }

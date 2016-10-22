@@ -1,4 +1,3 @@
-
 /* Книги в виде "card"-элемента */
 
 .card {
@@ -88,35 +87,6 @@
 
 /* Aside: категории, ползунок цены, корзина */
 
-.bg-elements-aside {
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.bs_titleForAsideElem > h5 {
-  padding: 8px;
-  border-bottom: 1px solid #989079;
-  letter-spacing: 2px;
-  background-color: #CDDC39;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  color: #323444;
-  margin: 0;
-}
-
-div.bs_bodyAsideElem {
-  border-left: 1px solid #989079;
-  border-right: 1px solid #989079;
-  padding: 10px;
-  margin: 0;
-}
-
-div.bs_bottomBorder {
-  border-top: 1px solid #989079;
-}
-
 /* слайдер цены */
 
 .rzslider .rz-pointer {
@@ -157,8 +127,6 @@ div.bs_priceInputs input {
 
 div.bs_clearFilterCategories {
   text-align: center;
-  border-left: 1px solid #989079;
-  border-right: 1px solid #989079;
 }
 
 div.bs_clearFilterCategories > a {
