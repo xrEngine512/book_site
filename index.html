@@ -91,11 +91,12 @@
 					</li>
 				</div>
 				<div class="right">
-					<li>
-						<a href="" ng-mouseover="showCartContent()" ng-mouseout="hideCartContent()" ng-click="openCartDialog()">
+					<li class="bs_liCart">
+						<a href="" ng-click="openCartDialog()">
 							<span class="fa fa-shopping-cart" aria-hidden="true"></span>
 							<span class="text-cart">Корзина</span>
 						</a>
+                        <span class="numb">2</span>
 					</li>
 					<li>
 						<a href="" ng-click="openRegistrationDialog()">
@@ -199,7 +200,7 @@
 		</div>
 	</div> <!-- конец хлебные крошки -->
 
-	<!-- содержимое корзины при наведении -->
+	<!-- содержимое корзины при наведении
 	<div id="headCart" class="bs_headCart">
 
 	</div>
@@ -230,15 +231,13 @@
 		<div class="bs_footerCart">
 			Всего: {{cart.getTotalPrice()}}
 		</div>
-	</div>	<!-- конец корзины -->
+	</div>	конец корзины -->
 
-    <div class="parallax"></div>
+
 
 	<main id="main" site-dynamic-content>
 		<div ng-view></div>
 	</main>
-
-    <div class="parallax"></div>
 
 	<!-- пока только шаблон! -->
 	<footer id="footer" class="bs_footer" site-footer>

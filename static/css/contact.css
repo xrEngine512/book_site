@@ -1,5 +1,7 @@
 .bs_contact {
 	background-color: #ffffff;
+	width: 90%;
+	margin: auto;
 }
 
 .bs_map {
@@ -35,7 +37,7 @@
 	transition: all 0.5s;
 }
 
-.btn:after {
+.btn::after {
 	content: '';
 	position: absolute;
 	z-index: -1;
@@ -44,7 +46,7 @@
 	transition: all 0.5s;
 }
 
-.btn:before {
+.btn::before {
 	speak: none;
 	font-style: normal;
 	font-weight: normal;

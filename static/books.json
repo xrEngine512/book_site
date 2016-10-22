@@ -1,0 +1,244 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Rodeology",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 1.13,
+      "author": "Пушкин А.С.",
+      "quantity": 17
+    },
+    {
+      "id": "2",
+      "title": "Biotica",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 22.89,
+      "author": "Пушкин А.С.",
+      "quantity": 11
+    },
+    {
+      "id": "3",
+      "title": "Billmed",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 30.7,
+      "author": "Пушкин А.С.",
+      "quantity": 19
+    },
+    {
+      "id": "4",
+      "title": "Webiotic",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 27.92,
+      "author": "Пушкин А.С.",
+      "quantity": 21
+    },
+    {
+      "id": "5",
+      "title": "Centregy",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 39.02,
+      "author": "Пушкин А.С.",
+      "quantity": 12
+    },
+    {
+      "id": "6",
+      "title": "Poshome",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 15.53,
+      "author": "Пушкин А.С.",
+      "quantity": 20
+    },
+    {
+      "id": "7",
+      "title": "Photobin",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 26.58,
+      "author": "Пушкин А.С.",
+      "quantity": 23
+    },
+    {
+      "id": "8",
+      "title": "Pathways",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 33.52,
+      "author": "Пушкин А.С.",
+      "quantity": 21
+    },
+    {
+      "id": "9",
+      "title": "Xurban",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 35.76,
+      "author": "Пушкин А.С.",
+      "quantity": 17
+    },
+    {
+      "id": "10",
+      "title": "Trasola",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 17.81,
+      "author": "Пушкин А.С.",
+      "quantity": 10
+    },
+    {
+      "id": "11",
+      "title": "Eyewax",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 17.86,
+      "author": "Пушкин А.С.",
+      "quantity": 13
+    },
+    {
+      "id": "12",
+      "title": "Dymi",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 4.4,
+      "author": "Пушкин А.С.",
+      "quantity": 17
+    },
+    {
+      "id": "13",
+      "title": "Lotron",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 12.81,
+      "author": "Пушкин А.С.",
+      "quantity": 19
+    },
+    {
+      "id": "14",
+      "title": "Ewaves",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 15.37,
+      "author": "Пушкин А.С.",
+      "quantity": 10
+    },
+    {
+      "id": "15",
+      "title": "Satiance",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 2.77,
+      "author": "Пушкин А.С.",
+      "quantity": 21
+    },
+    {
+      "id": "16",
+      "title": "Mantro",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 24.96,
+      "author": "Пушкин А.С.",
+      "quantity": 14
+    },
+    {
+      "id": "17",
+      "title": "Vicon",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 14.95,
+      "author": "Пушкин А.С.",
+      "quantity": 10
+    },
+    {
+      "id": "18",
+      "title": "Progenex",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 20.59,
+      "author": "Пушкин А.С.",
+      "quantity": 21
+    },
+    {
+      "id": "19",
+      "title": "Darwinium",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 34.41,
+      "author": "Пушкин А.С.",
+      "quantity": 11
+    },
+    {
+      "id": "20",
+      "title": "Zoid",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 31.14,
+      "author": "Пушкин А.С.",
+      "quantity": 17
+    },
+    {
+      "id": "21",
+      "title": "Plasmox",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 33.17,
+      "author": "Пушкин А.С.",
+      "quantity": 20
+    },
+    {
+      "id": "22",
+      "title": "Veraq",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 29.78,
+      "author": "Пушкин А.С.",
+      "quantity": 18
+    },
+    {
+      "id": "23",
+      "title": "Techade",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 20.8,
+      "author": "Пушкин А.С.",
+      "quantity": 20
+    },
+    {
+      "id": "24",
+      "title": "Quilch",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 6.5,
+      "author": "Пушкин А.С.",
+      "quantity": 14
+    },
+    {
+      "id": "25",
+      "title": "Austech",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 9.32,
+      "author": "Пушкин А.С.",
+      "quantity": 13
+    },
+    {
+      "id": "26",
+      "title": "Corpulse",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 16.85,
+      "author": "Пушкин А.С.",
+      "quantity": 14
+    },
+    {
+      "id": "27",
+      "title": "Musaphics",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 11.95,
+      "author": "Пушкин А.С.",
+      "quantity": 10
+    },
+    {
+      "id": "28",
+      "title": "Scentric",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 32.92,
+      "author": "Пушкин А.С.",
+      "quantity": 11
+    },
+    {
+      "id": "29",
+      "title": "Frosnex",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 25.51,
+      "author": "Пушкин А.С.",
+      "quantity": 20
+    },
+    {
+      "id": "30",
+      "title": "Zogak",
+	    "image": "http://lorempixel.com/250/300/",
+      "price": 26.83,
+      "author": "Пушкин А.С.",
+      "quantity": 17
+    }
+  ]
+}
