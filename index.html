@@ -159,7 +159,8 @@
 					</a>
 				</li>
 				<li class="about-usLi bs_negativeMargin">
-					<a ng-class="{ active: isActive('/about-us') }" href="#about-us">
+					<a
+                            ng-class="{ active: isActive('/about-us') }" href="#about-us">
 						<span class="fa fa-users" aria-hidden="true"></span>
 						&nbspО нас
 					</a>
@@ -231,10 +232,13 @@
 		</div>
 	</div>	<!-- конец корзины -->
 
+    <div class="parallax"></div>
 
 	<main id="main" site-dynamic-content>
 		<div ng-view></div>
 	</main>
+
+    <div class="parallax"></div>
 
 	<!-- пока только шаблон! -->
 	<footer id="footer" class="bs_footer" site-footer>

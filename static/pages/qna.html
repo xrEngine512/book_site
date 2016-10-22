@@ -1,14 +1,17 @@
 <link rel="stylesheet" type="text/css" href="/static/css/qna.css">
+<link rel="stylesheet" type="text/css" href="/static/css/section.css">
 
-<div ng-controller="qnaController">
-	<div class="container">
-		<div class="row">
-			<div ng-repeat="question in questions" on-last-repeat>
-				<button class="accordion">{{question.title}}</button>
-					<div class="panel">
-						<p>{{question.content}}</p>
-					</div>
-			</div>
-		</div>
-	</div>
-</div>
+<section class="bs_section">
+    <div ng-controller="qnaController">
+        <div class="container">
+            <div class="row">
+                <div ng-repeat="question in questions" on-last-repeat>
+                    <button class="accordion">{{question.title}}</button>
+                        <div class="panel">
+                            <p>{{question.content}}</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
