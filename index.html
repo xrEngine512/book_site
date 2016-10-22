@@ -54,6 +54,7 @@
 	<script type="text/javascript" src="/static/js/aside.js"></script>
 	<script type="text/javascript" src="/static/js/cart.js"></script>
 	<script type="text/javascript" src="/static/js/user.js"></script>
+	<script type="text/javascript" src="/static/js/logout.js"></script>
 </head>
 <body ng-app="BookStoreApp">
 
@@ -96,13 +97,25 @@
 						</a>
                         <span class="numb">2</span>
 					</li>
-					<li>
+                    <li id="btn-user" style="display: none">
+						<a href="" ng-click="openUser()">
+							<span class="fa fa-user" aria-hidden="true"></span>
+							<span class="text-user">{{ current_username }}</span>
+						</a>
+					</li>
+					<li id="btn-logout" style="display: none">
+						<a href="" ng-click="openLogoutDialog()">
+							<span class="fa fa-share" aria-hidden="true"></span>
+							<span class="text-share">Выход</span>
+						</a>
+					</li>
+					<li id="btn-registration">
 						<a href="" ng-click="openRegistrationDialog()">
 							<span class="fa fa-user" aria-hidden="true"></span>
 							<span class="text-user">Регистрация</span>
 						</a>
 					</li>
-					<li>
+					<li id="btn-login">
 						<a href="" ng-click="openLoginDialog()">
 							<span class="fa fa-share" aria-hidden="true"></span>
 							<span class="text-share">Вход</span>

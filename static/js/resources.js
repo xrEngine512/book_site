@@ -26,9 +26,6 @@ gApp.factory('Blog', function ($resource) {
             transformRequest: multipartRequest,
             headers: { 'Content-Type': undefined }
         }
-    },
-    {
-        stripTrailingSlashes: false
     })
 }).factory('Files', function ($resource) {
     return $resource('api/files/', {}, {
@@ -37,11 +34,32 @@ gApp.factory('Blog', function ($resource) {
             transformRequest: multipartRequest,
             headers: { 'Content-Type': undefined }
         }
-    },
-    {
-        stripTrailingSlashes: false
     })
+}).factory('User', function ($resource) {
+    // defining the endpoints.
+    return {
+        auth: function (credentialsGetter) {    //Because some fucking RETARD have decided to remove header modification in transform request
+            return $resource('/api/auth/', {}, {
+                    login: {
+                        method: 'POST',
+                        headers: {Authorization: ('Basic ' + btoa(credentialsGetter()))}
+                    }
+                }
+            )
+        },
+        current: $resource('/api/auth/', {},{
+                user: {method: 'GET'},
+                logout: {method: 'DELETE'}
+            }
+        ),
+        users: $resource('/api/users/', {}, {
+                create: {method: 'POST'}
+            }
+        )
+    };
 }).config(function ($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+}).config(function ($resourceProvider) {
+    $resourceProvider.defaults.stripTrailingSlashes = false;
 });
