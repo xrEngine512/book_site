@@ -14,8 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
 	<!-- для корзины -->
 	<link rel="stylesheet" type="text/css" href="/static/css/cart-content.css">
-	<!-- lodash -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.15.0/lodash.min.js" type="text/javascript"></script> -->
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
 
@@ -170,23 +168,19 @@
 					<a href="javascript:void(0);" style="font-size:15px;" ng-click="openNavbar()">☰</a>
 				</li>
 				<li class="search">
-					<a href="javascript:void(0);" ng-click="search_book()">
+					<a href="javascript:void(0);" ng-click="searchBook()">
 						<span class="fa fa-search" aria-hidden="true"></span>
 					</a>
+					<!-- форма поиска -->
+					<div class="bs_search-form" id="Search">
+						<input type="text" placeholder="Найти книгу...">
+						<button>Поиск</button>		
+					</div> <!-- конец формы поиска -->
 				</li>
 			</ul>
 		</nav> <!-- конец основной навигации -->
 
-		<!-- форма поиска -->
-		<div class="bs_search-closed" id="Search">
-			<br>
-			<form class="bs_search-form" role="search" id="search-form">
-				<input class="bs_search-input" type="text" placeholder="Найти книгу...">
-				<button class="bs_search-button" type="submit" ><span class="fa fa-search" aria-hidden="true"></span></button>
-			</form>
-			<br>
-			<span ng-click="close_divSearch()" class="close-icon fa fa-times" aria-hidden="true"></span>
-		</div> <!-- конец формы поиска -->
+		
 
 	</header> <!-- конец header -->
 
@@ -199,41 +193,6 @@
 			</nav>
 		</div>
 	</div> <!-- конец хлебные крошки -->
-
-	<!-- содержимое корзины при наведении
-	<div id="headCart" class="bs_headCart">
-
-	</div>
-	<div id="cartContent" class="bs_cart" ng-controller="cartControllerShowContent as cart">
-
-		<div class="bs_cartContent" ng-repeat="book in cart.books">
-			<ul>
-				<li class="bs_bodyCart">
-					<div>
-						<div class="bs_media">
-							<div class="media-left">
-								<div class="cart-img">
-									<a href="#">
-										<img class="media-object img-responsive" src="/static/img/cart-small-img-1.jpg" alt="book"></a>
-								</div>
-							</div>
-							<div class="media-body">
-								<h4 class="media-heading">{{book.title}}</h4>
-								<h4 class="media-heading">{{book.author}}</h4>
-								<span class="bs_qty">{{book.quantity}}</span>
-								<span class="bs_price">{{book.price}}</span>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="bs_footerCart">
-			Всего: {{cart.getTotalPrice()}}
-		</div>
-	</div>	конец корзины -->
-
-
 
 	<main id="main" site-dynamic-content>
 		<div ng-view></div>

@@ -126,36 +126,13 @@ gApp.controller('navbar', function($scope, $location, $uibModal) {
 		}
 	};
 
-	$scope.search_book = function() {
-		var divIdSearch = document.getElementById("Search");
-		divIdSearch.className += " bs_search";
-	};
-
-	$scope.close_divSearch = function() {
-		var divIdSearch = document.getElementById("Search");
-		divIdSearch.className = "bs_search-closed";
+	$scope.searchBook = function() {
+		document.querySelector("#Search").classList.toggle("bs_search-from-visible");
 	};
 
 	$scope.isActive = function (viewLocation) { 	
         return viewLocation === $location.path();
     };
-
-    $scope.showCartContent = function() {
-    	var elem = document.getElementById("headCart");
-    	elem.style.display = "block";
-    	elem.style.zIndex = "20";
-    	elem = document.getElementById("cartContent");
-    	elem.style.display = "block";
-    	elem.style.zIndex = "20";   	
-    };
-
-    $scope.hideCartContent = function() {
-    	var elem = document.getElementById("headCart");
-    	elem.style.display = "none";
-    	elem = document.getElementById("cartContent");
-    	elem.style.display = "none";
-    };
-
 });
 
 gApp.controller('breadcrumbController', function($scope, $location) {

@@ -377,6 +377,8 @@ ul.navbar li.icon
 
 ul.navbar li.search
 {
+    position: relative;
+
     float: right;
 }
 
@@ -472,63 +474,64 @@ li.about-usLi:hover > div.supportDiv
 
 /* форма поиска */
 
-div.bs_search-closed
+.bs_search-form
 {
-    display: none;
-}
-
-div.bs_search
-{
-    position: relative;
-
-    display: block;
-
-    background-color: #e7dcf3;
-}
-
-form.bs_search-form
-{
-    text-align: center;
-}
-
-input.bs_search-input
-{
-    padding: 5px 5px;
-
-    border: none;
-    outline: none;
-    background-image: none;
-}
-
-button.bs_search-button
-{
-    padding: 5px 15px;
-
-    color: white;
-    border: none;
-    outline: none;
-    background-color: #656565;
-    background-image: none;
-}
-
-.bs_search span.close-icon
-{
-    font-weight: lighter;
-
     position: absolute;
-    top: 0;
+    z-index: 10;
+    top: 60px;
     right: 0;
 
-    float: right;
+    display: none;
 
-    padding: 3px 3px;
+    box-sizing: border-box;
+
+    transition: all ease 1s;
+
+    background-color: #f29f33;
+}
+
+.bs_search-from-visible
+{
+    display: inline-flex;
+
+    transition: all ease 1s;
+}
+
+.bs_search-form input
+{
+    font-size: 1.3em;
+
+    width: 250px;
+    padding: 5px;
+
+    color: #2b2b2b;
+    border: none;
+    background-color: #fafafa;
+}
+
+.bs_search-form button
+{
+    font-size: 1.3em;
+
+    padding: 5px;
 
     cursor: pointer;
+    transition: .5s all ease;
+
+    color: #fafafa;
+    border: none;
+    background-color: #eeb013;
+}
+
+.bs_search-form button:hover
+{
+    color: #111;
+    background-color: #eeb013;
 }
 
 /* конец формы поиска*/
 
-.parallax
+.bs_parallax
 {
     /* Full height */
     height: 35%;
