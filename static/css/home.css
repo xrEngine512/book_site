@@ -1,79 +1,99 @@
-.bs_newsBooks {
-  background-color: #ffffff;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-  border-radius: 5px;
-  padding: 10px;
-  pargin-bottom: 10px;
+.bs_newsBooks
+{
+    padding: 10px;
+
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 8px 5px rgba(0,0,0,.3);
+
+    margin-bottom: 10px;
 }
 
-.bs_newBook {
-  display: inline-block;
-  border: 1px solid #8bc34a;
+.bs_newBook
+{
+    display: inline-block;
+
+    border: 1px solid #8bc34a;
 }
 
-.bs_newBookImage {
 
+
+.bs_newBookTitle
+{
+    text-align: center;
 }
 
-.bs_newBookTitle {
-  text-align: center;
+.bs_newBookAuthor
+{
+    text-align: center;
 }
 
-.bs_newBookAuthor {
-  text-align: center;
+a.bs_dates
+{
+    text-align: start;
+    text-decoration: none;
+
+    color: #989079;
+    outline: none;
 }
 
-a.bs_dates {
-  text-align: start;
-  outline: none;
-  text-decoration: none;
-  color: #989079;
+a.bs_dates:hover
+{
+    color: #322343;
 }
 
-a.bs_dates:hover {
-  color: #322343;
+a.bs_dates:before
+{
+    content: '>';
 }
 
-a.bs_dates:before {
-  content: ">";
+a.bs_dates
+{
+    display: block;
 }
 
-a.bs_dates {
-  display: block;
+.bs_news
+{
+    margin-bottom: 10px;
+    padding: 10px;
+
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 8px 5px rgba(0,0,0,.3);
 }
 
-.bs_news {
-  background-color: #ffffff;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+.article-info
+{
+    width: 85%;
+    margin: 0;
 }
 
-.article-info {
-  margin: 0;
-  width: 85%;
+.article-info-term
+{
+    display: none;
 }
 
-.article-info-term {
-  display: none;
+.article-info dd
+{
+    display: inline-block;
+
+    margin-right: 10px;
+    margin-left: 0;
+
+    white-space: nowrap;
 }
 
-.article-info dd {
-  display: inline-block;
-  margin-left: 0;
-  margin-right: 10px;
-  white-space: nowrap;
+.author-news
+{
+    text-align: right;
 }
 
-.author-news {
-  text-align: right;
+.author
+{
+    padding: 10px;
 }
 
-.author {
-  padding: 10px;
-}
-
-article.bs_newsArticle {
-  text-indent: 20px;
+article.bs_newsArticle
+{
+    text-indent: 20px;
 }

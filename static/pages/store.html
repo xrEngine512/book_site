@@ -5,149 +5,153 @@
 
 <section class="bs_section">
     <div class="container" ng-controller="storeController">
-        <div class="row">
-            <div class="col-md-12">
-                <div ng-controller="sortController as sort">
-                    <div class="bs_sortGroup">
-                        <span>Сортировать: </span>
-                        <!-- Есть select стандартный элемент! -->
-                        <div class="dropdown">
-                            <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortRating}}</button>
-                            <div id="menuAuthor" class="dropdown-content">
-                            <!-- полая звезда: <i class="fa fa-star-o" aria-hidden="true"></i> -->
-                            <!-- на половну заполненная: <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
-                                <a href=""><i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                </a>
-                                <a href=""><i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                </a>
-                                <a href=""><i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                </a>
-                                <a href=""><i class="fa fa-star" aria-hidden="true"></i>
-                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                </a>
-                                <a href=""><i class="fa fa-star" aria-hidden="true"></i>
-                                </a>
+        <div class="bs_tab">
+            <div class="bs_tab_caption">Магазин</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div ng-controller="sortController as sort">
+                        <div class="bs_sortGroup">
+                            <span>Сортировать: </span>
+                            <!-- Есть select стандартный элемент! -->
+                            <div class="dropdown">
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortRating}}</button>
+                                <div id="menuAuthor" class="dropdown-content">
+                                    <!-- полая звезда: <i class="fa fa-star-o" aria-hidden="true"></i> -->
+                                    <!-- на половну заполненная: <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
+                                    <a href=""><i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </a>
+                                    <a href=""><i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </a>
+                                    <a href=""><i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </a>
+                                    <a href=""><i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    </a>
+                                    <a href=""><i class="fa fa-star" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dropdown">
-                            <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortAuthor}}</button>
-                            <div id="menuAuthor" class="dropdown-content">
-                                <a href="">[А-Я]</a>
-                                <a href="">[Я-А]</a>
+                            <div class="dropdown">
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortAuthor}}</button>
+                                <div id="menuAuthor" class="dropdown-content">
+                                    <a href="">[А-Я]</a>
+                                    <a href="">[Я-А]</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dropdown">
-                            <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openPrice()">{{sort.sortPrice}}</button>
-                            <div id="menuPrice" class="dropdown-content">
-                                <a href="">По возрастанию</a>
-                                <a href="">По убыванию</a>
+                            <div class="dropdown">
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openPrice()">{{sort.sortPrice}}</button>
+                                <div id="menuPrice" class="dropdown-content">
+                                    <a href="">По возрастанию</a>
+                                    <a href="">По убыванию</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="dropdown">
-                            <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openName()">{{sort.sortName}}</button>
-                            <div id="menuName" class="dropdown-content">
-                                <a href="">[А-Я]</a>
-                                <a href="">[Я-А]</a>
+                            <div class="dropdown">
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openName()">{{sort.sortName}}</button>
+                                <div id="menuName" class="dropdown-content">
+                                    <a href="">[А-Я]</a>
+                                    <a href="">[Я-А]</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <!-- старый -->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <!-- старый -->
                 <!-- <div ng-controller="categoriesController">
-                </div> -->
-                <div class="bs_bgAside">
-                    <!-- жанр -->
-                    <div ng-controller="asideController as aside">
-                        <div class="bs_titleAsideElem">
-                            <h5><i class="fa fa-bookmark" aria-hidden="true"></i> Жанр</h5>
-                        </div>
-                        <div class="bs_bodyAsideElem">
-                            <div ng-repeat="category in aside.listCategories">
-                                <div class="checkbox">
-                                    <input class="bs_ckeck" id="{{category.id}}" type="checkbox" name="check" value="{{category.id}}" ng-model="category.selected" ng-change="aside.addCategoryActiveList(category)">
-                                    <label class="bs_label" for="{{category.id}}">{{category.name}}</label>
-                                </div>
+            </div> -->
+            <div class="bs_bgAside">
+                <!-- жанр -->
+                <div ng-controller="asideController as aside">
+                    <div class="bs_titleAsideElem">
+                        <h5><i class="fa fa-bookmark" aria-hidden="true"></i> Жанр</h5>
+                    </div>
+                    <div class="bs_bodyAsideElem">
+                        <div ng-repeat="category in aside.listCategories">
+                            <div class="checkbox">
+                                <input class="bs_check" id="{{category.id}}" type="checkbox" name="check" value="{{category.id}}" ng-model="category.selected" ng-change="aside.addCategoryActiveList(category)">
+                                <label class="bs_label" for="{{category.id}}">{{category.name}}</label>
                             </div>
-                            <!-- filter -->
-                            <strong>Фильтр:</strong>
-                            <div ng-controller="filtersController as filter">
-                                <div class="bs_chipsCategories" >
-                                    <div ng-repeat="chipCategory in filter.listActiveCategories" class="bs_chips">
-                                        <div class="bs_chip">
-                                            {{chipCategory}}
-                                            <span class="bs_iconChip"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
-                                        </div>
+                        </div>
+                        <!-- filter -->
+                        <strong>Фильтр:</strong>
+                        <div ng-controller="filtersController as filter">
+                            <div class="bs_chipsCategories" >
+                                <div ng-repeat="chipCategory in filter.listActiveCategories" class="bs_chips">
+                                    <div class="bs_chip">
+                                        {{chipCategory}}
+                                        <span class="bs_iconChip"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- доработать! -->
-                            <div class="bs_clearFilterCategories"><a href="">Сброс</a></div>
                         </div>
+                        <!-- доработать! -->
+                        <div class="bs_clearFilterCategories"><a href="">Сброс</a></div>
+                    </div>
 
-                    </div>
-                    <!-- цена -->
-                    <div class="bs_titleAsideElem">
-                        <h5><i class="fa fa-rub" aria-hidden="true"></i> Цена</h5>
-                    </div>
-                    <div class="bs_bodyAsideElem" ng-controller="sliderController">
-                        <rzslider rz-slider-model="slider.minValue"
-                                  rz-slider-high="slider.maxValue"
-                                  rz-slider-options="slider.options">
-                        </rzslider>
-                        <div class="bs_priceInputs">
-                            <label>от </label>
-                            <!-- Todo: если ввести в input не работает слайдер! -->
-                            <input type="number" name="prace" value="{{slider.minValue}}">
-                            <label>до </label>
-                            <input type="number" name="prace" value="{{slider.maxValue}}">
-                        </div>
-                    </div>
-                    <!-- теги -->
-                    <div class="bs_titleAsideElem">
-                        <h5><i class="fa fa-tags" aria-hidden="true"></i> Теги</h5>
-                    </div>
-                    <div class="bs_bodyAsideElem">
-                        <span class="tag tag-primary">Primary</span>
-                        <span class="tag tag-success">Success</span>
-                        <span class="tag tag-info">Info</span>
-                        <span class="tag tag-warning">Warning</span>
-                        <span class="tag tag-danger">Danger</span>
-                    </div>
+                </div>
+                <!-- цена -->
+                <div class="bs_titleAsideElem">
+                    <h5><i class="fa fa-rub" aria-hidden="true"></i> Цена</h5>
+                </div>
+                <div class="bs_bodyAsideElem" ng-controller="sliderController">
+                    <rzslider rz-slider-model="slider.minValue"
+                    rz-slider-high="slider.maxValue"
+                    rz-slider-options="slider.options">
+                </rzslider>
+                <div class="bs_priceInputs">
+                    <label>от </label>
+                    <!-- Todo: если ввести в input не работает слайдер! -->
+                    <input type="number" name="prace" value="{{slider.minValue}}">
+                    <label>до </label>
+                    <input type="number" name="prace" value="{{slider.maxValue}}">
+                </div>
+                </div>
+                <!-- теги -->
+                <div class="bs_titleAsideElem">
+                    <h5><i class="fa fa-tags" aria-hidden="true"></i> Теги</h5>
+                </div>
+                <div class="bs_bodyAsideElem">
+                    <span class="tag tag-primary">Primary</span>
+                    <span class="tag tag-success">Success</span>
+                    <span class="tag tag-info">Info</span>
+                    <span class="tag tag-warning">Warning</span>
+                    <span class="tag tag-danger">Danger</span>
                 </div>
             </div>
-            <!-- книги -->
-            <div class="col-sm-6 col-md-8 col-lg-9" ng-controller="booksController">
-                <div class="col-sm-12 col-md-6 col-lg-4" ng-repeat="item in products">
-                    <div class="card">
-                        <img class="img-fluid" src="http://lorempixel.com/250/300" alt="Card image cap">
-                        <div class="card-block">
-                            <a href="#/store/{{item.id}}"><h4>{{ item.title }}</h4></a>
-                            <h5>{{ item.author }}</h5>
-                            <h5>{{ item.quantity }}</h5>
-                            <h5>{{ item.price }} <i class="fa fa-rub" aria-hidden="true"></i></h5>
-                            <button class="btn-card" ng-click="addToCart(item)"><i class="fa" ng-class="isActive(item) == false ? 'fa-cart-arrow-down bs_btnCardActive' : 'fa-cart-plus'"></i></button>
-                        </div>
+        </div>
+        <!-- книги -->
+        <div class="col-sm-6 col-md-8 col-lg-9" ng-controller="booksController">
+            <div class="col-sm-12 col-md-6 col-lg-4" ng-repeat="item in products">
+                <div class="card">
+                    <img class="img-fluid" src="http://lorempixel.com/250/300" alt="Card image cap">
+                    <div class="card-block">
+                        <a href="#/store/{{item.id}}"><h5>{{ item.title }}</h5></a>
+                        <p>{{ item.author }}</p>
+                        <p>{{ item.quantity }}</p>
+                        <p>{{ item.price }} <i class="fa fa-rub" aria-hidden="true"></i></p>
+                        <button class="btn-card" ng-click="addToCart(item)"><i class="fa" ng-class="isActive(item) == false ? 'fa-cart-arrow-down bs_btnCardActive' : 'fa-cart-plus'"></i></button>
                     </div>
                 </div>
             </div>
         </div>
+</div>
 
-        <div class="pagination-wrap">
-            <ul class="pagination">
-                <li class="page-item" ng-repeat="page in paginationList" ng-click="showPage(page.link)" ng-class="{'active': currentPageNum() == page.link}"><a ng-bind-html="page.name" class="page-link"></a></li>
-            </ul>
-        </div>
-
+    <div class="pagination-wrap">
+        <ul class="pagination">
+            <li class="page-item" ng-repeat="page in paginationList" ng-click="showPage(page.link)" ng-class="{'active': currentPageNum() == page.link}"><a ng-bind-html="page.name" class="page-link"></a></li>
+        </ul>
     </div>
+</div>
+
+
+</div>
 </section>

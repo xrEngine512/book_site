@@ -1,61 +1,79 @@
-.card {
-  border: none;
-  border-radius: 0;
-  text-align: center;
-} 
+.card
+{
+    text-align: center;
 
-.img-fluid {
-  width: 100%;
+    border: none;
+    border-radius: 0;
 }
 
-.img-wrp {
-	position: relative;
+.img-fluid
+{
+    width: 100%;
 }
 
-.img-wrp:hover > .wrp {
-	display: block;
+.img-wrp
+{
+    position: relative;
 }
 
-.wrp {
-	position: absolute;
-    top: 0px;
-    left: 0px;
+.img-wrp:hover > .wrp
+{
+    display: block;
+}
+
+.wrp
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
     display: none;
-    height: 100%;
+
     width: 100%;
+    height: 100%;
 }
 
-.overlay {
-	opacity: 0.5;
-    height: 100%;
+.overlay
+{
     width: 100%;
+    height: 100%;
+
+    opacity: .5;
     border-radius: 2px;
     background: #000;
 }
 
-ul.overlay-icons {
-	margin-top: -11px;
+ul.overlay-icons
+{
     position: absolute;
+    z-index: 10;
     top: 20%;
     left: 20%;
-    z-index: 10;
-    padding: 0px;
+
+    margin-top: -11px;
+    padding: 0;
 }
 
-ul.overlay-icons a {
-	color: #ffffff;
+ul.overlay-icons a
+{
+    color: #fff;
 }
 
-ul.overlay-icons li {
-	list-style: none;
-    float: left;
+ul.overlay-icons li
+{
     display: inline;
+    float: left;
     /* это бред !!! 30px !*/
-    margin-right: 30px; 
+
+    margin-right: 30px;
+
+    list-style: none;
 }
 
-@media screen and (max-width:543px) {
-    ul.overlay-icons li {
-        margin-right: 80px; 
+@media screen and (max-width:543px)
+{
+    ul.overlay-icons li
+    {
+        margin-right: 80px;
     }
 }

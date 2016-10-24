@@ -1,52 +1,73 @@
-div.bs_bgUserInfo {
-	background-color: #ffffff;
-	padding: 10px;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+div.bs_bgUserInfo
+{
+    padding: 10px;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 5px rgba(0,0,0,.3);
 }
 
-div.bs_profile {
-	float: left;
+.bs_user
+{
+    margin: 0;
 }
 
-div.bs_profileImage {
-	position: relative;
+div.bs_profile
+{
+    float: left;
 }
 
-div.bs_profileImage a {
-	position: absolute;
-	right: 0;
-	top: 0;
-	font-size: 1.5em;
-	color: #111111;
-	background-color: #ffffff;
-	display: none;
+div.bs_profileImage
+{
+    position: relative;
 }
 
-div.bs_profile img {
-	max-width: 100%;
-	border-radius: 10px;
+div.bs_profileImage a
+{
+    font-size: 1.5em;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    color: #111;
+    background-color: #fff;
 }
 
-button.bs_btnLoadImage {
-	margin-top: 10px;
+div.bs_profile img
+{
+    max-width: 100%;
+
+    border-radius: 10px;
 }
 
-div.bs_infoUser {
-	display: inline-block;
+button.bs_btnLoadImage
+{
+    margin-top: 10px;
 }
 
-p.description {
-	font-family: 'gabriola', sans-serif;
-	text-align: left;
-	text-indent: 20px;
+div.bs_infoUser
+{
+    display: inline-block;
 }
 
-strong {
-	display: block;
+p.description
+{
+    font-family: 'gabriola', sans-serif;
+
+    text-align: left;
+    text-indent: 20px;
 }
 
-strong.bs_aboutSelf {
-	display: inline-block;
-	float: left;
+strong
+{
+    display: block;
+}
+
+strong.bs_aboutSelf
+{
+    display: inline-block;
+    float: left;
 }

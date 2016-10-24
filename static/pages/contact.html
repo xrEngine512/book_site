@@ -4,8 +4,11 @@
 <!-- валидация нужна -->
 <section class="bs_section">
     <div class="bs_contact" ng-controller="contactController">
-	    <div class="container">
-            <div class="row bs_paddingTop">
+       <div class="container">
+        <div class="bs_tab">
+            <div class="row ">
+                
+                <div class="bs_tab_caption">Наши контакты</div>
                 <div class="col-sm-6 bs_map">
                     <div id="googleMap"></div>
                 </div>
@@ -26,7 +29,11 @@
                     </div>
                 </div>
             </div>
-            <hr>
+            
+        </div>
+        
+        <div class="bs_tab">
+            <div class="bs_tab_caption">Свяжитесь с нами</div>
             <div class="row">
                 <div class="col-sm-12">
                     <div class="row">
@@ -48,14 +55,16 @@
                             <textarea class="form-control" id="comments" name="comments" placeholder="Комментарий" rows="5"></textarea>
                         </div>
                     </div>
-                    <div class="row bs_paddingTop">
+                    <div class="row">
                         <button class="btn btn-small btn-service btn-message br-8 pull-right" type="submit">Послать</button>
                     </div>
                 </div>
             </div>
         </div>
-
+        
     </div>
+
+</div>
 </section>
 
 

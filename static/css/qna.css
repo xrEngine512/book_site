@@ -1,52 +1,73 @@
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
+button.accordion
+{
     font-size: 15px;
-    transition: 0.4s;
+
+    width: 100%;
+    padding: 18px;
+
+    cursor: pointer;
+    transition: .4s;
+    text-align: left;
+
+    color: #444;
+    border: none;
+    outline: none;
+    background-color: #eee;
 }
 
-button.accordion.active, button.accordion:hover {
+button.accordion.active,
+button.accordion:hover
+{
+    color: #fff;
     background-color: #a874b1;
-    color: #ffffff;
 }
 
-button.accordion:hover:after {
-    color: #ffffff;
+button.accordion:hover:after
+{
+    color: #fff;
 }
 
-button.accordion:after {
-    content: '\02795';
+button.accordion:after
+{
     font-size: 13px;
-    color: #777;
+
     float: right;
+
     margin-left: 5px;
+
+    content: '\02795';
+
+    color: #777;
 }
 
-button.accordion.active:after {
-    content: "\2796";
-    color: #ffffff;
+button.accordion.active:after
+{
+    content: '\2796';
+
+    color: #fff;
 }
 
-div.panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
+div.panel
+{
     overflow: hidden;
-    transition: 0.6s ease-in-out;
+
+    max-height: 0;
+    padding: 0 18px;
+
+    transition: .6s ease-in-out;
+
     opacity: 0;
+    background-color: white;
 }
 
-div.panel.show {
-    opacity: 1;
+div.panel.show
+{
     max-height: 500px;
+
+    opacity: 1;
 }
 
-p {
-	padding-top: 10px;
+p
+{
+    padding-top: 10px;
 }

@@ -1,53 +1,74 @@
 /* main group */
-.bs_sortGroup {
-  padding: 7px;
-  background-color: #ffffff;
-  margin-bottom: 10px;
-  float: right;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  border-radius: 10px;
+.bs_sortGroup
+{
+    float: right;
+
+    margin-bottom: 10px;
+    padding: 7px;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 
 /* dropdowns */
-.dropbtn {
-    background-color: #8bc34a;
-    color: white;
+.dropbtn
+{
     font-size: 16px;
-    border: none;
+
     cursor: pointer;
+
+    color: white;
+    border: none;
+    background-color: #8bc34a;
 }
 
-.dropbtn:hover {
+.dropbtn:hover
+{
     background-color: #3e8e41;
 }
 
-.dropdown-content a {
-    color: black;
+.dropdown-content a
+{
+    display: block;
+
     text-decoration: none;
+
+    color: black;
+}
+
+.dropdown-content a:hover
+{
+    background-color: #f1f1f1;
+}
+
+.dropdown
+{
+    position: relative;
+    z-index: 10;
+
+    display: inline-block;
+}
+
+.dropdown-content
+{
+    position: absolute;
+
+    display: none;
+
+    min-width: 160px;
+
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+}
+
+.dropdown:hover .dropdown-content
+{
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    z-index: 10;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown:hover .dropdown-content {
- display: block;
-}
-
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn
+{
     background-color: #3e8e41;
 }
 
@@ -55,29 +76,40 @@
 /* .show {display:block !important;} */
 
 /* chips */
-.bs_chip {
-    display: inline-block;
-    padding: 0 15px;
-    height: 25px;
+.bs_chip
+{
     font-size: 16px;
+
+    display: inline-block;
+
+    height: 25px;
+    padding: 0 15px;
+
+    color: #fff;
     border-radius: 20px;
     background-color: #c5d20a;
-    color: #ffffff;
 }
 
-.bs_chips {
-  display: inline-block;
-  margin-left: 10px;
+.bs_chips
+{
+    display: inline-block;
+
+    margin-left: 10px;
 }
 
-.bs_iconChip {
-    padding-left: 10px;
-    color: #ffffff;
-    font-weight: bold;
-    float: right;
+.bs_iconChip
+{
     font-size: 16px;
+    font-weight: bold;
+
+    float: right;
+
+    padding-left: 10px;
+
+    color: #fff;
 }
 
-.bs_chipsCategories {
-  margin-bottom: 10px;
+.bs_chipsCategories
+{
+    margin-bottom: 10px;
 }

@@ -1,37 +1,45 @@
 <link rel="stylesheet" type="text/css" href="/static/css/user.css">
+<link rel="stylesheet" type="text/css" href="/static/css/section.css">
 
-<div class="container" ng-controller="userController as $user">
-	<div class="row">
-		<div class="col-sm-12 bs_bgUserInfo">
-			<div class="col-sm-3 bs_profile">
-				<div class="bs_profileImage">
-					<img src="http://lorempixel.com/250/300/people" alt="profile image">
-					<a href="#">x</a>
-					<button class="btn btn-primary bs_btnLoadImage" type="submit">Загрузить фото</button>
+<section class="bs_section">
+	<div class="container" ng-controller="userController as $user">
+		<div class="bs_tab">
+			<div class="bs_tab_caption">Ваш профиль</div>
+			<div class="row bs_user">
+				<div class="col-sm-12 bs_bgUserInfo">
+					<div class="col-sm-3 bs_profile">
+						<div class="bs_profileImage">
+							<img src="http://lorempixel.com/250/300/people" alt="profile image">
+							<a href="#">x</a>
+							<button class="btn btn-primary bs_btnLoadImage" type="submit">Загрузить фото</button>
+						</div>
+					</div>
+
+					<div class="col-sm-3 bs_infoUser">
+						<strong>Ник: Sergey</strong>
+						<strong>Имя: Сергей</strong>
+						<strong>Почта: sergey@mail.ru</strong>
+						<div class="bs_passwordLoad">
+							<input type="password" name="" placeholder="Старый пароль">
+							<button class="btn btn-primary" >Сменить пароль</button>
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<strong class="bs_aboutSelf">О себе: </strong>
+						<p class="description">Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet vel, nullam in in lorem vel. In molestie elit dui dictum, praesent nascetur pulvinar sed, in dolor pede in aliquam, risus nec error quis pharetra.</p>
+					</div>
 				</div>
 			</div>
-			
-			<div class="col-sm-3 bs_infoUser">
-				<strong>Ник: Sergey</strong>
-				<strong>Имя: Сергей</strong>
-				<strong>Почта: sergey@mail.ru</strong>
-				<div class="bs_passwordLoad">
-					<input type="password" name="" placeholder="Старый пароль">
-					<button class="btn btn-primary" >Сменить пароль</button>
+		</div>
+		<div class="bs_tab">
+			<div class="bs_tab_caption">Ваш покупки</div>
+			<div class="row bs_user">		
+				<div class="col-sm-12 bs_bgUserInfo">
+					Товары: книги
 				</div>
 			</div>
-
-			<div class="col-sm-6">
-				<strong class="bs_aboutSelf">О себе: </strong>
-				<p class="description">Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed, sit duis vestibulum ultricies, placerat morbi amet vel, nullam in in lorem vel. In molestie elit dui dictum, praesent nascetur pulvinar sed, in dolor pede in aliquam, risus nec error quis pharetra.</p>
-			</div>
 		</div>
+		
 	</div>
-	<div class="row">
-		<hr>		
-		<div class="col-sm-12 bs_bgUserInfo">
-			Ваши покупки:
-		</div>
-	</div>
-	
-</div>
+</section>

@@ -3,7 +3,7 @@
 <div id="modalDialog-bg" ng-cloak>
 	<div id="modalDialog">
 		<div class="bs_modal-header">
-			<button type="button" class="btn btn-outline-info" ng-click="$login.close()">&times;</button>
+			<button type="button" class="btn bs_circleButton" ng-click="$login.close()">x</button>
 		</div>
 		<div class="bs_modal-content">
 			<form>
@@ -25,9 +25,8 @@
 						</span>
 					</div>
 					<div class="checkbox">
-						<label>
-							<input type="checkbox">Запомнить меня
-						</label>
+					<input class="bs_check" id="remember" type="checkbox" name="check">
+						<label class="bs_label" for="remember">Запомнить меня</label>
 					</div>
 					<button type="submit" class="btn btn-primary bs_btn">Вход</button>
 				</fieldset>
