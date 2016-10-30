@@ -1,40 +1,92 @@
 <link type="text/css" rel="stylesheet" href="/static/css/blog.css">
+<link rel="stylesheet" type="text/css" href="/static/css/aside.css">
+<link rel="stylesheet" type="text/css" href="/static/css/section.css">
 
-<div class="container">
-    <div class="row">
-    <div ng-repeat="entry in blog_entries">
-        <article class="col-sm-4 bs-blog-entry bs-blog-entry-item">
-            <header class="bs-blog-entry-header">
-                <h2>
-                    {{ entry.header }}
-                </h2>
-            </header>
-             <section>
-                 <div class="row">
-                     <img class="col-sm-6 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
-                     <div class="col-sm-6" id="description-container">
-                         <div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
-                         <div class="bs-blog-entry-author">
-                             <div class="col-sm-3">
-                                 <img src="http://placehold.it/32x32">
-                             </div>
-                             <div class="col-sm-9">
-                                 <a href="">{{ entry.author.username }}</a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="row bs-blog-entry-footer">
-                     <a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}"">Читать дальше<span class="fa-arrow-right"></span></a>
-                     <section class="bs-blog-entry-date">
-                         <i class="fa-calendar"></i>
-                         <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
-                             {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
-                         </time>
-                     </section>
-                 </div>
-             </section>
-        </article>
-    </div>
-    </div>
-</div>
+<section class="bs_section">
+
+	<div class="container">
+		<div class="bs_tab">
+			<div class="bs_tab_caption">Блог</div>
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="bs_bgAside">
+						<div class="bs_titleAsideElem">
+							<h5><i class="fa fa-thumbs-up" aria-hidden="true"> Популярное</i></h5>
+						</div>
+						<div class="bs_bodyAsideElem">
+							Блог посты
+						</div>
+						<div class="bs_titleAsideElem">
+							<h5><i class="fa fa-tags" aria-hidden="true"></i> Теги</h5>
+						</div>
+						<div class="bs_bodyAsideElem">
+							<span class="tag tag-primary">Primary</span>
+							<span class="tag tag-success">Success</span>
+							<span class="tag tag-info">Info</span>
+							<span class="tag tag-warning">Warning</span>
+							<span class="tag tag-danger">Danger</span>
+						</div>
+					</div>
+				</div>
+				<div ng-repeat="entry in blog_entries">
+					<article class="col-sm-4 bs-blog-entry bs-blog-entry-item">
+						<header class="bs-blog-entry-header">
+							<h2>
+								{{ entry.header }}
+							</h2>
+						</header>
+						<section>
+							<div class="row">
+								<img class="col-sm-6 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
+								<div class="col-sm-6" id="description-container">
+									<div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
+									<div class="bs-blog-entry-author">
+										<div class="col-sm-3">
+											<img src="/static/img/avatar32x32.png">
+										</div>
+										<div class="col-sm-9">
+											<a href="">{{ entry.author.username }}</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row bs-blog-entry-footer">
+								<a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}"">Читать дальше&nbsp;<i class="fa fa-arrow-right"></i></a>
+								<section class="bs-blog-entry-date">
+									<i class="fa fa-calendar"></i>
+									<time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
+										{{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
+									</time>
+								</section>
+							</div>
+						</section>
+					</article>
+				</div>
+			</div>
+
+            <!-- template pagination -->
+            <div style="text-align: center">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+
+		</div>
+	</div>
+</section>

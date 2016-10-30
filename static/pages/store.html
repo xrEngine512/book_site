@@ -132,11 +132,10 @@
         <div class="col-sm-6 col-md-8 col-lg-9" ng-controller="booksController">
             <div class="col-sm-12 col-md-6 col-lg-4" ng-repeat="item in products">
                 <div class="card">
-                    <img class="img-fluid" src="http://lorempixel.com/250/300" alt="Card image cap">
+                    <img class="img-fluid" src="/static/img/book.png" alt="Card image cap">
                     <div class="card-block">
                         <a href="#/store/{{item.id}}"><h5>{{ item.title }}</h5></a>
                         <p>{{ item.author }}</p>
-                        <p>{{ item.quantity }}</p>
                         <p>{{ item.price }} <i class="fa fa-rub" aria-hidden="true"></i></p>
                         <button class="btn-card" ng-click="addToCart(item)"><i class="fa" ng-class="isActive(item) == false ? 'fa-cart-arrow-down bs_btnCardActive' : 'fa-cart-plus'"></i></button>
                     </div>

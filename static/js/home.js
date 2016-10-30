@@ -1,4 +1,4 @@
-gApp.controller('newsController', function() {
+gApp.controller('homeController', function() {
 	this.new = 'example';
 	this.news = [ 
 		{
@@ -24,3 +24,4 @@ gApp.controller('newsController', function() {
 		}
 	]; 
 });
+

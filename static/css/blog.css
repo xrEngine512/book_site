@@ -1,6 +1,5 @@
 .bs-blog-entry-read-more
 {
-    font-family: Roboto;
     font-size: medium;
     font-weight: bold;
 
@@ -14,7 +13,6 @@
     text-decoration: none;
 
     color: #3f3f3f;
-    border-bottom-left-radius: 15px;
 }
 
 .bs-blog-entry-read-more:hover
@@ -41,31 +39,23 @@
     float: right;
 
     padding: 15px;
-
-    alignment: right;
 }
-
-
 
 .bs-blog-entry-item
 {
-    margin: 10px;
-
-    background: rgba(120,120,120, .1);
-    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    box-shadow: 0 8px 5px rgba(0,0,0,.3);
 }
 
 .bs-blog-entry-header
 {
-    font-family: FreeSerif;
     font-style: italic;
 
+    text-align: center;
     white-space: nowrap;
 }
 
 .bs-blog-entry-description
 {
-    font-family: FreeSerif;
     font-size: medium;
     font-style: italic;
 
@@ -91,10 +81,10 @@
     padding-left: 0;
 }
 
-
-
 .bs-blog-entry-author a
 {
+    font-size: 2em;
+
     height: 100%;
 
     text-decoration: none;
@@ -107,7 +97,8 @@
 
 .bs-blog-entry
 {
-    border-radius: 15px;
+    border-radius: 5px;
+    background-color: #fff;
 }
 
 .bs-blog-entry #description-container
@@ -120,7 +111,5 @@
     height: 50px;
     margin-top: 15px;
 
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
     background: rgba(60, 60, 60, .1);
 }

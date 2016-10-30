@@ -10,7 +10,7 @@
 
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    box-shadow: 0 5px 5px rgba(0,0,0,.3);
 }
 
 div.card-block p
@@ -23,7 +23,6 @@ div.card-block p
     font-size: 26px;
 
     position: absolute;
-    bottom: -10px;
     left: 50%;
 
     width: 60px;
@@ -37,6 +36,7 @@ div.card-block p
     border: 5px solid #fff;
     border-radius: 50%;
     background-color: #ddd;
+    cursor: pointer;
 }
 
 .btn-card:hover,

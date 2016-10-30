@@ -302,11 +302,9 @@ ul.topnav li.service-icon
 
 li.logo-text
 {
-    font-family: 'mv boli';
-
     vertical-align: bottom;
-
-    color: black;
+    margin: auto;
+    color: #ffffff;
 }
 
 /* конец logo */

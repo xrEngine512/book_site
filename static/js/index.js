@@ -1,8 +1,8 @@
 gApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
-	.when("/news", {
+	.when("/home", {
 		templateUrl : "/static/pages/home.html",
-		controller: "newsController"
+		controller: "homeController"
 	})
 	.when("/store", {
 		templateUrl : "/static/pages/store.html",
@@ -137,7 +137,7 @@ gApp.controller('navbar', function($scope, $location, $uibModal) {
 
 gApp.controller('breadcrumbController', function($scope, $location) {
 	// хреновый подход!
-	var pages = { 'Новости' : '/news', 'Магазин' : '/store', 'Блог' : '/blog', 
+	var pages = { 'Домашняя' : '/home', 'Магазин' : '/store', 'Блог' : '/blog',
 				  'Контакты' : '/contact', 'Q&A' : '/qna', 
 			      'О нас' : '/about-us', 'Пользователь': '/user'
 	};
