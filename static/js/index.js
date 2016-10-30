@@ -44,7 +44,7 @@ gApp.config(['$routeProvider', function($routeProvider) {
 	);
 }]);
 
-gApp.controller('navbar', function($scope, $location, $uibModal) {
+gApp.controller('navbar', function($scope, $location, $uibModal, User) {
 	// корзина
 	$scope.animationsEnabled = true;
     var testItems = [
@@ -99,6 +99,28 @@ gApp.controller('navbar', function($scope, $location, $uibModal) {
         });
     };
 
+    // логин
+    $scope.openLogoutDialog = function (size) {
+        $uibModal.open({
+            animations: $scope.animationsEnabled,
+            templateUrl: '/static/pages/logout.html',
+            controller: 'logoutDialogController',
+            controllerAs: '$logout',
+            size: size
+        });
+    };
+
+    // пользователь
+    $scope.openUser = function (size) {
+        $uibModal.open({
+            animations: $scope.animationsEnabled,
+            templateUrl: '/static/pages/user.html',
+            controller: 'userController',
+            controllerAs: '$user',
+            size: size
+        });
+    };
+
 	$scope.openSocialIcon = function() {
 		var x = document.getElementById("ulTopnav");
 		if (x.className === "topnav") {
@@ -133,6 +155,44 @@ gApp.controller('navbar', function($scope, $location, $uibModal) {
 	$scope.isActive = function (viewLocation) { 	
         return viewLocation === $location.path();
     };
+
+    $scope.showCartContent = function() {
+    	var elem = document.getElementById("headCart");
+    	elem.style.display = "block";
+    	elem.style.zIndex = "20";
+    	elem = document.getElementById("cartContent");
+    	elem.style.display = "block";
+    	elem.style.zIndex = "20";   	
+    };
+
+    $scope.hideCartContent = function() {
+    	var elem = document.getElementById("headCart");
+    	elem.style.display = "none";
+    	elem = document.getElementById("cartContent");
+    	elem.style.display = "none";
+    };
+
+    $scope.$on('logged_in', function (event, data) {
+		$('#btn-user span.text-user').text(data.username);
+		$('#btn-login').hide();
+		$('#btn-registration').hide();
+		$('#btn-user').show();
+		$('#btn-logout').show();
+	});
+
+	$scope.$on('logged_out', function () {
+		$('#btn-user span.text-user').text('');
+		$('#btn-login').show();
+		$('#btn-registration').show();
+		$('#btn-user').hide();
+		$('#btn-logout').hide();
+	});
+
+	User.current.user().$promise.then(function (data) {
+        $scope.$emit('logged_in', data);
+    }).catch(function (data) {
+        console.error(data);
+    })
 });
 
 gApp.controller('breadcrumbController', function($scope, $location) {

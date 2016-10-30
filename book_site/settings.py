@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'common',
     'blog',
     'files'
 ]
@@ -115,6 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30  # One month
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/

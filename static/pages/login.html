@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/modal.css">
 
-<div id="modalDialog-bg" ng-cloak>
-	<div id="modalDialog">
+<div class="bs_modalDialog-bg" ng-cloak>
+	<div class="bs_modalDialog" id="login-modal">
 		<div class="bs_modal-header">
 			<button type="button" class="btn bs_circleButton" ng-click="$login.close()">x</button>
 		</div>
@@ -10,7 +10,7 @@
 				<fieldset>
 					<div class="form-group">
 						<span class="bs-input">
-							<input class="bs-input-field bs-input-account" type="text" id="login" placeholder="логин">					
+							<input class="bs-input-field bs-input-account" type="text" id="login" ng-model="$login.username" placeholder="логин">
 							<label class="bs-input-label bs-label-account" for="login">
 								<i class="fa fa-user" aria-hidden="true"></i>
 							</label>
@@ -18,17 +18,17 @@
 					</div>
 					<div class="form-group">
 						<span class="bs-input">
-							<input class="bs-input-field bs-input-account" type="password" id="userPassword" placeholder="пароль">					
+							<input class="bs-input-field bs-input-account" type="password" id="userPassword" ng-model="$login.password" placeholder="пароль">
 							<label class="bs-input-label bs-label-account" for="userPassword">
 								<i class="fa fa-key" aria-hidden="true"></i>
 							</label>
 						</span>
 					</div>
-					<div class="checkbox">
-					<input class="bs_check" id="remember" type="checkbox" name="check">
+					<div class="checkbox" id="login_remember">
+					    <input class="bs_check" id="remember" type="checkbox" name="check" ng-model="$login.remember_me">
 						<label class="bs_label" for="remember">Запомнить меня</label>
 					</div>
-					<button type="submit" class="btn btn-primary bs_btn">Вход</button>
+					<button type="submit" class="btn btn-primary bs_btn" ng-click="$login.submit()">Вход</button>
 				</fieldset>
 			</form>
 		</div>

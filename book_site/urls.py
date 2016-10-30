@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^', include('files.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^index', index, name='home'),
+    url(r'^api/auth/$', AuthView.as_view(), name='authenticate'),
     url(r'^$', index, name='home'),
 ]
 

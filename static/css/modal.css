@@ -6,7 +6,7 @@
     display: none;
 }
 
-#modalDialog-bg
+.bs_modalDialog-bg
 {
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@
     background: rgba(0, 0, 0, .6);
 }
 
-#modalDialog
+.bs_modalDialog
 {
     position: fixed;
     left: 50%;

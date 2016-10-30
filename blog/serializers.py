@@ -1,12 +1,6 @@
 from rest_framework import serializers
 from blog.models import BlogEntry
-from django.contrib.auth.models import User
-
-
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ('id', 'username')
+from common.serializers import UserSerializer
 
 
 class BlogSerializer(serializers.ModelSerializer):
