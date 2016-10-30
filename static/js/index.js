@@ -25,8 +25,7 @@ gApp.config(['$routeProvider', function($routeProvider) {
 		controller: "contactController"
 	})
 	.when("/qna", {
-		templateUrl : "/static/pages/qna.html",
-		controller: "qnaController"
+		templateUrl : "/static/pages/qna.html"
 	})
 	.when("/about-us", {
 		templateUrl : "/static/pages/about-us.html",

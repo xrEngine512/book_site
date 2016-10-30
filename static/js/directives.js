@@ -37,7 +37,7 @@ function handleFooter(footer) {
     }
 }
 
-var gApp = angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.bootstrap', 'ui.tinymce', 'storeModule']);
+var gApp = angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 'ngResource', 'ui.bootstrap', 'ui.tinymce', 'storeModule', 'qnaModule']);
 
 gApp.directive('siteDynamicContent', function ($interval) {
     return function (scope, element) {

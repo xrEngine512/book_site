@@ -54,17 +54,11 @@ div.panel
     max-height: 0;
     padding: 0 18px;
 
-    transition: .6s ease-in-out;
-
-    opacity: 0;
-    background-color: white;
-}
-
-div.panel.show
-{
-    max-height: 500px;
+    transition: .3s all ease;
 
     opacity: 1;
+    background-color: white;
+    max-height: 500px;
 }
 
 p
