@@ -52,13 +52,13 @@ div.panel
     overflow: hidden;
 
     max-height: 0;
+    max-height: 500px;
     padding: 0 18px;
 
     transition: .3s all ease;
 
     opacity: 1;
     background-color: white;
-    max-height: 500px;
 }
 
 p

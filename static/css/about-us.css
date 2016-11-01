@@ -4,11 +4,13 @@
 
     border: none;
     border-radius: 0;
+    background-color: #e5e2e2;
 }
 
 .img-fluid
 {
-    width: 100%;
+    width: 80%;
+    margin-top: 10px;
 }
 
 .img-wrp

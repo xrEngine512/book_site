@@ -28,9 +28,40 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-9" >
                     <!-- start carousel -->
+                    <div ng-controller="newsController as newBooks">
+                        <div class="slideshow-container">
+                            <div class="mySlides bs_fadeSlide">
+                                <div class="numbertext">1 / 3</div>
+                                <img class="bs_slideImg" src="/static/img/bg.jpg" style="width:100%">                    
+                                <div class="text">Пушкин А.С. Евгений Онегин</div>
+                            </div>
 
+                            <div class="mySlides bs_fadeSlide">
+                                <div class="numbertext">2 / 3</div>
+                                <img class="bs_slideImg" src="/static/img/bg2.jpg" style="width:100%">                    
+                                <div class="text">Толстой Л.В. Война и мир</div>
+                            </div>
+
+                            <div class="mySlides bs_fadeSlide">
+                                <div class="numbertext">3 / 3</div>
+                                <img class="bs_slideImg" src="/static/img/bg3.jpg" style="width:100%">                    
+                                <div class="text">Тургенев И.С. Отцы и дети</div>
+                            </div>
+
+                            <a class="prev" ng-click="newBooks.plusSlides(-1)">&#10094;</a>
+                            <a class="next" ng-click="newBooks.plusSlides(1)">&#10095;</a>
+                        </div>
+                        <br>                    
+
+                        <div style="text-align:center">
+                            <span class="dot" ng-click="newBooks.currentSlide(1)"></span>
+                            <span class="dot" ng-click="newBooks.currentSlide(2)"></span>
+                            <span class="dot" ng-click="newBooks.currentSlide(3)"></span>
+                        </div>
+                    </div>
+                        
                     <!-- end carousel -->
                 </div>
             </div>

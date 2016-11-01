@@ -95,7 +95,7 @@ angular.module( 'storeModule', ['rzModule'] )
 		booksFromJson: function (callback) {
 	      	$http({
 		        method: 'GET',
-		        url: '/static/books.json',
+		        url: '/static/json/books.json',
 		        cache: true
 	      	}).success(callback);
     	}
