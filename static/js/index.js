@@ -87,7 +87,7 @@ gApp.controller('navbar', function($scope, $location, $uibModal, User) {
         });
     };
 
-    // логин
+    // регистрация
     $scope.openRegistrationDialog = function (size) {
         $uibModal.open({
             animations: $scope.animationsEnabled,

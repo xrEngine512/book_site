@@ -11,7 +11,6 @@ component('qnaComponent', {
             });
 
 			self.isOpen = false;
-			console.log(self.isOpen);
 		}
 	]
 });

@@ -1,5 +1,5 @@
 /*template (raw) button*/
-.btn
+.bs_btn
 {
     font-family: inherit;
     font-size: inherit;
@@ -25,7 +25,7 @@
     background: none;
 }
 
-.btn::after
+.bs_btn::after
 {
     position: absolute;
     z-index: -1;
@@ -36,7 +36,7 @@
             transition: all .5s;
 }
 
-.btn::before
+.bs_btn::before
 {
     font-weight: normal;
     font-style: normal;
@@ -195,4 +195,9 @@
 .btn-message:before
 {
     content: '\f0e0';
+}
+
+.btn-password:before
+{
+    content: '\f084';
 }

@@ -3,12 +3,12 @@
 <div class="bs_modalDialog-bg" ng-cloak>
 	<div class="bs_modalDialog">
 		<div class="bs_modal-header">
-			<button type="button" class="btn btn-outline-info" ng-click="$logout.close()">&times;</button>
+			<button type="button" class="btn bs_circleButton" ng-click="$logout.close()">x</button>
 		</div>
 		<div class="bs_modal-content">
             <h2>Вы действительно хотите выйти?</h2>
-            <button type="submit" class="btn btn-primary bs_btn" ng-click="$logout.submit()">Выход</button>
-            <button type="submit" class="btn btn-primary bs_btn" ng-click="$logout.close()">Отмена</button>
+            <button type="submit" class="btn btn-primary bs_btnModal" ng-click="$logout.submit()">Выход</button>
+            <button type="submit" class="btn btn-primary bs_btnModal" ng-click="$logout.close()">Отмена</button>
 		</div>
 		<div class="bs_modal-footer">
 			<a href="">Забыли пароль или логин?</a>
