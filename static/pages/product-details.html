@@ -2,65 +2,68 @@
 <link rel="stylesheet" type="text/css" href="/static/css/_style.css">
 
 <section class="bs_section">
-	<div id="bs_product" class="container" ng-controller="productDetailsController">
-		<div class="bs_tab">
-			<div class="bs_tab_caption">Книга</div>
-			<div class="row">
-				<div class="info-book">
-					<div class="col-md-6">
-						<img src="/static/img/book.png">
-						<p>Цена: {{book.price}}</p>
-                        <p>На складе:<strong>есть</strong></p>
-					</div>
-					<div class="col-md-6">
-						<h4>{{book.title}}</h4>
-						<h4>{{book.author}}</h4>
-						<table>
-							<tr>
-								<td>Издательство:</td>
-								<td>Комната 211.</td>
-							</tr>
-							<tr>
-								<td>Тираж:</td>
-								<td>100</td>
-							</tr>
-							<tr>
-								<td>Возрастные ограничения:</td>
-								<td>18+</td>
-							</tr>
-							<tr>
-								<td>Формат:</td>
-								<td>22.2 x 15.3 x 2</td>
-							</tr>
-							<tr>
-								<td>Год:</td>
-								<td>2016</td>
-							</tr>
-						</table>
-						<h6 class="bs_head-desc">Описание:</h6>
-						<p class="description">
-							Творчество Александра Сергеевича Пушкина знакомо каждому еще со школы. И любой читатель находит в нем именно то, что ему близко: одни восторженно относятся к пушкинской лирике, другие учат наизусть «Евгения Онегина», третьи любят простоту и ясность его прозы. Уникальный язык пушкинской прозы стал той плодородной почвой, на которой поднялся великий русский реализм 19 века.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="offset-md-6 col-md-6">
-					<form class="form-inline">
-						<div class="form-group">
-							<label for="quantity">Количество:</label>
-							<input type="number" class="form-control" name="quantity" min="1" max="5">
-						</div>
-						<button class="bs_btn btn-small btn-service btn-cart br-8 pull-right" type="submit">Купить</button>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div class="bs_tab">
-			<div class="bs_tab_caption">Комментарии</div>
-			<div class="row">
-				<comments-component></comments-component>
-			</div>
-		</div>
-	</div>
+    <div id="bs_product" class="container" ng-controller="productDetailsController">
+        <div class="bs_tab">
+            <div class="bs_tab_caption">Книга</div>
+            <div class="row">
+                <div class="info-book">
+                    <div class="col-md-6">
+                        <img src="/static/img/book.png">
+                        <p>Цена:
+                            {{book.price}}</p>
+                        <p>На складе:<strong>есть</strong>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>{{book.title}}</h4>
+                        <h4>{{book.author}}</h4>
+                        <table>
+                            <tr>
+                                <td>Издательство:</td>
+                                <td>Комната 211.</td>
+                            </tr>
+                            <tr>
+                                <td>Тираж:</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Возрастные ограничения:</td>
+                                <td>18+</td>
+                            </tr>
+                            <tr>
+                                <td>Формат:</td>
+                                <td>22.2 x 15.3 x 2</td>
+                            </tr>
+                            <tr>
+                                <td>Год:</td>
+                                <td>2016</td>
+                            </tr>
+                        </table>
+                        <h6 class="bs_head-desc">Описание:</h6>
+                        <p class="description">
+                            Творчество Александра Сергеевича Пушкина знакомо каждому еще со школы. И любой читатель находит в нем именно то, что ему близко: одни восторженно относятся к пушкинской лирике, другие учат наизусть «Евгения Онегина», третьи любят простоту и ясность
+                            его прозы. Уникальный язык пушкинской прозы стал той плодородной почвой, на которой поднялся великий русский реализм 19 века.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-md-6 col-md-6">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="quantity">Количество:</label>
+                            <input type="number" class="form-control" name="quantity" min="1" max="5">
+                        </div>
+                        <button class="bs_btn btn-small btn-service btn-cart br-8 pull-right" type="submit">Купить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bs_tab">
+            <div class="bs_tab_caption">Комментарии</div>
+            <div class="row">
+                <comments-component></comments-component>
+            </div>
+        </div>
+    </div>
 </section>

@@ -1,231 +1,213 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Book store</title>
-    <meta charset="utf-8">
-	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-	<!-- bootstrap 4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
-          integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-	<!-- шрифты стили -->
-	<link rel="stylesheet" type="text/css" href="/static/font-awesome/css/font-awesome.min.css">
-	<!-- стили для слайдера -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.4.2/rzslider.min.css">
-	<!-- шаблон стили -->
-	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
-	<!-- для корзины -->
-	<link rel="stylesheet" type="text/css" href="/static/css/cart-content.css">
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+    <head>
+        <title>Book store</title>
+        <meta charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+        <!-- bootstrap 4 -->
+        <link rel="stylesheet" href="/static/libs/bootstrap.min.css">
+        <!-- шрифты стили -->
+        <link rel="stylesheet" type="text/css" href="/static/font-awesome/css/font-awesome.min.css">
+        <!-- стили для слайдера -->
+        <link rel="stylesheet" type="text/css" href="/static/libs/rzslider.min.css">
+        <!-- шаблон стили -->
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+        <!-- для корзины -->
+        <link rel="stylesheet" type="text/css" href="/static/css/cart-content.css">
 
-	<!-- ангуляр -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
-	<!-- для слайдера -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/5.4.2/rzslider.min.js" type="text/javascript"></script>
+        <!-- jQuery -->
+        <script src="/static/libs/jquery.min.js" crossorigin="anonymous"></script>
+        <!-- ангуляр -->
+        <script src="/static/libs/angular.min.js"></script>
+        <script src="/static/libs/angular-route.min.js"></script>
+        <script src="/static/libs/angular-resource.min.js"></script>
+        <script src="/static/libs/angular-animate.min.js"></script>
+        <script src="/static/libs/angular-sanitize.min.js"></script>
+        <!-- ui-bootstrap-tpls -->
+        <script src="/static/libs/ui-bootstrap-tpls.min.js"></script>
+        <!-- для слайдера -->
+        <script src="/static/libs/rzslider.min.js"></script>
+        <!-- tinyMCE -->
+        <script src="/static/js/libs/tinymce-dist/tinymce.min.js"></script>
+        <script src="/static/js/libs/angular-ui-tinymce/src/tinymce.js"></script>
+        <!-- шаблон, основа-->
+        <script src="/static/js/main/lang-extensions.js"></script>
+        <script src="/static/js/main/directives.js"></script>
+        <script src="/static/js/main/resources.js"></script>
+        <script src="/static/js/main/index.js"></script>
+        <!-- карта гугл -->
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCIRvXUjoE75h6s2tk5hIftawhWoFI_EeE"></script>
 
-    <!-- tinyMCE -->
-    <script type="text/javascript" src="/static/js/libs/tinymce-dist/tinymce.min.js"></script>
-    <script type="text/javascript" src="/static/js/libs/angular-ui-tinymce/src/tinymce.js"></script>
+        <!-- скрипты страниц -->
+        <script src="/static/public/js/scripts.js"></script>
+    </head>
+    <body ng-app="BookStoreApp">
 
-	<!-- шаблон, основа-->
-    <script type="text/javascript" src="/static/js/lang-extensions.js"></script>
-	<script type="text/javascript" src="/static/js/directives.js"></script>
-	<script type="text/javascript" src="/static/js/resources.js"></script>
-	<script type="text/javascript" src="/static/js/index.js"></script>
+        <header ng-controller="navbar" id="header">
+            <!-- верхняя навигация с соц. ссылками, корзиной, регистрацией и входом-->
+            <div class="bs_top-navbar" id="Topnav">
+                <ul class="topnav" id="ulTopnav">
+                    <div class="left">
+                        <li class="social-icon">
+                            <a class="share" href="javascript:void(0);" ng-click="openSocialIcon()">
+                                <span class="fa fa-share-alt"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://vk.com/bilnt" class="vk">
+                                <span class="fa fa-vk"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="instagram">
+                                <span class="fa fa-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="youtube">
+                                <span class="fa fa-youtube"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="google-plus">
+                                <span class="fa fa-google-plus"></span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="right">
+                        <li class="bs_liCart">
+                            <a href="" ng-click="openCartDialog()">
+                                <span class="fa fa-shopping-cart" aria-hidden="true"></span>
+                                <span class="text-cart">Корзина</span>
+                            </a>
+                            <span class="numb">2</span>
+                        </li>
+                        <li id="btn-user" style="display: none">
+                            <a href="" ng-click="openUser()">
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                                <span class="text-user">{{ current_username }}</span>
+                            </a>
+                        </li>
+                        <li id="btn-logout" style="display: none">
+                            <a href="" ng-click="openLogoutDialog()">
+                                <span class="fa fa-share" aria-hidden="true"></span>
+                                <span class="text-share">Выход</span>
+                            </a>
+                        </li>
+                        <li id="btn-registration">
+                            <a href="" ng-click="openRegistrationDialog()">
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                                <span class="text-user">Регистрация</span>
+                            </a>
+                        </li>
+                        <li id="btn-login">
+                            <a href="" ng-click="openLoginDialog()">
+                                <span class="fa fa-share" aria-hidden="true"></span>
+                                <span class="text-share">Вход</span>
+                            </a>
+                        </li>
+                        <li class="service-icon">
+                            <a href="javascript:void(0);" ng-click="openServiceIcon()">
+                                <span class="fa fa-tasks"></span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <!-- конец верхней навигации -->
 
-	<!-- карта гугл -->
-	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCIRvXUjoE75h6s2tk5hIftawhWoFI_EeE"></script>
+            <!-- основная навигация по сайту-->
+            <nav class="bs_main-navbar" id="Mainnav">
+                <ul class="navbar" id="ulMainnav">
+                    <li class="logo-text">
+                        <span>Library 2.1</span>
+                    </li>
+                    <li>
+                        <img src="/static/img/logo.png" width="60px" height="55px">
+                    </li>
+                    <li class="bs_negativeMargin">
+                        <a ng-class="{ active: isActive('/home') }" href="#home">
+                            <span class="fa fa-bullhorn" aria-hidden="true"></span>
+                            &nbspДомашняя
+                        </a>
+                    </li>
+                    <li class="bs_negativeMargin">
+                        <a ng-class="{ active: isActive('/store') }" href="#store">
+                            <span class="fa fa-book" aria-hidden="true"></span>
+                            &nbspМагазин
+                        </a>
+                    </li>
+                    <li class="bs_negativeMargin">
+                        <a ng-class="{ active: isActive('/blog') }" href="#blog">
+                            <span class="fa fa-commenting" aria-hidden="true"></span>
+                            &nbspБлог
+                        </a>
+                    </li>
+                    <li class="bs_negativeMargin">
+                        <a ng-class="{ active: isActive('/contact') }" href="#contact">
+                            <span class="fa fa-volume-control-phone" aria-hidden="true"></span>
+                            &nbspКонтакты
+                        </a>
+                    </li>
+                    <li class="bs_negativeMargin">
+                        <a ng-class="{ active: isActive('/qna') }" href="#qna">
+                            <span class="fa fa-question-circle-o" aria-hidden="true"></span>
+                            &nbspQ&A
+                        </a>
+                    </li>
+                    <li class="about-usLi bs_negativeMargin">
+                        <a ng-class="{ active: isActive('/about-us') }" href="#about-us">
+                            <span class="fa fa-users" aria-hidden="true"></span>
+                            &nbspО нас
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="javascript:void(0);" style="font-size:15px;" ng-click="openNavbar()">☰</a>
+                    </li>
+                    <li class="search">
+                        <a href="javascript:void(0);" ng-click="searchBook()">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                        </a>
+                        <!-- форма поиска -->
+                        <div class="bs_search-form" id="Search">
+                            <input type="text" placeholder="Найти книгу...">
+                            <button>Поиск</button>
+                        </div>
+                        <!-- конец формы поиска -->
+                    </li>
+                </ul>
+            </nav>
+            <!-- конец основной навигации -->
 
-	<!-- скрипты страниц -->
-	<script type="text/javascript" src="/static/js/home.js"></script>
-	<script type="text/javascript" src="/static/js/store.js"></script>
-	<script type="text/javascript" src="/static/js/about-us.js"></script>
-    <script type="text/javascript" src="/static/qna/qna.module.js"></script>
-    <script type="text/javascript" src="/static/qna/qna.component.js"></script>
-    <script type="text/javascript" src="/static/comments/comments.module.js"></script>
-    <script type="text/javascript" src="/static/comments/comments.component.js"></script>
-	<script type="text/javascript" src="/static/js/contact.js"></script>
-	<script type="text/javascript" src="/static/js/blog.js"></script>
-	<script type="text/javascript" src="/static/js/blog-details.js"></script>
-	<script type="text/javascript" src="/static/js/product-details.js"></script>
-	<script type="text/javascript" src="/static/js/login.js"></script>
-	<script type="text/javascript" src="/static/js/registration.js"></script>
-	<script type="text/javascript" src="/static/js/aside.js"></script>
-	<script type="text/javascript" src="/static/js/cart.js"></script>
-	<script type="text/javascript" src="/static/js/user.js"></script>
-	<script type="text/javascript" src="/static/js/logout.js"></script>
-</head>
-<body ng-app="BookStoreApp">
+        </header>
+        <!-- конец header -->
 
-	<header ng-controller="navbar" id="header">
-		<!-- верхняя навигация с соц. ссылками, корзиной, регистрацией и входом-->
-		<div class="bs_top-navbar" id="Topnav">
-			<ul class="topnav" id="ulTopnav">
-				<div class="left">
-					<li class="social-icon">
-						<a class="share" href="javascript:void(0);" ng-click="openSocialIcon()">
-							<span class="fa fa-share-alt"></span>
-						</a>
-					</li>
-					<li>
-						<a href="https://vk.com/bilnt" class="vk">
-							<span class="fa fa-vk"></span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="instagram">
-							<span class="fa fa-instagram"></span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="youtube">
-							<span class="fa fa-youtube"></span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="google-plus">
-							<span class="fa fa-google-plus"></span>
-						</a>
-					</li>
-				</div>
-				<div class="right">
-					<li class="bs_liCart">
-						<a href="" ng-click="openCartDialog()">
-							<span class="fa fa-shopping-cart" aria-hidden="true"></span>
-							<span class="text-cart">Корзина</span>
-						</a>
-                        <span class="numb">2</span>
-					</li>
-                    <li id="btn-user" style="display: none">
-						<a href="" ng-click="openUser()">
-							<span class="fa fa-user" aria-hidden="true"></span>
-							<span class="text-user">{{ current_username }}</span>
-						</a>
-					</li>
-					<li id="btn-logout" style="display: none">
-						<a href="" ng-click="openLogoutDialog()">
-							<span class="fa fa-share" aria-hidden="true"></span>
-							<span class="text-share">Выход</span>
-						</a>
-					</li>
-					<li id="btn-registration">
-						<a href="" ng-click="openRegistrationDialog()">
-							<span class="fa fa-user" aria-hidden="true"></span>
-							<span class="text-user">Регистрация</span>
-						</a>
-					</li>
-					<li id="btn-login">
-						<a href="" ng-click="openLoginDialog()">
-							<span class="fa fa-share" aria-hidden="true"></span>
-							<span class="text-share">Вход</span>
-						</a>
-					</li>
-					<li class="service-icon">
-						<a href="javascript:void(0);" ng-click="openServiceIcon()">
-							<span class="fa fa-tasks"></span>
-						</a>
-					</li>
-				</div>
-			</ul>
-		</div> <!-- конец верхней навигации -->
+        <!-- хлебные крошки -->
+        <div class="container-fluid" ng-controller="breadcrumbController">
+            <div class="row">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="{{ '/#' + getPath() }}">{{ pathStr() }}</a>
+                    <span class="breadcrumb-item bc-active" href="#">...</span>
+                </nav>
+            </div>
+        </div>
+        <!-- конец хлебные крошки -->
 
+        <main id="main" site-dynamic-content>
+            <div ng-view></div>
+        </main>
 
-		<!-- основная навигация по сайту-->
-		<nav class="bs_main-navbar" id="Mainnav">
-			<ul class="navbar" id="ulMainnav">
-				<li class="logo-text">
-					<span>Library 2.1</span>
-				</li>
-				<li>
-					<img src="/static/img/logo.png" width="60px" height="55px">
-				</li>
-				<li class="bs_negativeMargin">
-					<a ng-class="{ active: isActive('/home') }" href="#home">
-						<span class="fa fa-bullhorn" aria-hidden="true"></span>
-						&nbspДомашняя
-					</a>
-				</li>
-				<li class="bs_negativeMargin">
-					<a ng-class="{ active: isActive('/store') }" href="#store">
-						<span class="fa fa-book" aria-hidden="true"></span>
-						&nbspМагазин
-					</a>
-				</li>
-				<li class="bs_negativeMargin">
-					<a ng-class="{ active: isActive('/blog') }" href="#blog">
-						<span class="fa fa-commenting" aria-hidden="true"></span>
-						&nbspБлог
-					</a>
-				</li>
-				<li class="bs_negativeMargin">
-					<a ng-class="{ active: isActive('/contact') }" href="#contact">
-						<span class="fa fa-volume-control-phone" aria-hidden="true"></span>
-						&nbspКонтакты
-					</a>
-				</li>
-				<li class="bs_negativeMargin">
-					<a ng-class="{ active: isActive('/qna') }" href="#qna">
-						<span class="fa fa-question-circle-o" aria-hidden="true"></span>
-						&nbspQ&A
-					</a>
-				</li>
-				<li class="about-usLi bs_negativeMargin">
-					<a
-                            ng-class="{ active: isActive('/about-us') }" href="#about-us">
-						<span class="fa fa-users" aria-hidden="true"></span>
-						&nbspО нас
-					</a>
-				</li>
-				<li class="icon">
-					<a href="javascript:void(0);" style="font-size:15px;" ng-click="openNavbar()">☰</a>
-				</li>
-				<li class="search">
-					<a href="javascript:void(0);" ng-click="searchBook()">
-						<span class="fa fa-search" aria-hidden="true"></span>
-					</a>
-					<!-- форма поиска -->
-					<div class="bs_search-form" id="Search">
-						<input type="text" placeholder="Найти книгу...">
-						<button>Поиск</button>		
-					</div> <!-- конец формы поиска -->
-				</li>
-			</ul>
-		</nav> <!-- конец основной навигации -->
+        <!-- пока только шаблон! -->
+        <footer id="footer" class="bs_footer" site-footer>
+            <a href="#main">
+                <i class="fa fa-sort-asc" aria-hidden="true"></i>
+            </a>
+            <br>
+            <br>
+            <p>
+                © Copyright 2016 Library 2.1
+            </p>
+        </footer>
 
-		
-
-	</header> <!-- конец header -->
-
-	<!-- хлебные крошки -->
-	<div class="container-fluid" ng-controller="breadcrumbController">
-		<div class="row">
-			<nav class="breadcrumb">
-				 <a class="breadcrumb-item" href="{{ '/#' + getPath() }}">{{ pathStr() }}</a>
-				 <span class="breadcrumb-item bc-active" href="#">...</span>
-			</nav>
-		</div>
-	</div> <!-- конец хлебные крошки -->
-
-	<main id="main" site-dynamic-content>
-		<div ng-view></div>
-	</main>
-
-	<!-- пока только шаблон! -->
-	<footer id="footer" class="bs_footer" site-footer>
-		<a href="#main">
-			<i class="fa fa-sort-asc" aria-hidden="true"></i>
-		</a>
-		<br>
-		<br>
-		<p>
-			© Copyright 2016 Library 2.1
-		</p>
-	</footer>
-
-</body>
+    </body>
 </html>

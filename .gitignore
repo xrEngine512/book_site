@@ -9,3 +9,4 @@ static/js/libs
 runserver.sh
 media/
 nginx.conf
+node_modules

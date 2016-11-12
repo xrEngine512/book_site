@@ -1,23 +1,19 @@
-/**
- * Created by islam on 26.10.16.
- */
-
 gApp.controller('logoutDialogController', function($rootScope, $scope, $uibModalInstance, User) {
-	var $logout = this;
+    var $logout = this;
 
-    $logout.setStateLoggedIn = function(data){
+    $logout.setStateLoggedIn = function(data) {
 
     };
 
-	$logout.close = function() {
+    $logout.close = function() {
         $uibModalInstance.dismiss('close');
     };
 
-    $logout.submit = function () {
-        User.current.logout().$promise.then(function () {
+    $logout.submit = function() {
+        User.current.logout().$promise.then(function() {
             $logout.close();
             $rootScope.$broadcast('logged_out');
-        }).catch(function (data) {
+        }).catch(function(data) {
             console.error(data);
         });
     };

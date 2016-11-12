@@ -1,4 +1,35 @@
+<link rel="stylesheet" type="text/css" href="/static/comments/comments.css">
+
+<div class="bs_comments-header">Количество комментариев:
+    <span>{{$ctrl.numberComments}}</span>
+</div>
+
 <div ng-repeat="comment in $ctrl.comments">
-	<span>{{comment.id}}</span>
-	<span>{{comment.comment}}</span>
+    <div class="col-xs-12 bs_comments">
+        <div class="bs_comments-list">
+            <div class="bs_comment">
+
+                <div class="bs_photo">
+                    <img class="bs_img-photo" src="/static/img/photo.png" alt="photo" width="90px" height="100px">
+                </div>
+
+                <div class="bs_triangle-comment"></div>
+                <div class="bs_content">
+                    <span>{{comment.id}}</span>
+                    <p>{{comment.comment}}</p>
+                </div>
+
+								<div class="bs_delete-comment" ng-click="$ctrl.deleteComment(comment.id)">
+										<div class="bs_delete-comment-content">x</div>
+								</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bs_comments-form">
+    <form class="" ng-submit="$ctrl.postComment()">
+        <textarea id="textareaComment" class="bs_comments-textarea" name="name" rows="5" cols="40" placeholder="Ваш комментарий..."></textarea>
+        <button class="bs_btn btn-small btn-service btn-message pull-right" type="submit" ng-click="$ctrl.addCommentView()">Комментировать</button>
+    </form>
 </div>

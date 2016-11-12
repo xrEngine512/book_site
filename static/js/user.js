@@ -1,3 +1,3 @@
 gApp.controller('userController', function() {
-	var $user = this;
+    var $user = this;
 });

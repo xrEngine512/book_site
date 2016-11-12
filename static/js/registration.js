@@ -1,8 +1,8 @@
-gApp.controller('registrationDialogController', function($uibModalInstance){
+gApp.controller('registrationDialogController', function($uibModalInstance) {
 
-	var $registration = this;
+    var $registration = this;
 
-	$registration.close = function() {
+    $registration.close = function() {
         $uibModalInstance.dismiss('close');
     }
 });
