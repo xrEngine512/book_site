@@ -1,540 +1,373 @@
-html,
-body
-{
+html, body {
     font-family: 'segoe print', sans-serif;
-
     height: 100%;
     margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-{
+h1, h2, h3, h4, h5, h6 {
     /* общий шрифт */
     font-family: 'century gothic', sans-serif;
 }
 
 /* Хлебные крошки */
 
-.breadcrumb
-{
+.breadcrumb {
     margin-bottom: 0;
     padding: .2rem .1rem;
-
     border-radius: 0;
     background-color: #fff;
 }
 
-.breadcrumb-item + .breadcrumb-item::before
-{
+.breadcrumb-item+.breadcrumb-item::before {
     content: '>';
 }
 
+
 /* Конец хлебные крошки*/
+
 
 /* Верхняя навигация */
 
-.bs_top-navbar
-{
+.bs_top-navbar {
     background-color: #2b2b2b;
 }
 
-.left,
-.right
-{
+.left, .right {
     display: inline-block;
 }
 
-.left
-{
+.left {
     float: left;
-
     text-align: center;
 }
 
-.left a.vk
-{
+.left a.vk {
     padding-right: 13px;
     padding-left: 13px;
 }
 
-.left a.instagram
-{
+.left a.instagram {
     padding-right: 14px;
     padding-left: 14px;
 }
 
-.left a.youtube
-{
+.left a.youtube {
     padding-right: 14px;
     padding-left: 14px;
 }
 
-.left a.google-plus
-{
+.left a.google-plus {
     padding-right: 12px;
     padding-left: 12px;
 }
 
-/* цвета брендов */
-/*
-.left a.youtube:hover {
-  background-color: #111111;
-}
-
-.left a.google-plus:hover {
-  background-color: #EA4335;
-}
-
-.left a.vk:hover {
-  background-color: #2B587A;
-}
-
-.left a.instagram:hover {
-  background-color: #cc181e;
-}*/
-
-ul.topnav li a::after
-{
+ul.topnav li a::after {
     position: absolute;
     bottom: 0;
     left: 0;
-
     display: block;
-
     width: 0;
     height: 3px;
-
     content: '';
     -webkit-transition: all .2s;
-       -moz-transition: all .2s;
-         -o-transition: all .2s;
-            transition: all .2s;
-
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
     background-color: rgb(238, 176, 19);
 }
 
-ul.topnav li a:hover
-{
+ul.topnav li a:hover {
     color: rgb(238, 176, 19) !important;
 }
 
-ul.topnav li a:hover::after
-{
+ul.topnav li a:hover::after {
     width: 100%;
 }
 
-.right
-{
+.right {
     float: right;
-
     letter-spacing: 2px;
 }
 
-.bs_liCart
-{
+.bs_liCart {
     position: relative;
 }
 
-.bs_liCart .numb
-{
+.bs_liCart .numb {
     font-size: 14px;
     line-height: 15px;
-
     position: absolute;
     z-index: 10;
     top: 0;
     right: -4px;
-
     width: 15px;
     height: 15px;
     margin: 1px auto;
     padding: 0 0 1px 3px;
-
     text-align: center;
-
     color: rgb(255, 255, 255);
     border-radius: 50%;
     background: rgb(238, 176, 19);
 }
 
-ul.topnav
-{
+ul.topnav {
     overflow: hidden;
-
     margin: 0;
     padding: 0;
-
     list-style-type: none;
 }
 
-ul.topnav li
-{
+ul.topnav li {
     display: inline;
 }
 
-ul.topnav li a
-{
+ul.topnav li a {
     font-size: 12px;
-
     position: relative;
-
     float: left;
-
     padding: 8px;
-
     text-decoration: none;
-
     color: white;
 }
 
-ul.topnav li a:hover
-{
-    color: #7ae07a;
+ul.topnav li a:hover {
     background-color: #4d4e4e;
 }
 
-ul.topnav li.social-icon
-{
+ul.topnav li.social-icon {
     display: none;
 }
 
-ul.topnav li.service-icon
-{
+ul.topnav li.service-icon {
     display: none;
 }
 
-@media screen and (max-width:680px)
-{
-    .left a.share
-    {
+@media screen and (max-width:680px) {
+    .left a.share {
         padding-right: 14px;
         padding-left: 14px;
     }
-
-    .left a.google-plus
-    {
+    .left a.google-plus {
         padding: 11.5px;
     }
-
-    .left a.vk
-    {
+    .left a.vk {
         padding: 12.5px;
     }
-
-    ul.topnav div.left li
-    {
+    ul.topnav div.left li {
         display: none;
     }
-
-    ul.topnav div.left li.social-icon
-    {
+    ul.topnav div.left li.social-icon {
         display: inline-block;
         float: left;
     }
-
-    ul.topnav.resleft div.left
-    {
+    ul.topnav.resleft div.left {
         position: absolute;
         z-index: 10;
     }
-
-    ul.topnav.resleft div.left li
-    {
+    ul.topnav.resleft div.left li {
         display: block;
         float: none;
     }
-
-    ul.topnav.resright div.right
-    {
+    ul.topnav.resright div.right {
         position: absolute;
         z-index: 10;
         right: 0;
     }
-
-    ul.topnav.resright div.right li
-    {
+    ul.topnav.resright div.right li {
         display: block;
         float: none;
     }
-
-    ul.topnav.resright div.right li a
-    {
+    ul.topnav.resright div.right li a {
         width: 100%;
-
         background-color: #a2a2a2;
     }
-
-    ul.topnav.resright div.right li.service-icon a
-    {
+    ul.topnav.resright div.right li.service-icon a {
         background-color: #2b2b2b;
     }
-
-    span.text-user,
-    span.text-cart,
-    span.text-share
-    {
+    span.text-user, span.text-cart, span.text-share {
         display: none;
     }
 }
 
-@media screen and (max-width:300px)
-{
-    ul.topnav div.right li
-    {
+@media screen and (max-width:300px) {
+    ul.topnav div.right li {
         display: none;
     }
-
-    ul.topnav div.right li.service-icon
-    {
+    ul.topnav div.right li.service-icon {
         display: inline-block;
         float: right;
     }
 }
 
+
 /* конец верхней навигации */
+
 
 /* logo */
 
-li.logo-text
-{
+li.logo-text {
     vertical-align: bottom;
     margin: auto;
     color: #ffffff;
 }
 
+
 /* конец logo */
+
 
 /* основная навигация */
 
-.active
-{
-    /*border-bottom: 2px solid #7ae07a; 
-  border-top: 2px solid #7ae07a; */
-    background-color: #a874b1;
+.active {
+    background-color: #4e3253;
 }
 
-.bs_main-navbar
-{
-    background-color: #5ab15a;
+.bs_main-navbar {
+    background-color: #6c5770;
 }
 
-ul.navbar
-{
+ul.navbar {
     margin: 0;
     padding: 0;
-
     list-style-type: none;
     /*overflow: hidden;*/
-
     text-align: center;
 }
 
-ul.navbar li
-{
+ul.navbar li {
     display: inline-block;
 }
 
 /* для того чтобы у li не было лишнего отступа */
-ul.navbar li.bs_negativeMargin
-{
+ul.navbar li.bs_negativeMargin {
     margin-right: -.3em;
 }
 
-ul.navbar li a
-{
+ul.navbar li a {
     font-size: 17px;
-
     display: inline-block;
-
     padding: 17px 17px;
-
     -webkit-transition: all .3s;
-       -moz-transition: all .3s;
-         -o-transition: all .3s;
-            transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
     text-decoration: none;
-
     color: white;
 }
 
-ul.navbar li a:hover
-{
-    color: #7ae07a;
+ul.navbar li a:hover {
     background-color: #4d4e4e;
 }
 
-ul.navbar li.icon
-{
+ul.navbar li.icon {
     display: none;
 }
 
-ul.navbar li.search
-{
+ul.navbar li.search {
     position: relative;
-
     float: right;
-}
-
-li.about-usLi
-{
-    position: relative;
-}
-
-li.about-usLi:hover
-{
-    background-color: #3d823d;
 }
 
 /* поддержть проект */
 
-div.supportDiv
-{
+div.supportDiv {
     display: none;
-
     width: 256.5px;
-
     background-color: #3d823d;
-}
-
-li.about-usLi:hover > div.supportDiv
-{
-    position: absolute;
-    z-index: 30;
-
-    display: block !important;
 }
 
 /* конец поддержать проект */
 
-@media screen and (max-width:680px)
-{
-    ul.navbar li:not(:first-child)
-    {
+@media screen and (max-width:680px) {
+    ul.navbar li:not(:first-child) {
         display: none;
     }
-
-    ul.navbar li.icon
-    {
+    ul.navbar li.icon {
         display: inline-block;
         float: right;
     }
 }
 
-@media screen and (max-width:680px)
-{
-    ul.navbar.responsive
-    {
+@media screen and (max-width:680px) {
+    ul.navbar.responsive {
         position: relative;
     }
-
-    ul.navbar.responsive li.icon
-    {
+    ul.navbar.responsive li.icon {
         position: absolute;
         top: 0;
         right: 0;
     }
-
-    ul.navbar.responsive li
-    {
+    ul.navbar.responsive li {
         display: inline;
         float: none;
-
         margin-right: 0;
     }
-
-    ul.navbar.responsive li a
-    {
+    ul.navbar.responsive li a {
         display: block;
-
         text-align: left;
     }
-
     /* не работает какого то хрена!*/
-    ul.navbar.responsive li.about-usLi:hover
-    {
+    ul.navbar.responsive li.about-usLi:hover {
         background-color: #3d823d !important;
     }
-
-    ul.navbar.responsive
-    li.about-usLi:hover > div.supportDiv
-    {
+    ul.navbar.responsive li.about-usLi:hover>div.supportDiv {
         /* ширина должна быть как у родителя! */
         min-width: 550px;
     }
 }
 
+
 /* конец основной навигации */
+
 
 /* форма поиска */
 
-.bs_search-form
-{
+.bs_search-form {
     position: absolute;
     z-index: 10;
     top: 60px;
     right: 0;
-
     display: none;
-
     box-sizing: border-box;
-
     transition: all ease 1s;
-
     background-color: #f29f33;
 }
 
-.bs_search-from-visible
-{
+.bs_search-from-visible {
     display: inline-flex;
-
     transition: all ease 1s;
 }
 
-.bs_search-form input
-{
+.bs_search-form input {
     font-size: 1.3em;
-
     width: 250px;
     padding: 5px;
-
     color: #2b2b2b;
     border: none;
     background-color: #fafafa;
 }
 
-.bs_search-form button
-{
+.bs_search-form button {
     font-size: 1.3em;
-
     padding: 5px;
-
     cursor: pointer;
     transition: .5s all ease;
-
     color: #fafafa;
     border: none;
     background-color: #eeb013;
 }
 
-.bs_search-form button:hover
-{
+.bs_search-form button:hover {
     color: #111;
     background-color: #eeb013;
 }
 
+
 /* конец формы поиска*/
 
-.bs_parallax
-{
+.bs_parallax {
     /* Full height */
     height: 35%;
     /* The image used */
-
     background-image: url('/static/img/bg3.jpg');
     background-repeat: no-repeat;
     /* Create the parallax scrolling effect */
@@ -543,31 +376,26 @@ li.about-usLi:hover > div.supportDiv
     background-size: cover;
 }
 
+
 /* начало футера */
 
-footer.bs_footer
-{
+footer.bs_footer {
     z-index: 3;
-
     width: 100%;
     padding: 32px;
-
     text-align: center;
-
     color: #f5f5f5;
     background-color: #2b2b2b;
 }
 
-footer.bs_footer a
-{
+footer.bs_footer a {
     color: #f5f5f5;
 }
 
-footer.bs_footer a:hover
-{
+footer.bs_footer a:hover {
     text-decoration: none;
-
     color: #777;
 }
+
 
 /* конец футера */

@@ -1,19 +1,20 @@
-.bs_contact
-{  
+.bs_contact {
     margin: auto;
 }
 
-#googleMap
-{
-    width: 100%; /* Span the entire width of the screen */
-    height: 400px; /* Set the height to 400 pixels */
+#googleMap {
+    width: 100%;
+    height: 400px;
 }
 
-.bs_paddingTop
-{
+.bs_paddingTop {
     padding-top: 15px;
 }
 
 .bs_contactData {
-	background-color: #e5e2e2;
+    background-color: #ffffff;
+}
+
+.bs_btn-send {
+    margin-right: 15px;
 }

@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/section.css">
 
 <section class="bs_section">
-    <div class="container">
+    <div class="container-fluid">
         <div class="bs_tab">
             <div class="bs_tab_caption">Частые вопросы</div>
             <div ng-repeat="question in $ctrl.questions">
@@ -10,7 +10,7 @@
                 <div class="panel" ng-show="isOpen">
                     <p>{{question.content}}</p>
                 </div>
-            </div>        
+            </div>
         </div>
     </div>
 </section>

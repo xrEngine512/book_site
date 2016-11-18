@@ -1,201 +1,215 @@
-* {box-sizing:border-box}
-.mySlides {display:none;}
+* {
+    box-sizing: border-box
+}
+
+.mySlides {
+    display: none;
+}
+
+.bs_carousel {
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+}
 
 img.bs_slideImg {
-    max-height: 450px;
     min-height: 450px;
+    max-height: 450px;
 }
+
 
 /* Slideshow container */
+
 .slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
 }
+
 
 /* Next & previous buttons */
+
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: #ffffff !important;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.6s ease;
+    color: #ffffff !important;
+    border-radius: 0 3px 3px 0;
+    font-size: 18px;
+    font-weight: bold;
 }
+
 
 /* Position the "next button" to the right */
+
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
+
 
 /* On hover, add a black background color with a little bit see-through */
+
 .prev:hover, .next:hover {
-  background-color: #8BC34A;
     color: #ffffff;
+    background-color: #8BC34A;
 }
+
 
 /* Caption text */
+
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
 }
+
 
 /* Number text (1/3 etc) */
+
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    position: absolute;
+    top: 0;
+    padding: 8px 12px;
+    color: #f2f2f2;
+    font-size: 12px;
 }
 
+
 /* The dots/bullets/indicators */
+
 .dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+    border-radius: 50%;
+    background-color: #bbb;
 }
 
 .activeSlide, .dot:hover {
-  background-color: #8bc34a !important;
+    background-color: #8bc34a !important;
 }
 
+
 /* Fading animation */
+
 .bs_fadeSlide {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: 0.4}
-  to {opacity: 1}
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes fade {
-  from {opacity: 0.4}
-  to {opacity: 1}
+    from {
+        opacity: 0.4
+    }
+    to {
+        opacity: 1
+    }
 }
+
 
 /* On smaller screens, decrease text size */
+
 @media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+    .prev, .next, .text {
+        font-size: 11px
+    }
 }
 
-
-.bs_newsBooks
-{
+.bs_newsBooks {
+    margin-bottom: 10px;
     padding: 10px;
-
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0 8px 5px rgba(0,0,0,.3);
-
-    margin-bottom: 10px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, .3);
 }
 
-.bs_newBook
-{
+.bs_newBook {
     display: inline-block;
-
     border: 1px solid #8bc34a;
 }
 
-
-
-.bs_newBookTitle
-{
+.bs_newBookTitle {
     text-align: center;
 }
 
-.bs_newBookAuthor
-{
+.bs_newBookAuthor {
     text-align: center;
 }
 
-a.bs_dates
-{
+a.bs_dates {
     text-align: start;
     text-decoration: none;
-
     color: #989079;
     outline: none;
 }
 
-a.bs_dates:hover
-{
+a.bs_dates:hover {
     color: #322343;
 }
 
-a.bs_dates:before
-{
+a.bs_dates:before {
     content: '>';
 }
 
-a.bs_dates
-{
+a.bs_dates {
     display: block;
 }
 
-.bs_news
-{
+.bs_news {
     margin-bottom: 10px;
     padding: 10px;
-
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0 8px 5px rgba(0,0,0,.3);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
 }
 
-.article-info
-{
+.article-info {
     width: 85%;
     margin: 0;
 }
 
-.article-info-term
-{
+.article-info-term {
     display: none;
 }
 
-.article-info dd
-{
+.article-info dd {
     display: inline-block;
-
     margin-right: 10px;
     margin-left: 0;
-
     white-space: nowrap;
 }
 
-.author-news
-{
+.author-news {
     text-align: right;
 }
 
-.author
-{
+.author {
     padding: 10px;
 }
 
-article.bs_newsArticle
-{
+article.bs_newsArticle {
     text-indent: 20px;
 }

@@ -19,9 +19,9 @@
                     <p>{{comment.comment}}</p>
                 </div>
 
-								<div class="bs_delete-comment" ng-click="$ctrl.deleteComment(comment.id)">
-										<div class="bs_delete-comment-content">x</div>
-								</div>
+                <div class="bs_delete-comment" ng-click="$ctrl.deleteComment(comment.id)">
+                    <div class="bs_delete-comment-content">x</div>
+                </div>
             </div>
         </div>
     </div>
@@ -30,6 +30,6 @@
 <div class="bs_comments-form">
     <form class="" ng-submit="$ctrl.postComment()">
         <textarea id="textareaComment" class="bs_comments-textarea" name="name" rows="5" cols="40" placeholder="Ваш комментарий..."></textarea>
-        <button class="bs_btn btn-small btn-service btn-message pull-right" type="submit" ng-click="$ctrl.addCommentView()">Комментировать</button>
+        <button class="bs_btn btn-small btn-service btn-message br-8 pull-right" type="submit" ng-click="$ctrl.addCommentView()">Комментировать</button>
     </form>
 </div>
