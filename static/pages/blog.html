@@ -7,7 +7,7 @@
         <div class="bs_tab">
             <div class="bs_tab_caption">Блог</div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-md-3 col-sm-5">
                     <div class="bs_bgAside">
                         <div class="bs_titleAsideElem">
                             <h5>
@@ -32,8 +32,9 @@
                         </div>
                     </div>
                 </div>
+                <!-- blog posts -->
                 <div ng-repeat="entry in blog_entries">
-                    <article class="col-sm-4 bs-blog-entry bs-blog-entry-item">
+                    <article class="col-md-4 col-sm-7 bs-blog-entry bs-blog-entry-item">
                         <header class="bs-blog-entry-header">
                             <h2>
                                 {{ entry.header }}
@@ -41,32 +42,33 @@
                         </header>
                         <section>
                             <div class="row">
-                                <img class="col-sm-6 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
-                                <div class="col-sm-6" id="description-container">
+                                <img class="col-xs-12 col-sm-12 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
+                                <div class="col-sm-12" id="description-container">
                                     <div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
-                                    <div class="bs-blog-entry-author">
-                                        <div class="col-sm-3">
-                                            <img src="/static/img/avatar32x32.png">
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <a href="">{{ entry.author.username }}</a>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                             <div class="row bs-blog-entry-footer">
-                                <a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}" ">Читать дальше&nbsp;<i class="fa fa-arrow-right"></i>
+                                <a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}">
+                                    Читать дальше&nbsp;<i class="fa fa-arrow-right"></i>
                                 </a>
-                                <section class="bs-blog-entry-date">
-                                    <i class="fa fa-calendar"></i>
-                                    <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
-                                        {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
-                                    </time>
+                                <section class="col-xs-12 col-sm-12 bs-blog-entry-date">
+                                    <div class="col-xs-5 col-sm-5 bs-blog-entry-author">
+                                        <img class="bs_avatar" src="/static/img/avatar32x32.png">
+                                        <a href="">{{ entry.author.username }}</a>
+                                    </div>
+                                    <div class="col-xs-7 col-sm-7">
+                                        <i class="fa fa-calendar"></i>
+                                        <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
+                                            {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
+                                        </time>
+                                    </div>
                                 </section>
                             </div>
                         </section>
                     </article>
                 </div>
+                <!-- end blog posts -->
             </div>
 
             <!-- template pagination -->

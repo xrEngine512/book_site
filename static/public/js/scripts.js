@@ -702,6 +702,10 @@ angular.module('storeModule', ['rzModule'])
     };
 });
 
-gApp.controller('userController', function() {
+gApp.controller('userController', function($uibModalInstance) {
     var $user = this;
+
+    $user.close = function() {
+        $uibModalInstance.dismiss('close');
+    };
 });

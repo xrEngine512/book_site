@@ -1,115 +1,81 @@
-.bs-blog-entry-read-more
-{
-    font-size: medium;
-    font-weight: bold;
-
-    float: left;
-
-    width: 50%;
-    height: 100%;
-    padding-top: 15px;
-
-    text-align: center;
-    text-decoration: none;
-
-    color: #3f3f3f;
+img.bs_avatar {
+    vertical-align: bottom;
 }
 
-.bs-blog-entry-read-more:hover
-{
-    text-decoration: none;
+.bs-blog-entry-read-more {
+    font-weight: bold;
+    float: left;
+    padding: 15px;
+    color: #3f3f3f;
+    background-color: rgb(250, 224, 255);
+}
 
+.bs-blog-entry-read-more:hover {
+    text-decoration: none;
     background: rgba(20, 20, 20, .1);
 }
 
-.bs-blog-entry-read-more span
-{
+.bs-blog-entry-read-more span {
     visibility: hidden;
-
     margin-left: 10px;
 }
 
-.bs-blog-entry-read-more:hover span
-{
+.bs-blog-entry-read-more:hover span {
     visibility: visible;
 }
 
-.bs-blog-entry-date
-{
+.bs-blog-entry-date {
     float: right;
-
     padding: 15px;
 }
 
-.bs-blog-entry-item
-{
-    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+.bs-blog-entry-item {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
 }
 
-.bs-blog-entry-header
-{
+.bs-blog-entry-header {
     font-style: italic;
-
     text-align: center;
     white-space: nowrap;
 }
 
-.bs-blog-entry-description
-{
+.bs-blog-entry-description {
     font-size: medium;
-    font-style: italic;
-
     overflow: hidden;
-
-    height: 130px;
-    padding-left: 0;
-
+    min-height: 25px;
+    padding: 15px;
     text-overflow: ellipsis;
+    text-indent: 25px;
 }
 
-.bs-blog-entry-author
-{
+.bs-blog-entry-author {
     font-size: x-small;
-
     height: 32px;
-
-    background: rgba(60, 60, 60, .1);
 }
 
-.bs-blog-entry-author div
-{
+.bs-blog-entry-author div {
     padding-left: 0;
 }
 
-.bs-blog-entry-author a
-{
+.bs-blog-entry-author a {
     font-size: 2em;
-
-    height: 100%;
-
     text-decoration: none;
 }
 
-.bs-blog-entry-author:hover a
-{
-    text-decoration: none;
-}
-
-.bs-blog-entry
-{
+.bs-blog-entry {
     border-radius: 5px;
     background-color: #fff;
 }
 
-.bs-blog-entry #description-container
-{
+.bs-blog-entry #description-container {
     padding-left: 0;
 }
 
-.bs-blog-entry-footer
-{
-    height: 50px;
-    margin-top: 15px;
+.bs-blog-entry-footer {
+}
 
-    background: rgba(60, 60, 60, .1);
+@media screen and (max-width: 575px) {
+    .bs-blog-entry {
+        margin-top: 15px;
+    }
 }
