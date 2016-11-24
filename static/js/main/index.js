@@ -11,7 +11,7 @@ gApp.config(['$routeProvider', function($routeProvider) {
 	.when("/store/:idBook", {
 		templateUrl : "/static/pages/product-details.html",
 		controller: "productDetailsController"
-	}) 
+	})
 	.when("/blog", {
 		templateUrl : "/static/pages/blog.html",
 		controller: "blogController"
@@ -56,8 +56,14 @@ gApp.controller('navbar', function($scope, $location, $uibModal, User) {
             title: 'Преступление и наказание',
             price: 17,
             quantity: 4
+        },
+        {
+            title: 'Мормоны',
+            price: 10,
+            quantity: 1
         }
     ];
+	$scope.numberBooks = testItems.length;
     $scope.openCartDialog = function (size) {
         $uibModal.open({
             animations: $scope.animationsEnabled,
@@ -151,7 +157,7 @@ gApp.controller('navbar', function($scope, $location, $uibModal, User) {
 		document.querySelector("#Search").classList.toggle("bs_search-from-visible");
 	};
 
-	$scope.isActive = function (viewLocation) { 	
+	$scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
 
@@ -161,7 +167,7 @@ gApp.controller('navbar', function($scope, $location, $uibModal, User) {
     	elem.style.zIndex = "20";
     	elem = document.getElementById("cartContent");
     	elem.style.display = "block";
-    	elem.style.zIndex = "20";   	
+    	elem.style.zIndex = "20";
     };
 
     $scope.hideCartContent = function() {
@@ -197,10 +203,10 @@ gApp.controller('navbar', function($scope, $location, $uibModal, User) {
 gApp.controller('breadcrumbController', function($scope, $location) {
 	// хреновый подход!
 	var pages = { 'Домашняя' : '/home', 'Магазин' : '/store', 'Блог' : '/blog',
-				  'Контакты' : '/contact', 'Q&A' : '/qna', 
+				  'Контакты' : '/contact', 'Q&A' : '/qna',
 			      'О нас' : '/about-us', 'Пользователь': '/user'
 	};
-		
+
 	$scope.pathStr = function() {
 		var locpath = $location.path();
 
@@ -227,4 +233,3 @@ gApp.run(function ($route, $rootScope, $location) {
         return original.apply($location, [path]);
     };
 });
-

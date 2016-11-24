@@ -33,41 +33,44 @@
                     </div>
                 </div>
                 <!-- blog posts -->
-                <div ng-repeat="entry in blog_entries">
-                    <article class="col-md-4 col-sm-7 bs-blog-entry bs-blog-entry-item">
-                        <header class="bs-blog-entry-header">
-                            <h2>
-                                {{ entry.header }}
-                            </h2>
-                        </header>
-                        <section>
-                            <div class="row">
-                                <img class="col-xs-12 col-sm-12 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
-                                <div class="col-sm-12" id="description-container">
-                                    <div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
+                <div class="col-md-9 col-sm-7">
+                    <div ng-repeat="entry in blog_entries">
+                        <article class="col-md-5 col-sm-12 bs-blog-entry bs-blog-entry-item">
+                            <header class="bs-blog-entry-header">
+                                <h2>
+                                    {{ entry.header }}
+                                </h2>
+                            </header>
+                            <section>
+                                <div class="row">
+                                    <img class="col-xs-12 col-sm-12 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
+                                    <div class="col-sm-12" id="description-container">
+                                        <div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
 
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row bs-blog-entry-footer">
-                                <a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}">
-                                    Читать дальше&nbsp;<i class="fa fa-arrow-right"></i>
-                                </a>
-                                <section class="col-xs-12 col-sm-12 bs-blog-entry-date">
-                                    <div class="col-xs-5 col-sm-5 bs-blog-entry-author">
-                                        <img class="bs_avatar" src="/static/img/avatar32x32.png">
-                                        <a href="">{{ entry.author.username }}</a>
-                                    </div>
-                                    <div class="col-xs-7 col-sm-7">
-                                        <i class="fa fa-calendar"></i>
-                                        <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
-                                            {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
-                                        </time>
-                                    </div>
-                                </section>
-                            </div>
-                        </section>
-                    </article>
+                                <div class="row bs-blog-entry-footer">
+                                    <a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}">
+                                        Читать дальше&nbsp;<i class="fa fa-arrow-right"></i>
+                                    </a>
+                                    <section class="col-xs-12 col-sm-12 bs-blog-entry-date">
+                                        <div class="col-xs-5 col-sm-5 bs-blog-entry-author">
+                                            <img class="bs_avatar" src="/static/img/avatar32x32.png">
+                                            <a href="">{{ entry.author.username }}</a>
+                                        </div>
+                                        <div class="col-xs-7 col-sm-7">
+                                            <i class="fa fa-calendar"></i>
+                                            <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
+                                                {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
+                                            </time>
+                                        </div>
+                                    </section>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
                 </div>
+
                 <!-- end blog posts -->
             </div>
 

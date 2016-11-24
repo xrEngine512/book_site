@@ -30,6 +30,9 @@ img.bs_avatar {
 }
 
 .bs-blog-entry-item {
+    width: 47%;
+    margin-right: 20px;
+    margin-bottom: 15px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
 }
 
@@ -71,11 +74,22 @@ img.bs_avatar {
     padding-left: 0;
 }
 
-.bs-blog-entry-footer {
-}
+.bs-blog-entry-footer {}
 
 @media screen and (max-width: 575px) {
     .bs-blog-entry {
         margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .bs-blog-entry-item {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    .bs-blog-entry-item {
+        width: 46%;
     }
 }

@@ -3,29 +3,23 @@
     right: -22px;
 }
 
-.table > tbody > tr > td
-{
+.table>tbody>tr>td {
     vertical-align: middle;
 }
 
-.cart-item
-{
+.cart-item {
     transition: all .5s linear;
 }
 
-.cart-item.ng-leave
-{
+.cart-item.ng-leave {
     animation: .5s fadeout;
 }
 
-@keyframes fadeout
-{
-    from
-    {
+@keyframes fadeout {
+    from {
         opacity: 1;
     }
-    to
-    {
+    to {
         opacity: 0;
     }
 }

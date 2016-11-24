@@ -1,59 +1,58 @@
-.info-book
-{
+img.bs_book {
+    outline-width: 10px;
+    outline-color: #2c2c2c;
+    outline-offset: 3px;
+    outline-style: inset;
+}
+
+p.bs_price {
+    margin-top: 20px;
+}
+
+.info-book {
     text-align: center;
 }
 
-.border
-{
+strong.bs_status {
+    color: rgb(39, 176, 23)
+}
+
+.border {
     border: 1px solid grey;
 }
 
-h6.bs_head-desc
-{
+h6.bs_head-desc {
     text-align: left;
 }
 
-p.description
-{
+p.description {
     font-size: 0.9em;
-
     text-align: left;
     text-indent: 20px;
 }
 
-.bs_btn_right
-{
+.bs_btn_right {
     float: right;
 }
 
-table
-{
+table {
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif;
     font-size: 14px;
-
     width: 70%;
     max-width: 70%;
-
     border-collapse: collapse;
-
     text-align: left;
 }
 
-th
-{
+th {
     font-weight: normal;
-
     padding: 10px 8px;
-
     color: #039;
     border-bottom: 2px solid #6678b1;
 }
 
-td
-{
+td {
     padding: 9px 8px;
-
     transition: .3s linear;
-
     color: #669;
 }

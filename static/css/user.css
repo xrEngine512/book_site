@@ -3,76 +3,59 @@
     right: -30px;
 }
 
-div.bs_bgUserInfo
-{
-    padding: 10px;
-
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 8px 5px rgba(0,0,0,.3);
-}
-
-.bs_user
-{
+.bs_user {
     margin: 0;
 }
 
-div.bs_profile
-{
+div.bs_profile {
     float: left;
 }
 
-div.bs_profileImage
-{
+div.bs_profileImage {
     position: relative;
 }
 
-div.bs_profileImage a
-{
+div.bs_profileImage a {
     font-size: 1.5em;
-
     position: absolute;
     top: 0;
     right: 0;
-
     display: none;
     z-index: 10;
     color: #111;
     background-color: #fff;
 }
 
-div.bs_profile img
-{
+div.bs_profile img {
     max-width: 100%;
-
     border-radius: 10px;
+    max-width: 100%;
+    border-radius: 10px;
+    outline-width: 10px;
+    outline-color: #2c2c2c;
+    outline-offset: 2px;
+    outline-style: double;
 }
 
-button.bs_btnLoadImage
-{
+button.bs_btnLoadImage {
     margin-top: 10px;
 }
 
-div.bs_infoUser
-{
+div.bs_infoUser {
     display: inline-block;
 }
 
-p.description
-{
+p.description {
     font-family: 'gabriola', sans-serif;
-
     text-align: left;
     text-indent: 20px;
 }
 
-strong
-{
+strong {
     display: block;
 }
 
-strong.bs_aboutSelf
-{
+strong.bs_aboutSelf {
     display: inline-block;
     float: left;
 }
