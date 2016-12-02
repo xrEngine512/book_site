@@ -17,6 +17,9 @@ img.bs_slideImg {
     max-height: 450px;
 }
 
+#pagination {
+  text-align: center;
+}
 
 /* Slideshow container */
 

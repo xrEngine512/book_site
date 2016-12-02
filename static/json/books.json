@@ -6,7 +6,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 1.13,
       "author": "Пушкин А.С.",
-      "quantity": 17
+      "rating": 3
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 22.89,
       "author": "Пушкин А.С.",
-      "quantity": 11
+      "rating": 2
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 30.7,
       "author": "Пушкин А.С.",
-      "quantity": 19
+      "rating": 1
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 27.92,
       "author": "Пушкин А.С.",
-      "quantity": 21
+      "rating": 4
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 39.02,
       "author": "Пушкин А.С.",
-      "quantity": 12
+      "rating": 1
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 15.53,
       "author": "Пушкин А.С.",
-      "quantity": 20
+      "rating": 2
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 26.58,
       "author": "Пушкин А.С.",
-      "quantity": 23
+      "rating": 2
     },
     {
       "id": "8",
@@ -62,7 +62,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 33.52,
       "author": "Пушкин А.С.",
-      "quantity": 21
+      "rating": 2
     },
     {
       "id": "9",
@@ -70,7 +70,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 35.76,
       "author": "Пушкин А.С.",
-      "quantity": 17
+      "rating": 1
     },
     {
       "id": "10",
@@ -78,7 +78,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 17.81,
       "author": "Пушкин А.С.",
-      "quantity": 10
+      "rating": 1
     },
     {
       "id": "11",
@@ -86,7 +86,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 17.86,
       "author": "Пушкин А.С.",
-      "quantity": 13
+      "rating": 3
     },
     {
       "id": "12",
@@ -94,7 +94,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 4.4,
       "author": "Пушкин А.С.",
-      "quantity": 17
+      "rating": 1
     },
     {
       "id": "13",
@@ -102,7 +102,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 12.81,
       "author": "Пушкин А.С.",
-      "quantity": 19
+      "rating": 1
     },
     {
       "id": "14",
@@ -110,7 +110,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 15.37,
       "author": "Пушкин А.С.",
-      "quantity": 10
+      "rating": 1
     },
     {
       "id": "15",
@@ -118,7 +118,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 2.77,
       "author": "Пушкин А.С.",
-      "quantity": 21
+      "rating": 2
     },
     {
       "id": "16",
@@ -126,7 +126,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 24.96,
       "author": "Пушкин А.С.",
-      "quantity": 14
+      "rating": 4
     },
     {
       "id": "17",
@@ -134,7 +134,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 14.95,
       "author": "Пушкин А.С.",
-      "quantity": 10
+      "rating": 1
     },
     {
       "id": "18",
@@ -142,7 +142,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 20.59,
       "author": "Пушкин А.С.",
-      "quantity": 21
+      "rating": 2
     },
     {
       "id": "19",
@@ -150,7 +150,7 @@
 	  "image": "http://lorempixel.com/250/300/",
       "price": 34.41,
       "author": "Пушкин А.С.",
-      "quantity": 11
+      "rating": 1
     }
   ]
 }
