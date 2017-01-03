@@ -1,3 +1,6 @@
 {
-  "directory": "static/libs"
+  "directory": "static/libs",
+  "scripts": {
+    "postinstall": "utils/link_tinymce_langs.sh"
+  }
 }

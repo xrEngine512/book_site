@@ -17,7 +17,7 @@
     "tests"
   ],
   "devDependencies": {
-    "angular-ui-tinymce": "^0.0.16"
+    "angular-ui-tinymce": "latest"
   },
   "dependencies": {
     "jQuery": "^3.1.1",
@@ -31,6 +31,7 @@
     "angular-bootstrap": "^2.4.0",
     "angularjs-slider": "^6.0.0",
     "font-awesome": "^4.7.0",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "tinymce-i18n": "^4.0.0"
   }
 }
