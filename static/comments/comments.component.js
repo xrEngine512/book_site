@@ -21,13 +21,15 @@ module('commentsModule').component('commentsComponent', {
             Comments.remove(tools.union(this.context, {id: id}), this.handleComments);
         }.bind(this);
 
-        this.context = {};
+        this.$onInit = function () {
+            this.context = {};
 
-        if(this.book)
-            this.context = {book_id: this.book.id};
-        else if(this.blog_entry)
-            this.context = {blog_entry_id: this.blog_entry.id};
+            if (this.book)
+                this.context = {book_id: this.book.id};
+            else if (this.blog_entry)
+                this.context = {blog_entry_id: this.blog_entry.id};
 
-        Comments.query(this.context, this.handleComments);
+            Comments.query(this.context, this.handleComments);
+        };
     }
 });
