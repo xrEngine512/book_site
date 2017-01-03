@@ -4,9 +4,10 @@ main_app/__pycache__/
 logs/
 uwsgi.ini
 uwsgi_params
-static/js/libs
+static/libs/
 */migrations/
 runserver.sh
 media/
 nginx.conf
 node_modules
+static/generated/

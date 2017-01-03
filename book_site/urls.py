@@ -16,17 +16,29 @@ Including another URLconf
 from django.conf.urls import url, include, static
 from django.contrib import admin
 from django.conf import settings
+from rest_framework import routers
 from .views import *
+from blog.views import *
+from common.views import *
+from store.views import *
+from files.views import *
+
+router = routers.DefaultRouter()
+router.register(r'blog_entry', BlogViewSet)
+router.register(r'comment', CommentView)
+router.register(r'profile', ProfileViewSet)
+router.register(r'store/book', BookViewSet)
+router.register(r'store/tag', ItemTagViewSet)
+
 
 urlpatterns = [
-    url(r'^', include('blog.urls')),
-    url(r'^', include('files.urls')),
-    url(r'^admin/', admin.site.urls),
-    url(r'^index', index, name='home'),
+    url(r'^api/', include(router.urls)),
+    url(r'^api/files', FilesView.as_view()),
     url(r'^api/auth/$', AuthView.as_view(), name='authenticate'),
-    url(r'^$', index, name='home'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^.*', index, name='home'),
 ]
 
 if settings.DEBUG:
-    urlpatterns.extend(static.static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
+    urlpatterns[-1: -1] = static.static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

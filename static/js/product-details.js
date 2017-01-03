@@ -1,10 +1,9 @@
-gApp.controller('productDetailsController', function($scope, $routeParams, booksFactory) {
-    var idbooks = Number($routeParams.idBook);
-    // медленный поиск и еще вызов json
-    booksFactory.booksFromJson(function(booksFactory) {
-        for (var i = 0; i < booksFactory.products.length; i++) {
-            if (booksFactory.products[i].id == idbooks)
-                $scope.book = booksFactory.products[i];
-        }
+gApp.controller('productDetailsController', function($scope, $routeParams, Books) {
+    Books.get({
+        id: $routeParams.id
+    }, function(data){
+        $scope.book = data;
+        if(!$scope.book.age_restriction)
+            $scope.book.age_restriction = {short: 'нет'};
     });
 });

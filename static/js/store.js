@@ -129,13 +129,13 @@ angular.module('storeModule', ['rzModule'])
             }
         }
     })
-    .controller('storeController', function($scope, pagination, booksFactory) {
+    .controller('storeController', function($scope, pagination, Books) {
 
-        booksFactory.booksFromJson(function(booksFactory) {
+        Books.query({}, function(data) {
 
-            $scope.booksList = booksFactory;
+            $scope.booksList = data;
 
-            pagination.setProducts($scope.booksList.products);
+            pagination.setProducts($scope.booksList);
             $scope.products = pagination.getPageProducts($scope.currentPage);
             $scope.paginationList = pagination.getPaginationList();
 
@@ -183,16 +183,23 @@ angular.module('storeModule', ['rzModule'])
     .controller('filtersController', function(filtersFactory) {
         this.listActiveCategories = filtersFactory.getListActiveCategories();
     })
-    .controller('sortController', function(filtersFactory) {
+    .controller('sortController', function(filtersFactory, Tags) {
         this.sortAuthor = "Автор";
         this.sortPrice = "Цена";
         this.sortName = "Название";
         this.sortCategories = "Категории";
         this.sortRating = "Рейтинг";
 
-        this.listCategories = ['Анархизм', 'Мемуары', 'Рассказы', 'Романы', 'Фэнтези'];
+        Tags.query({tag_class: 'Жанр'}, function (tags) {
+            this.listCategories = tags;
+        });
 
         this.addCategoryActiveList = function(category) {
             filtersFactory.addCategoryActiveList(category);
-    };
-});
+        };
+    })
+    .controller('tagsController', function(Tags) {
+        Tags.query({tag_class: 'Обычный тег'}, function(tags) {
+            this.tags = tags;
+        }.bind(this));
+    });

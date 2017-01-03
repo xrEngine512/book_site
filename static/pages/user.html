@@ -14,7 +14,7 @@
 
 					<div class="col-sm-4 bs_profile">
 						<div class="bs_profileImage">
-							<img src="/static/img/about-photo.jpg" alt="profile photo">
+							<img src="{{ profile.photo }}" alt="profile photo">
 							<a href="#">x</a>
 						</div>
 					</div>
@@ -23,11 +23,11 @@
                         <table>
                             <tbody>
                                 <th><label for="user_login">Логин: </label></th>
-                                <td><input type="text" name="user_login" value="Сергей"></td>
+                                <td><input type="text" name="user_login" value="{{ profile.user.username }}"></td>
                             </tbody>
                             <tbody>
                                 <th><label for="user_mail">Почта: </label></th>
-                                <td><input type="email" name="user_mail" value="Sergey@mail.ru"></td>
+                                <td><input type="email" name="user_mail" value="{{ profile.user.email }}"></td>
                             </tbody>
                             <tbody>
                                 <th><label for="user_password">Новый пароль: </label></th>

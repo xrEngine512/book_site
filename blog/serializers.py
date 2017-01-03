@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from blog.models import BlogEntry
-from common.serializers import UserSerializer
+from common.serializers import ProfileSerializerPublic
 
 
 class BlogSerializer(serializers.ModelSerializer):
-    author = UserSerializer()
+    author = ProfileSerializerPublic()
 
     class Meta:
         model = BlogEntry

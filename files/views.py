@@ -1,5 +1,5 @@
 from rest_framework.status import *
-from rest_framework.views import *
+from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 from rest_framework.permissions import BasePermission, is_authenticated, IsAdminUser, SAFE_METHODS

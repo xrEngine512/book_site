@@ -82,7 +82,7 @@
                                 <div ng-repeat="category in aside.listCategories">
                                     <div class="checkbox">
                                         <input class="bs_check" id="{{category.id}}" type="checkbox" name="check" value="{{category.id}}" ng-model="category.selected" ng-change="aside.addCategoryActiveList(category)">
-                                        <label class="bs_label" for="{{category.id}}">{{category.name}}</label>
+                                        <label class="bs_label" for="{{category.id}}">{{category.value}}</label>
                                     </div>
                                 </div>
                                 <!-- filter -->
@@ -132,12 +132,8 @@
                                 <i class="fa fa-tags" aria-hidden="true"></i>
                                 Теги</h5>
                         </div>
-                        <div class="bs_bodyAsideElem">
-                            <span class="tag tag-primary">Primary</span>
-                            <span class="tag tag-success">Success</span>
-                            <span class="tag tag-info">Info</span>
-                            <span class="tag tag-warning">Warning</span>
-                            <span class="tag tag-danger">Danger</span>
+                        <div class="bs_bodyAsideElem" ng-controller="tagsController as ctrl">
+                            <span class="tag tag-primary" style="background-color: {{ tag.color }}; margin-right: 5px;" ng-repeat="tag in ctrl.tags">{{ tag.value }}</span>
                         </div>
                     </div>
                 </div>
@@ -145,12 +141,12 @@
                 <div class="col-sm-6 col-md-8 col-lg-9" ng-controller="booksController">
                     <div class="col-sm-12 col-md-6 col-lg-3" ng-repeat="item in products">
                         <div class="card">
-                            <img class="img-fluid" src="/static/img/book.png" alt="Card image cap">
+                            <img class="img-fluid" src="{{ item.image }}" alt="Card image cap">
                             <div class="card-block">
-                                <a href="#/store/{{item.id}}">
-                                    <h5>{{ item.title }}</h5>
+                                <a href="store/{{item.id}}">
+                                    <h5>{{ item.name }}</h5>
                                 </a>
-                                <p>{{ item.author }}</p>
+                                <p>{{ item.author.name }}</p>
                                 <p>{{ item.price }}
                                     <i class="fa fa-rub" aria-hidden="true"></i>
                                 </p>

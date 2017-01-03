@@ -43,14 +43,14 @@
                             </header>
                             <section>
                                 <div class="row">
-                                    <img class="col-xs-12 col-sm-12 bs-blog-entry-preview" src="{{ entry.image.replace('%3A', ':') }}">
+                                    <img class="col-xs-12 col-sm-12 bs-blog-entry-preview" src="{{ entry.image }}">
                                     <div class="col-sm-12" id="description-container">
                                         <div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
 
                                     </div>
                                 </div>
                                 <div class="row bs-blog-entry-footer">
-                                    <a class="bs-blog-entry-read-more" href="#blog/{{ entry.id }}">
+                                    <a class="bs-blog-entry-read-more" href="blog/{{ entry.id }}">
                                         Читать дальше&nbsp;<i class="fa fa-arrow-right"></i>
                                     </a>
                                     <section class="col-xs-12 col-sm-12 bs-blog-entry-date">

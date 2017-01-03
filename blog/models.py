@@ -1,9 +1,8 @@
 from django.db import models
-import django.contrib.auth.models as auth
+from common.models import Profile
 
 
 def upload_path(instance, filename):
-    """media/user_id/filename"""
     return 'user_{0}/{1}'.format(instance.author.id, filename)
 
 
@@ -14,7 +13,7 @@ class BlogEntry(models.Model):
     image = models.FileField('Картинка записи', upload_to=upload_path)
     creationDateTime = models.DateTimeField('Дата и время создания записи', auto_now_add=True)
     editDateTime = models.DateTimeField('Дата и время последнего редактрования', auto_now=True)
-    author = models.ForeignKey(auth.User, on_delete=models.CASCADE)
+    author = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.header

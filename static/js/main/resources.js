@@ -26,7 +26,7 @@ gApp.factory('Blog', function ($resource) {
             transformRequest: multipartRequest,
             headers: { 'Content-Type': undefined }
         }
-    })
+    });
 }).factory('Files', function ($resource) {
     return $resource('api/files/', {}, {
         save: {
@@ -34,7 +34,7 @@ gApp.factory('Blog', function ($resource) {
             transformRequest: multipartRequest,
             headers: { 'Content-Type': undefined }
         }
-    })
+    });
 }).factory('User', function ($resource) {
     // defining the endpoints.
     return {
@@ -57,7 +57,33 @@ gApp.factory('Blog', function ($resource) {
             }
         )
     };
-}).config(function ($httpProvider) {
+}).factory('Profile', function ($resource) {
+    return $resource('api/profile/:id/', {}, {});
+}).factory('Books', function ($resource) {
+    return $resource('api/store/book/:id/', {}, {
+        save: {
+            method: 'POST',
+            transformRequest: multipartRequest,
+            headers: { 'Content-Type': undefined }
+        },
+        update: {
+            method: 'PUT',
+            transformRequest: multipartRequest,
+            headers: { 'Content-Type': undefined }
+        }
+    });
+}).factory('Comments', function ($resource) {
+    return $resource('api/comment/:id/', {}, {
+        update: {method: 'PUT'},
+        save: {method: 'POST', isArray: true},
+        remove: {method: 'DELETE', isArray: true}
+    });
+}).factory('Tags', function ($resource) {
+    return $resource('api/store/tag/:id/', {}, {});
+});
+
+
+gApp.config(function ($httpProvider) {
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
 }).config(function ($resourceProvider) {

@@ -10,16 +10,16 @@
             <div class="bs_comment">
 
                 <div class="bs_photo">
-                    <img class="bs_img-photo" src="/static/img/photo.png" alt="photo" width="90px" height="100px">
+                    <img class="bs_img-photo" src="{{ comment.author.photo }}" alt="photo" width="90px" height="100px" uib-tooltip="{{ comment.author.user.username }}">
                 </div>
 
                 <div class="bs_triangle-comment"></div>
                 <div class="bs_content">
-                    <span>{{comment.id}}</span>
-                    <p>{{comment.comment}}</p>
+                    <span>{{ $index + 1 }}</span>
+                    <p>{{comment.text}}</p>
                 </div>
 
-                <div class="bs_delete-comment" ng-click="$ctrl.deleteComment(comment.id)">
+                <div class="bs_delete-comment" ng-click="$ctrl.deleteComment(comment.id)" ng-if="$ctrl.appState.auth.isAdmin()">
                     <div class="bs_delete-comment-content">x</div>
                 </div>
             </div>
@@ -28,8 +28,8 @@
 </div>
 
 <div class="bs_comments-form">
-    <form class="" ng-submit="$ctrl.postComment()">
+    <form>
         <textarea id="textareaComment" class="bs_comments-textarea" name="name" rows="5" cols="40" placeholder="Ваш комментарий..."></textarea>
-        <button class="bs_btn btn-small btn-service btn-message br-8 pull-right" type="submit" ng-click="$ctrl.addCommentView()">Комментировать</button>
+        <button class="bs_btn btn-small btn-service btn-message br-8 pull-right" type="submit" ng-click="$ctrl.addComment()">Комментировать</button>
     </form>
 </div>

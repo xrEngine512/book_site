@@ -25,7 +25,7 @@ gulp.task('css', function() {
 gulp.task('scripts', function() {
     return gulp.src(paths.scripts)
         .pipe(concat('scripts.js'))
-        .pipe(gulp.dest('static/public/js'));
+        .pipe(gulp.dest('static/generated/js'));
 });
 
 gulp.task('build', ['scripts']);

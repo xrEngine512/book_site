@@ -10,7 +10,7 @@
         </form>
     </div>
     <div id="view-mode" style="display: none">
-        <div id="btn-edit" ng-click="setModeEdit(true)"><div class="fa icon-edit"></div>Редактировать</div>
+        <div id="btn-edit" ng-click="setModeEdit(true)" ng-if="blog_entry.can_modify"><div class="fa icon-edit"></div>Редактировать</div>
         <h2>{{ blog_entry.header }}</h2>
         <form class="entry-content" ng-bind-html="htmlContent()"></form>
     </div>

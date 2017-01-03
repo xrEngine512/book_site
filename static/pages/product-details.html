@@ -8,42 +8,42 @@
             <div class="row">
                 <div class="info-book">
                     <div class="col-md-6">
-                        <img class="bs_book" src="/static/img/book.png">
-                        <p class="bs_price">Цена:
-                            {{book.price}}</p>
-                        <p>На складе:<strong class="bs_status">есть</strong>
+                        <img class="bs_book" src="{{ book.image }}">
+                        <p class="bs_price">Цена: {{book.price}} {{ book.currency.name_short }}</p>
+                        <p>На складе:<strong class="bs_status">{{ book.in_stock }}</strong>
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <h4>{{book.title}}</h4>
-                        <h4>{{book.author}}</h4>
+                        <h4>{{book.name}}</h4>
+                        <h4>{{book.author.name}}</h4>
                         <table>
                             <tr>
+                                <td>Жанр:</td>
+                                <td><span ng-repeat="tag in book.tags | filter: {tag_class: 'Жанр'}">{{ tag.value }}{{ $last ? '' : ', ' }}</span></td>
+                            </tr>
+                            <tr>
                                 <td>Издательство:</td>
-                                <td>Комната 211.</td>
+                                <td>{{ book.publishing_house }}</td>
                             </tr>
                             <tr>
                                 <td>Тираж:</td>
-                                <td>100</td>
+                                <td>{{ book.circulation }}</td>
                             </tr>
                             <tr>
                                 <td>Возрастные ограничения:</td>
-                                <td>18+</td>
+                                <td>{{ book.age_restriction.short }}</td>
                             </tr>
                             <tr>
                                 <td>Формат:</td>
-                                <td>22.2 x 15.3 x 2</td>
+                                <td>{{ book.format }}</td>
                             </tr>
                             <tr>
                                 <td>Год:</td>
-                                <td>2016</td>
+                                <td>{{ book.year }}</td>
                             </tr>
                         </table>
                         <h6 class="bs_head-desc">Описание:</h6>
-                        <p class="description">
-                            Творчество Александра Сергеевича Пушкина знакомо каждому еще со школы. И любой читатель находит в нем именно то, что ему близко: одни восторженно относятся к пушкинской лирике, другие учат наизусть «Евгения Онегина», третьи любят простоту и ясность
-                            его прозы. Уникальный язык пушкинской прозы стал той плодородной почвой, на которой поднялся великий русский реализм 19 века.
-                        </p>
+                        <p class="description">{{ book.description }}</p>
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
         <div class="bs_tab">
             <div class="bs_tab_caption">Комментарии</div>
             <div class="row">
-                <comments-component></comments-component>
+                <comments-component book="book" app-state="applicationState" ng-if="book"></comments-component>
             </div>
         </div>
     </div>
