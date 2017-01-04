@@ -1,9 +1,12 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets
+from registration.backends.hmac.views import RegistrationView as BaseRegistrationView, ActivationView
+from rest_framework import viewsets, views, status
+from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from rest_framework.permissions import *
 from .serializers import *
 from common import resolve_user_profile, to_dict
+from validate_email import validate_email
 
 
 class CommentPermission(BasePermission):
@@ -106,3 +109,36 @@ class ProfileViewSet(viewsets.ReadOnlyModelViewSet):
         if IsAdminUser().has_permission(request, self):
             return Response(ProfileSerializerPrivate(Profile.objects.all(), many=True).data)
         return Response(ProfileSerializerPublic(Profile.objects.all(), many=True).data)
+
+
+class RegistrationView(views.APIView):
+    permission_classes = (AllowAny, )
+    parser_classes = (JSONParser, )
+    registration_view = BaseRegistrationView()
+    activation_view = ActivationView()
+
+    def post(self, request):
+        data = to_dict(request.data)
+        if User.objects.filter(username=data.get('username')):
+            return Response({'reason': 'Пользователь с таким логином уже существует'}, status.HTTP_409_CONFLICT)
+        if not validate_email(data.get('email'), verify=True):
+            return Response({'reason': 'Указанный почтовый ящик не найден'}, status.HTTP_404_NOT_FOUND)
+
+        raw_password = data.pop('password')
+        user = User.objects.create(**data, is_active=False)
+        user.set_password(raw_password)
+        user.save()
+        try:
+            self.registration_view.request = request
+            self.registration_view.send_activation_email(user)
+        except Exception as e:
+            user.delete()
+            return Response({'reason': 'Ошибка при отправке письма'}, status.HTTP_500_INTERNAL_SERVER_ERROR)
+        return Response(UserSerializerPrivate(user).data, status.HTTP_201_CREATED)
+
+    def get(self, request):
+        user = self.activation_view.activate(**to_dict(request.query_params))
+        if user:
+            return Response(UserSerializerPublic(user).data)
+        return Response(status=status.HTTP_404_NOT_FOUND)
+

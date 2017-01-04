@@ -11,3 +11,5 @@ media/
 nginx.conf
 node_modules
 static/generated/
+*/private_settings.py
+*/configuration_settings.py

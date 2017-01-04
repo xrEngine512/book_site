@@ -35,6 +35,11 @@ gApp.config(function ($routeProvider, $locationProvider) {
             templateUrl: "/static/pages/user.html",
             controller: "userController"
         })
+        .when("/activate/:key", {
+            templateUrl: "/static/pages/activation.html",
+            controller: "activationController",
+            controllerAs: "$activation"
+        })
         .when("/404", {
             templateUrl: "/static/pages/404.html"
         })

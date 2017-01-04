@@ -52,8 +52,9 @@ gApp.factory('Blog', function ($resource) {
                 logout: {method: 'DELETE'}
             }
         ),
-        users: $resource('/api/users/', {}, {
-                create: {method: 'POST'}
+        users: $resource('/api/register/', {}, {
+                create: {method: 'POST'},
+                activate: {method: 'GET'}
             }
         )
     };

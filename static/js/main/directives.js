@@ -27,14 +27,8 @@ function handleNavigationBar(navigationBar) {
     }
 }
 function handleFooter(footer) {
-    var footerFactor = (scrollTop() + $(window).height()) - ($(document).height() - 75);
-
-    if(footerFactor > 25) {
-        footer.attr('style', 'top : ' + '{}px'.format($(window).height() - footerFactor));
-    }
-    else {
-        footer.removeAttr('style');
-    }
+    var footerFactor = Math.max((scrollTop() + $(window).height()) - $(document).height(), -85);
+    footer.attr('style', 'bottom : ' + '{}px;'.format(footerFactor));
 }
 
 var gApp = angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ngSanitize', 
@@ -81,6 +75,22 @@ gApp.directive('siteDynamicContent', function ($interval) {
                         callee_info: event.callee_info
                     });
                 }
+            });
+        }
+    };
+}).directive('equal', function () {
+    return {
+        require: 'ngModel',
+        scope: {
+            otherModelValue: "=equal"
+        },
+        link: function($scope, elm, attrs, ctrl) {
+            ctrl.$validators.equal = function(modelValue) {
+                return modelValue == $scope.otherModelValue;
+            };
+
+            $scope.$watch("otherModelValue", function() {
+                ctrl.$validate();
             });
         }
     };

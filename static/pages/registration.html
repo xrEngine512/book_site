@@ -6,34 +6,39 @@
 			<button type="button" class="btn bs_circleButton" ng-click="$registration.close()">x</button>
 		</div>
 		<div class="bs_modal-content">
-			<form>
+			<form name="registrationForm" novalidate>
 				<fieldset>
 					<div class="form-group">
 						<label for="login">Имя пользователя/Логин:</label>
-						<input type="text" id="login" class="form-control">
+						<input type="text" id="login" class="form-control" ng-model="account.username" required>
 					</div>
 
 					<div class="form-group">
 						<label for="login">Почта:</label>
-						<input type="email" id="login" class="form-control">
+						<input type="email" id="email" class="form-control" ng-model="account.email" required>
 					</div>
 
 					<div class="form-group">
 						<label for="password">Пароль:</label>
-						<input type="password" id="password" class="form-control">
+						<input type="password" id="password" class="form-control" ng-model="account.password" required>
 					</div>
 
 					<div class="form-group">
 						<label for="password">Повторите пароль:</label>
-						<input type="password" id="password" class="form-control">
+						<input type="password" id="password_confirm" class="form-control" ng-model="password_confirm" equal="account.password" required>
 					</div>
 
-					<button type="submit" class="btn btn-primary bs_btnModal">Регистрация</button>
+					<button type="submit" ng-click="$registration.submit()" ng-disabled="registrationForm.$invalid" class="btn btn-primary bs_btnModal">Регистрация</button>
 				</fieldset>
 			</form>
 		</div>
 		<div class="bs_modal-footer">
-			
+            <div style="color: rgb(0, 154, 0);" ng-if="status">
+			    {{ status }}
+            </div>
+            <div style="color: rgb(154, 0, 0);" ng-if="failure">
+			    {{ failure }}
+            </div>
 		</div>
 	</div>
 </div>

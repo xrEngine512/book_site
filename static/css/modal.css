@@ -172,6 +172,12 @@ input.bs_check[type=checkbox] {
     animation: icon-scale .3s forwards;
 }
 
+/*Валидация*/
+
+input.ng-invalid {
+    border-color: #e20909;
+}
+
 @-webkit-keyframes icon-scale {
     50% {
         -webkit-transform: scale(1.3);

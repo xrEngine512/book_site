@@ -33,10 +33,11 @@ router.register(r'store/tag', ItemTagViewSet)
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
-    url(r'^api/files', FilesView.as_view()),
+    url(r'^api/files/', FilesView.as_view(), name='files'),
     url(r'^api/auth/$', AuthView.as_view(), name='authenticate'),
+    url(r'^api/register/', RegistrationView.as_view(), name='registration'),
     url(r'^admin/', admin.site.urls),
-    url(r'^.*', index, name='home'),
+    url(r'^.*', index, name='index'),
 ]
 
 if settings.DEBUG:
