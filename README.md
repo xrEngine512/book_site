@@ -10,3 +10,8 @@
 7. npm install --save-dev gulp-uglify
 8. gulp build -> gulp watch-scripts
 9. (for Windows deployment) copy static/libs/tinymce-i18n/langs to static/libs/tinymce/langs
+
+## Server Deployment (some tips)
+
+1. Copy book_site/configuration_settings.py.(debug/release) as book_site/configuration_settings.py
+2. Copy book_site/private_settings.py.sample as book_site/private_settings.py and fill it with your info
