@@ -14,7 +14,7 @@
 
 img.bs_slideImg {
     min-height: 450px;
-    max-height: 450px;
+    max-height: 500px;
 }
 
 #pagination {
@@ -132,8 +132,15 @@ img.bs_slideImg {
     }
 }
 
+@media screen and (min-width: 1500px) {
+    img.bs_slideImg {
+        max-height: initial;
+    }
 
-/* On smaller screens, decrease text size */
+    .slideshow-container {
+        max-width: initial;
+    }
+}
 
 @media only screen and (max-width: 300px) {
     .prev, .next, .text {
