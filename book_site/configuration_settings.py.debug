@@ -3,13 +3,8 @@ import book_site.settings as settings
 
 settings.DEBUG = True
 
-settings.INSTALLED_APPS.append('django.contrib.staticfiles')
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-
-settings.STATIC_URL = '/static/'
-
 settings.STATICFILES_DIRS = (
     os.path.join(settings.BASE_DIR, "static"),
 )
+
+settings.ALLOWED_HOSTS = []

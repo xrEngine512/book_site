@@ -1,3 +1,5 @@
+import os
 import book_site.settings as settings
 
 settings.ALLOWED_HOSTS = ['library21.asuscomm.com']
+settings.STATIC_ROOT = os.path.join(settings.BASE_DIR, 'static/')

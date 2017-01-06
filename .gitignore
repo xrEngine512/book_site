@@ -5,6 +5,8 @@ logs/
 uwsgi.ini
 uwsgi_params
 static/libs/
+static/admin/
+static/rest_framework/
 */migrations/
 runserver.sh
 media/
