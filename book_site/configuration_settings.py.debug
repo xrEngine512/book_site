@@ -6,3 +6,5 @@ settings.DEBUG = True
 settings.STATICFILES_DIRS = (
     os.path.join(settings.BASE_DIR, "static"),
 )
+
+settings.ALLOWED_HOSTS = []
