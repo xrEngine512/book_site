@@ -241,6 +241,9 @@ gApp.run(function ($route, $rootScope, $location) {
             user: null,
             isAdmin: function () {
                 return this.user && this.user.is_superuser;
+            },
+            isAuthenticated: function () {
+                return this.user !== null;
             }
         }
     };

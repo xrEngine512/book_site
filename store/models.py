@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.contenttypes.fields import GenericRelation
-from common.models import Comment
+from common.models import Comment, Tag
 
 
 class Writer(models.Model):
@@ -33,16 +33,13 @@ class AgeRestriction(models.Model):
         return self.full
 
 
-class ItemTag(models.Model):
+class Genre(models.Model):
     """Тег товара"""
-    tag_classes = ['Обычный тег', 'Жанр']
-    tag_class = models.IntegerField('Класс тега', choices=(enumerate(tag_classes)))
-    value = models.TextField('Значение тега')
-    color = models.CharField('HTML цвет', max_length=7, blank=True, null=True)
+    name = models.TextField('Название жанра')
     comment = models.TextField('Комментарий', blank=True, default='')
 
     def __str__(self):
-        return '{}: "{}"'.format(self.tag_classes[self.tag_class], self.value)
+        return self.name
 
 
 class Item(models.Model):
@@ -68,5 +65,6 @@ class Book(Item):
     format = models.TextField('Формат книги', null=True, blank=True)
     year = models.IntegerField('Год')
     rating = models.FloatField('Рейтинг', default=0.0)
-    tags = models.ManyToManyField(ItemTag, verbose_name="Теги книги")
+    genres = models.ManyToManyField(Genre, verbose_name="Жанры")
+    tags = models.ManyToManyField(Tag, verbose_name="Теги книги")
     comments = GenericRelation(Comment, verbose_name="Комментарии к книге")

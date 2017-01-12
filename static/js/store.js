@@ -108,52 +108,36 @@ angular.module('storeModule', ['rzModule'])
             }
         }
     })
-    .factory('filtersFactory', function() {
-        var listActiveCategories = [];
-        return {
-            addCategoryActiveList: function(category) {
-                if (listActiveCategories.indexOf(category) != -1)
-                    return;
-                else
-                    listActiveCategories.push(category);
-            },
-
-            closeChipCategory: function(chipCategory) {
-                var i = listActiveCategories.indexOf(chipCategory);
-                if (i > -1)
-                    listActiveCategories.splice(i, 1);
-            },
-
-            getListActiveCategories: function() {
-                return listActiveCategories;
-            }
-        }
-    })
     .controller('storeController', function($scope, pagination, Books) {
+        this.queryBooks = function (queryArgs) {
+            if(!queryArgs)
+                queryArgs = {};
 
-        Books.query({}, function(data) {
+            Books.query(queryArgs, function (data) {
 
-            $scope.booksList = data;
+                $scope.booksList = data;
 
-            pagination.setProducts($scope.booksList);
-            $scope.products = pagination.getPageProducts($scope.currentPage);
-            $scope.paginationList = pagination.getPaginationList();
+                pagination.setProducts($scope.booksList);
+                $scope.products = pagination.getPageProducts($scope.currentPage);
+                $scope.paginationList = pagination.getPaginationList();
 
-            $scope.showPage = function(page) {
-                if (page == 'prev') {
-                    $scope.products = pagination.getPrevPageProducts();
-                } else if (page == 'next') {
-                    $scope.products = pagination.getNextPageProducts();
-                } else {
-                    $scope.products = pagination.getPageProducts(page);
+                $scope.showPage = function (page) {
+                    if (page == 'prev') {
+                        $scope.products = pagination.getPrevPageProducts();
+                    } else if (page == 'next') {
+                        $scope.products = pagination.getNextPageProducts();
+                    } else {
+                        $scope.products = pagination.getPageProducts(page);
+                    }
+                };
+
+                $scope.currentPageNum = function () {
+                    return pagination.getCurrentPageNum();
                 }
-            };
+            });
+        };
 
-            $scope.currentPageNum = function() {
-                return pagination.getCurrentPageNum();
-            }
-        });
-
+        this.queryBooks();
     })
     .controller('booksController', function($scope, cartFactory) {
         $scope.isActive = function(id) {
@@ -180,26 +164,15 @@ angular.module('storeModule', ['rzModule'])
             }
         };
     })
-    .controller('filtersController', function(filtersFactory) {
-        this.listActiveCategories = filtersFactory.getListActiveCategories();
-    })
-    .controller('sortController', function(filtersFactory, Tags) {
+    .controller('sortController', function(Genres) {
         this.sortAuthor = "Автор";
         this.sortPrice = "Цена";
         this.sortName = "Название";
         this.sortCategories = "Категории";
         this.sortRating = "Рейтинг";
-
-        Tags.query({tag_class: 'Жанр'}, function (tags) {
-            this.listCategories = tags;
-        });
-
-        this.addCategoryActiveList = function(category) {
-            filtersFactory.addCategoryActiveList(category);
-        };
     })
     .controller('tagsController', function(Tags) {
-        Tags.query({tag_class: 'Обычный тег'}, function(tags) {
+        Tags.query({}, function(tags) {
             this.tags = tags;
         }.bind(this));
     });

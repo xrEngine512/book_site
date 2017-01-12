@@ -142,3 +142,11 @@ class RegistrationView(views.APIView):
             return Response(UserSerializerPublic(user).data)
         return Response(status=status.HTTP_404_NOT_FOUND)
 
+
+class TagViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = TagSerializer
+    queryset = Tag.objects.all()
+
+    def list(self, request, *args, **kwargs):
+        return Response(TagSerializer(Tag.objects.filter(**to_dict(request.query_params)), many=True).data)
+

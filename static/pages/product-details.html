@@ -19,7 +19,7 @@
                         <table>
                             <tr>
                                 <td>Жанр:</td>
-                                <td><span ng-repeat="tag in book.tags | filter: {tag_class: 'Жанр'}">{{ tag.value }}{{ $last ? '' : ', ' }}</span></td>
+                                <td><span ng-repeat="genre in book.genres">{{ genre.name }}{{ $last ? '' : ', ' }}</span></td>
                             </tr>
                             <tr>
                                 <td>Издательство:</td>

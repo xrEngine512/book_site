@@ -3,8 +3,8 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.permissions import *
 from store.models import *
-from store.serializers import BookSerializer, ItemTagSerializer
-from common import resolve_foreign_keys, to_dict, resolve_enum_fields
+from store.serializers import BookSerializer, GenreSerializer
+from common import resolve_foreign_keys, to_dict, fill_kwargs
 
 
 class BookPermission(BasePermission):
@@ -24,8 +24,11 @@ class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     permission_classes = (BookPermission, )
 
+    @fill_kwargs
     def list(self, request, *args, **kwargs):
-        return Response(BookSerializer(Book.objects.all(), many=True).data)
+        if 'genres' in kwargs:
+            kwargs['genres__in'] = [int(id) for id in kwargs.pop('genres')]
+        return Response(BookSerializer(Book.objects.filter(**kwargs), many=True).data)
 
     def retrieve(self, request, *args, **kwargs):
         return Response(BookSerializer(get_object_or_404(Book.objects.all(), pk=kwargs.get('pk'))).data)
@@ -45,11 +48,10 @@ class BookViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
 
-class ItemTagViewSet(viewsets.ReadOnlyModelViewSet):
-    serializer_class = ItemTagSerializer
-    queryset = ItemTag.objects.all()
+class GenreViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = GenreSerializer
+    queryset = Genre.objects.all()
 
-    @resolve_enum_fields(('tag_class', ItemTag.tag_classes))
     def list(self, request, *args, **kwargs):
-        return Response(ItemTagSerializer(ItemTag.objects.filter(**to_dict(request.query_params)), many=True).data)
+        return Response(GenreSerializer(Genre.objects.filter(**to_dict(request.query_params)), many=True).data)
 

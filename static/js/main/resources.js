@@ -73,6 +73,8 @@ gApp.factory('Blog', function ($resource) {
             headers: { 'Content-Type': undefined }
         }
     });
+}).factory('Genres', function ($resource) {
+    return $resource('api/store/genre/:id/', {}, {});
 }).factory('Comments', function ($resource) {
     return $resource('api/comment/:id/', {}, {
         update: {method: 'PUT'},
@@ -80,7 +82,7 @@ gApp.factory('Blog', function ($resource) {
         remove: {method: 'DELETE', isArray: true}
     });
 }).factory('Tags', function ($resource) {
-    return $resource('api/store/tag/:id/', {}, {});
+    return $resource('api/tag/:id/', {}, {});
 });
 
 

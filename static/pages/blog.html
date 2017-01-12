@@ -6,6 +6,7 @@
     <div class="container-fluid">
         <div class="bs_tab">
             <div class="bs_tab_caption">Блог</div>
+            <a ng-if="applicationState.auth.isAuthenticated()" href="blog/0" class="bs_tab_add_button">Добавить</a>
             <div class="row">
                 <div class="col-md-3 col-sm-5">
                     <div class="bs_bgAside">

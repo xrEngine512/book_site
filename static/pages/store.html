@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="/static/css/_style.css">
 
 <section class="bs_section">
-    <div class="container-fluid" ng-controller="storeController">
+    <div class="container-fluid" ng-controller="storeController as store">
         <div class="bs_tab">
             <div class="bs_tab_caption">Магазин</div>
             <div class="row">
@@ -79,29 +79,33 @@
                                     Жанр</h5>
                             </div>
                             <div class="bs_bodyAsideElem">
-                                <div ng-repeat="category in aside.listCategories">
+                                <div ng-repeat="category in listCategories">
                                     <div class="checkbox">
-                                        <input class="bs_check" id="{{category.id}}" type="checkbox" name="check" value="{{category.id}}" ng-model="category.selected" ng-change="aside.addCategoryActiveList(category)">
-                                        <label class="bs_label" for="{{category.id}}">{{category.value}}</label>
+                                        <input class="bs_check" id="{{category.id}}" type="checkbox" name="check" value="{{category.selected}}" ng-model="category.selected" ng-change="aside.onSelectionChange(category)">
+                                        <label class="bs_label" for="{{category.id}}">{{category.name}}</label>
                                     </div>
                                 </div>
                                 <!-- filter -->
                                 <strong>Фильтр:</strong>
-                                <div ng-controller="filtersController as filter">
+                                <div>
                                     <div class="bs_chipsCategories">
-                                        <div ng-repeat="chipCategory in filter.listActiveCategories" class="bs_chips">
+                                        <div ng-repeat="category in listCategories | inArray:listActiveCategories:'id'" class="bs_chips">
                                             <div class="bs_chip">
-                                                {{chipCategory}}
+                                                {{ category.name }}
                                                 <span class="bs_iconChip">
                                                     <i class="fa fa-paperclip" aria-hidden="true"></i>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- доработать! -->
-                                <div class="bs_clearFilterCategories">
-                                    <a href="">Сброс</a>
+                                    <div class="row">
+                                        <div class="bs_clearFilterCategories col-sm-6">
+                                            <a href="" ng-click="aside.clearCategoryActiveList();">Сброс</a>
+                                        </div>
+                                        <div class="bs_clearFilterCategories col-sm-6">
+                                            <a href="" ng-click="store.queryBooks({genres: listActiveCategories});">Отфильтровать</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 

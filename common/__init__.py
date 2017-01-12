@@ -22,7 +22,9 @@ class resolve_foreign_keys(object):
 
 
 def to_dict(qd):
-    return dict(qd.items())
+    if isinstance(qd, dict):
+        return qd
+    return {k: v[0] if len(v) == 1 else v for k, v in qd.lists()}
 
 
 class resolve_enum_fields(object):
@@ -55,6 +57,16 @@ def resolve_user_profile(fn):
     def wrapper(self, request, *args, **kwargs):
         kwargs['user_profile'] = Profile.objects.get(user=request.user)
         return fn(self, request, *args, **kwargs)
+    return wrapper
+
+
+def fill_kwargs(fn):
+    @wraps(fn)
+    def wrapper(self, request, *args, **kwargs):
+        data = request.query_params if request.method in ('GET',) else request.data
+        kwargs.update(to_dict(data))
+        return fn(self, request, *args, **kwargs)
+
     return wrapper
 
 

@@ -173,6 +173,14 @@ div.bs_clearFilterCategories > a
     text-decoration: none;
 
     color: #989079;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+div.bs_clearFilterCategories > a:hover
+{
+    background-color: rgba(128, 128, 128, 0.4);
 }
 
 label.bs_label
