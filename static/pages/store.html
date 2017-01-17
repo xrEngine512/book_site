@@ -103,7 +103,7 @@
                                             <a href="" ng-click="aside.clearCategoryActiveList();">Сброс</a>
                                         </div>
                                         <div class="bs_clearFilterCategories col-sm-6">
-                                            <a href="" ng-click="store.queryBooks({genres: listActiveCategories});">Отфильтровать</a>
+                                            <a href="" ng-click="store.queryBooks({genres: listActiveCategories.join()});">Отфильтровать</a>
                                         </div>
                                     </div>
                                 </div>

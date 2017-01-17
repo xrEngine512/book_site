@@ -32,6 +32,7 @@
     "angularjs-slider": "^6.0.0",
     "font-awesome": "^4.7.0",
     "bootstrap": "^3.3.7",
-    "tinymce-i18n": "^4.0.0"
+    "tinymce-i18n": "^4.0.0",
+    "ngstorage": "^0.3.11"
   }
 }

@@ -9,9 +9,20 @@
 6. npm install --save-dev gulp-uncss
 7. npm install --save-dev gulp-uglify
 8. gulp build -> gulp watch-scripts
-9. (for Windows deployment) copy static/libs/tinymce-i18n/langs to static/libs/tinymce/langs
+9. (for deployment on Windows) copy static/libs/tinymce-i18n/langs to static/libs/tinymce/langs
 
 ## Server Deployment (some tips)
+**Dependencies:**
+
+1. django (^1.10.5)
+2. mysqlclient (^1.3.7)
+3. djangorestframework (^3.4.5)
+4. django-registration (^2.2)
+5. django-filter (^1.0.1)
+6. validate-email (^1.3)
+7. py3dns (^3.1.0)
+
+**Instructions:**
 
 1. Copy book_site/configuration_settings.py.(debug/release) as book_site/configuration_settings.py
 2. Copy book_site/private_settings.py.sample as book_site/private_settings.py and fill it with your info

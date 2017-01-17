@@ -62,11 +62,6 @@ gApp.factory('Blog', function ($resource) {
     return $resource('api/profile/:id/', {}, {});
 }).factory('Books', function ($resource) {
     return $resource('api/store/book/:id/', {}, {
-        save: {
-            method: 'POST',
-            transformRequest: multipartRequest,
-            headers: { 'Content-Type': undefined }
-        },
         update: {
             method: 'PUT',
             transformRequest: multipartRequest,
@@ -83,12 +78,4 @@ gApp.factory('Blog', function ($resource) {
     });
 }).factory('Tags', function ($resource) {
     return $resource('api/tag/:id/', {}, {});
-});
-
-
-gApp.config(function ($httpProvider) {
-    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-}).config(function ($resourceProvider) {
-    $resourceProvider.defaults.stripTrailingSlashes = false;
 });

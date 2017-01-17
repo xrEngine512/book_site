@@ -2,6 +2,11 @@ from functools import wraps
 from django.db.models import ForeignKey
 from json import loads as from_json
 from rest_framework.serializers import Field
+from django_filters import BaseInFilter, NumberFilter
+
+
+class NumericInFilter(BaseInFilter, NumberFilter):
+    pass
 
 
 class resolve_foreign_keys(object):

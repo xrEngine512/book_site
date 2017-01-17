@@ -66,5 +66,5 @@ class Book(Item):
     year = models.IntegerField('Год')
     rating = models.FloatField('Рейтинг', default=0.0)
     genres = models.ManyToManyField(Genre, verbose_name="Жанры")
-    tags = models.ManyToManyField(Tag, verbose_name="Теги книги")
+    tags = models.ManyToManyField(Tag, verbose_name="Теги книги", blank=True)
     comments = GenericRelation(Comment, verbose_name="Комментарии к книге")

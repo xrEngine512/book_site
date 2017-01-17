@@ -139,13 +139,9 @@ angular.module('storeModule', ['rzModule'])
 
         this.queryBooks();
     })
-    .controller('booksController', function($scope, cartFactory) {
-        $scope.isActive = function(id) {
-            return cartFactory.isBook(id);
-        };
-        $scope.addToCart = function(product) {
-            cartFactory.setBook(product);
-        };
+    .controller('booksController', function($scope, CartService) {
+        $scope.isActive = CartService.inCart;
+        $scope.addToCart = CartService.addToCart;
     })
     .controller('cartController', function($scope, cartFactory) {
         $scope.books = cartFactory.getBooks();
