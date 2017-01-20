@@ -6,7 +6,7 @@ var gApp = angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ngSanitize',
                                            'ngResource', 'ngStorage', 'ui.bootstrap', 'ui.tinymce',
                                            'storeModule', 'qnaModule', 'commentsModule']);
 
-gApp.config(function ($routeProvider, $locationProvider, $httpProvider, $resourceProvider, $localStorageProvider) {
+gApp.config(function ($routeProvider, $locationProvider, $httpProvider, $resourceProvider) {
     $routeProvider
         .when("/home", {
             templateUrl: "/static/pages/home.html",
@@ -64,6 +64,4 @@ gApp.config(function ($routeProvider, $locationProvider, $httpProvider, $resourc
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
     /* ---- */
     $resourceProvider.defaults.stripTrailingSlashes = false;
-    /* ---- */
-    $localStorageProvider.setKeyPrefix('library21BookSite.');
 });
