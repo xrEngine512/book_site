@@ -24,8 +24,8 @@ gApp.factory('CartService', function ($localStorage) {
         return item.id in ServiceState.items;
     };
 
-    ServiceInterface.addToCart = function (item) {
-        ServiceState.items[idOf(item)] = 1;
+    ServiceInterface.addToCart = function (item, quantity) {
+        ServiceState.items[idOf(item)] = quantity || 1;
         ServiceState.updateItemsCount();
     };
 

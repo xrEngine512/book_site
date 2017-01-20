@@ -52,9 +52,10 @@
                     <form class="form-inline">
                         <div class="form-group">
                             <label for="quantity">Количество:</label>
-                            <input type="number" class="form-control" name="quantity" min="1" max="5">
+                            <input type="number" class="form-control" name="quantity" min="1" max="{{ book.in_stock }}" ng-model="quantity">
                         </div>
-                        <button class="bs_btn btn-small btn-service btn-cart br-8 pull-right" type="submit">Купить</button>
+                        <button class="bs_btn btn-small btn-service btn-cart br-8 pull-right" type="submit"
+                                ng-click="addToCart();">Купить</button>
                     </form>
                 </div>
             </div>
