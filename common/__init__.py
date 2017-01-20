@@ -26,6 +26,7 @@ class resolve_foreign_keys(object):
         return wrapper
 
 
+# FIXME: does not work for ActivationView.activate
 def to_dict(qd):
     if isinstance(qd, dict):
         return qd
