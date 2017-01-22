@@ -364,16 +364,16 @@ div.supportDiv {
 
 /* конец формы поиска*/
 
-.bs_parallax {
-    /* Full height */
-    height: 35%;
-    /* The image used */
+.bs_parallax_background {
     background-image: url('/static/img/bg3.jpg');
-    background-repeat: no-repeat;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    z-index: -1000;
+    pointer-events: none;
 }
 
 
