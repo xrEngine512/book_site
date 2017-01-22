@@ -103,7 +103,7 @@ ul.topnav li a:hover::after {
     width: 15px;
     height: 15px;
     margin: 1px auto;
-    padding: 0 0 1px 3px;
+    padding: 0 0 0 2px;
     text-align: center;
     color: rgb(255, 255, 255);
     border-radius: 50%;
@@ -118,7 +118,7 @@ ul.topnav {
 }
 
 ul.topnav li {
-    display: inline;
+    display: inline-flex;
 }
 
 ul.topnav li a {
@@ -371,7 +371,7 @@ div.supportDiv {
     bottom: 0;
     top: 0;
     position: fixed;
-    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     z-index: -1000;
     pointer-events: none;
 }
