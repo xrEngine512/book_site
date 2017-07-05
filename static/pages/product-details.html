@@ -1,16 +1,16 @@
 <link rel="stylesheet" type="text/css" href="/static/css/product-details.css">
 <link rel="stylesheet" type="text/css" href="/static/css/_style.css">
 
-<section class="bs_section">
-    <div id="bs_product" class="container-fluid" ng-controller="productDetailsController">
-        <div class="bs_tab">
-            <div class="bs_tab_caption">Книга</div>
+<section class="bs-section">
+    <div id="bs-product" class="container-fluid" ng-controller="productDetailsController">
+        <div class="bs-tab">
+            <div class="bs-tab_caption">Книга</div>
             <div class="row">
                 <div class="info-book">
                     <div class="col-md-6">
-                        <img class="bs_book" src="{{ book.image }}">
-                        <p class="bs_price">Цена: {{book.price}} {{ book.currency.name_short }}</p>
-                        <p>На складе:<strong class="bs_status">{{ book.in_stock }}</strong>
+                        <img class="bs-book" src="{{ book.image }}">
+                        <p class="bs-price">Цена: {{book.price}} {{ book.currency.name_short }}</p>
+                        <p>На складе:<strong class="bs-status">{{ book.in_stock }}</strong>
                         </p>
                     </div>
                     <div class="col-md-6">
@@ -42,7 +42,7 @@
                                 <td>{{ book.year }}</td>
                             </tr>
                         </table>
-                        <h6 class="bs_head-desc">Описание:</h6>
+                        <h6 class="bs-head-desc">Описание:</h6>
                         <p class="description">{{ book.description }}</p>
                     </div>
                 </div>
@@ -54,14 +54,14 @@
                             <label for="quantity">Количество:</label>
                             <input type="number" class="form-control" name="quantity" min="1" max="{{ book.in_stock }}" ng-model="quantity">
                         </div>
-                        <button class="bs_btn btn-small btn-service btn-cart br-8 pull-right" type="submit"
+                        <button class="bs-btn btn-small btn-service btn-cart br-8 pull-right" type="submit"
                                 ng-click="addToCart();">Купить</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="bs_tab">
-            <div class="bs_tab_caption">Комментарии</div>
+        <div class="bs-tab">
+            <div class="bs-tab_caption">Комментарии</div>
             <div class="row">
                 <comments-component book="book" app-state="applicationState" ng-if="book"></comments-component>
             </div>

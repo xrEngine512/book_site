@@ -2,14 +2,14 @@
 <link rel="stylesheet" type="text/css" href="/static/css/sort.css">
 <link rel="stylesheet" type="text/css" href="/static/css/_style.css">
 
-<section class="bs_section">
+<section class="bs-section">
     <div class="container-fluid" ng-controller="storeController as store">
-        <div class="bs_tab">
-            <div class="bs_tab_caption">Магазин</div>
+        <div class="bs-tab">
+            <div class="bs-tab_caption">Магазин</div>
             <div class="row">
                 <div class="col-md-12">
                     <div ng-controller="sortController as sort">
-                        <div class="bs_sortGroup">
+                        <div class="bs-sortGroup">
                             <span>Сортировать:
                             </span>
                             <!-- Есть select стандартный элемент! -->
@@ -70,39 +70,39 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="bs_bgAside">
+                    <div class="bs-bgAside">
                         <!-- жанр -->
                         <div ng-controller="asideController as aside">
-                            <div class="bs_titleAsideElem">
+                            <div class="bs-titleAsideElem">
                                 <h5>
                                     <i class="fa fa-bookmark" aria-hidden="true"></i>
                                     Жанр</h5>
                             </div>
-                            <div class="bs_bodyAsideElem">
+                            <div class="bs-bodyAsideElem">
                                 <div ng-repeat="category in listCategories">
                                     <div class="checkbox">
-                                        <input class="bs_check" id="{{category.id}}" type="checkbox" name="check" value="{{category.selected}}" ng-model="category.selected" ng-change="aside.onSelectionChange(category)">
-                                        <label class="bs_label" for="{{category.id}}">{{category.name}}</label>
+                                        <input class="bs-check" id="{{category.id}}" type="checkbox" name="check" value="{{category.selected}}" ng-model="category.selected" ng-change="aside.onSelectionChange(category)">
+                                        <label class="bs-label" for="{{category.id}}">{{category.name}}</label>
                                     </div>
                                 </div>
                                 <!-- filter -->
                                 <strong>Фильтр:</strong>
                                 <div>
-                                    <div class="bs_chipsCategories">
-                                        <div ng-repeat="category in listCategories | inArray:listActiveCategories:'id'" class="bs_chips">
-                                            <div class="bs_chip">
+                                    <div class="bs-chipsCategories">
+                                        <div ng-repeat="category in listCategories | inArray:listActiveCategories:'id'" class="bs-chips">
+                                            <div class="bs-chip">
                                                 {{ category.name }}
-                                                <span class="bs_iconChip">
+                                                <span class="bs-iconChip">
                                                     <i class="fa fa-paperclip" aria-hidden="true"></i>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="bs_clearFilterCategories col-sm-6">
+                                        <div class="bs-clearFilterCategories col-sm-6">
                                             <a href="" ng-click="aside.clearCategoryActiveList();">Сброс</a>
                                         </div>
-                                        <div class="bs_clearFilterCategories col-sm-6">
+                                        <div class="bs-clearFilterCategories col-sm-6">
                                             <a href="" ng-click="store.queryBooks({genres: listActiveCategories.join()});">Отфильтровать</a>
                                         </div>
                                     </div>
@@ -111,16 +111,16 @@
 
                         </div>
                         <!-- цена -->
-                        <div class="bs_titleAsideElem">
+                        <div class="bs-titleAsideElem">
                             <h5>
                                 <i class="fa fa-rub" aria-hidden="true"></i>
                                 Цена</h5>
                         </div>
-                        <div class="bs_bodyAsideElem" ng-controller="sliderController">
+                        <div class="bs-bodyAsideElem" ng-controller="sliderController">
                             <rzslider rz-slider-model="slider.minValue" rz-slider-high="slider.maxValue"
                                       rz-slider-options="slider.options">
                             </rzslider>
-                            <div class="bs_priceInputs">
+                            <div class="bs-priceInputs">
                                 <label>от
                                 </label>
                                 <!-- Todo: если ввести в input не работает слайдер! -->
@@ -131,12 +131,12 @@
                             </div>
                         </div>
                         <!-- теги -->
-                        <div class="bs_titleAsideElem">
+                        <div class="bs-titleAsideElem">
                             <h5>
                                 <i class="fa fa-tags" aria-hidden="true"></i>
                                 Теги</h5>
                         </div>
-                        <div class="bs_bodyAsideElem" ng-controller="tagsController as ctrl">
+                        <div class="bs-bodyAsideElem" ng-controller="tagsController as ctrl">
                             <span class="label label-primary" style="background-color: {{ tag.color }}; margin-right: 5px;" ng-repeat="tag in ctrl.tags">{{ tag.value }}</span>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                                     Рейтинг: {{ item.rating }}
                                 </p>
                                 <button class="btn-card" ng-click="addToCart(item)">
-                                    <i class="fa" ng-class="isActive(item) == false ? 'fa-cart-arrow-down bs_btnCardActive' : 'fa-cart-plus'"></i>
+                                    <i class="fa" ng-class="isActive(item) == false ? 'fa-cart-arrow-down bs-btnCardActive' : 'fa-cart-plus'"></i>
                                 </button>
                             </div>
                         </div>

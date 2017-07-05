@@ -1,35 +1,35 @@
 <link rel="stylesheet" type="text/css" href="/static/comments/comments.css">
 
-<div class="bs_comments-header">Количество комментариев:
+<div class="bs-comments-header">Количество комментариев:
     <span>{{$ctrl.numberComments}}</span>
 </div>
 
 <div ng-repeat="comment in $ctrl.comments">
-    <div class="col-xs-12 bs_comments">
-        <div class="bs_comments-list">
-            <div class="bs_comment">
+    <div class="col-xs-12 bs-comments">
+        <div class="bs-comments-list">
+            <div class="bs-comment">
 
-                <div class="bs_photo">
-                    <img class="bs_img-photo" src="{{ comment.author.photo }}" alt="photo" width="90px" height="100px" uib-tooltip="{{ comment.author.user.username }}">
+                <div class="bs-photo">
+                    <img class="bs-img-photo" src="{{ comment.author.photo }}" alt="photo" width="90px" height="100px" uib-tooltip="{{ comment.author.user.username }}">
                 </div>
 
-                <div class="bs_triangle-comment"></div>
-                <div class="bs_content">
+                <div class="bs-triangle-comment"></div>
+                <div class="bs-content">
                     <span>{{ $index + 1 }}</span>
                     <p>{{comment.text}}</p>
                 </div>
 
-                <div class="bs_delete-comment" ng-click="$ctrl.deleteComment(comment.id)" ng-if="$ctrl.appState.auth.isAdmin()">
-                    <div class="bs_delete-comment-content">x</div>
+                <div class="bs-delete-comment" ng-click="$ctrl.deleteComment(comment.id)" ng-if="$ctrl.appState.auth.isAdmin()">
+                    <div class="bs-delete-comment-content">x</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="bs_comments-form">
+<div class="bs-comments-form">
     <form>
-        <textarea id="textareaComment" class="bs_comments-textarea" name="name" rows="5" cols="40" placeholder="Ваш комментарий..."></textarea>
-        <button class="bs_btn btn-small btn-service btn-message br-8 pull-right" type="submit" ng-click="$ctrl.addComment()">Комментировать</button>
+        <textarea id="textareaComment" class="bs-comments-textarea" name="name" rows="5" cols="40" placeholder="Ваш комментарий..."></textarea>
+        <button class="bs-btn btn-small btn-service btn-message br-8 pull-right" type="submit" ng-click="$ctrl.addComment()">Комментировать</button>
     </form>
 </div>

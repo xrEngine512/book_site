@@ -1,81 +1,63 @@
-.card
-{
+.card {
     text-align: center;
-
     border: none;
     border-radius: 0;
     background-color: #e5e2e2;
 }
 
-.img-fluid
-{
+.img-fluid {
     width: 80%;
     margin-top: 10px;
 }
 
-.img-wrp
-{
+.img-wrp {
     position: relative;
 }
 
-.img-wrp:hover > .wrp
-{
+.img-wrp:hover>.wrp {
     display: block;
 }
 
-.wrp
-{
+.wrp {
     position: absolute;
     top: 0;
     left: 0;
-
     display: none;
-
     width: 100%;
     height: 100%;
 }
 
-.overlay
-{
+.overlay {
     width: 100%;
     height: 100%;
-
     opacity: .5;
     border-radius: 2px;
     background: #000;
 }
 
-ul.overlay-icons
-{
+ul.overlay-icons {
     position: absolute;
     z-index: 10;
     top: 20%;
     left: 20%;
-
     margin-top: -11px;
     padding: 0;
 }
 
-ul.overlay-icons a
-{
+ul.overlay-icons a {
     color: #fff;
 }
 
-ul.overlay-icons li
-{
+ul.overlay-icons li {
     display: inline;
     float: left;
     /* это бред !!! 30px !*/
-
     margin-right: 30px;
-
     list-style: none;
 }
 
-@media screen and (max-width:543px)
-{
-    ul.overlay-icons li
-    {
+@media screen and (max-width:543px) {
+    ul.overlay-icons li {
         margin-right: 80px;
     }
 }

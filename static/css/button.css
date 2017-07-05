@@ -1,6 +1,6 @@
 /*template (raw) button*/
 
-.bs_btn {
+.bs-btn {
     font-family: inherit;
     font-size: inherit;
     font-weight: 700;
@@ -20,7 +20,7 @@
     background: none;
 }
 
-.bs_btn::after {
+.bs-btn::after {
     position: absolute;
     z-index: -1;
     content: '';
@@ -29,7 +29,7 @@
     transition: all .5s;
 }
 
-.bs_btn::before {
+.bs-btn::before {
     font-weight: normal;
     font-style: normal;
     font-variant: normal;
@@ -49,6 +49,7 @@
     line-height: 2.7 !important;
     width: 35px !important;
 }
+
 
 /*button service*/
 

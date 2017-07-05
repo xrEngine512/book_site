@@ -1,11 +1,11 @@
 <link rel="stylesheet" type="text/css" href="/static/css/modal.css">
 
-<div class="bs_modalDialog-bg" ng-cloak>
-	<div class="bs_modalDialog">
-		<div class="bs_modal-header">
-			<button type="button" class="btn bs_circleButton" ng-click="$registration.close()">x</button>
+<div class="bs-modalDialog-bg" ng-cloak>
+	<div class="bs-modalDialog">
+		<div class="bs-modal-header">
+			<button type="button" class="btn bs-circleButton" ng-click="$registration.close()">x</button>
 		</div>
-		<div class="bs_modal-content">
+		<div class="bs-modal-content">
 			<form name="registrationForm" novalidate>
 				<fieldset>
 					<div class="form-group">
@@ -28,11 +28,11 @@
 						<input type="password" id="password_confirm" class="form-control" ng-model="password_confirm" equal="account.password" required>
 					</div>
 
-					<button type="submit" ng-click="$registration.submit()" ng-disabled="registrationForm.$invalid" class="btn btn-primary bs_btnModal">Регистрация</button>
+					<button type="submit" ng-click="$registration.submit()" ng-disabled="registrationForm.$invalid" class="btn btn-primary bs-btnModal">Регистрация</button>
 				</fieldset>
 			</form>
 		</div>
-		<div class="bs_modal-footer">
+		<div class="bs-modal-footer">
             <div style="color: rgb(0, 154, 0);" ng-if="status">
 			    {{ status }}
             </div>

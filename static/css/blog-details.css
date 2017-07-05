@@ -1,82 +1,60 @@
-#preview-image
-{
+#preview-image {
     display: inline-block !important;
 }
 
-#btn-edit
-{
+#btn-edit {
     line-height: 30px;
-
     float: right;
-
     height: 30px;
     padding-right: 10px;
     padding-left: 10px;
-
     cursor: pointer;
     text-align: center;
-
     color: #919191;
     border-radius: 15px;
     background-color: #3f3f3f;
 }
 
-#btn-edit:hover
-{
+#btn-edit:hover {
     color: #fff;
 }
 
-#btn-edit:active
-{
+#btn-edit:active {
     color: #b4b4b4;
 }
 
-#btn-edit:active div
-{
+#btn-edit:active div {
     color: #fff;
 }
 
-#btn-edit div
-{
+#btn-edit div {
     margin-right: 10px;
 }
 
-.entry-content
-{
+.entry-content {
     margin-right: 10px;
     margin-bottom: 10px;
 }
 
-.icon-edit:before
-{
+.icon-edit:before {
     font-family: FontAwesome;
-
     content: '\f044';
 }
 
-i.mce-i-icon-save:before
-{
+i.mce-i-icon-save:before {
     font-family: FontAwesome;
-
     position: absolute;
-
     content: '\f0c7';
 }
 
-i.mce-i-icon-remove-sign:before
-{
+i.mce-i-icon-remove-sign:before {
     font-family: FontAwesome;
-
     position: absolute;
-
     content: '\f057';
 }
 
-i.mce-i-fa-eye:before
-{
+i.mce-i-fa-eye:before {
     font-family: FontAwesome;
-
     position: absolute;
-
     content: '\f06e';
 }

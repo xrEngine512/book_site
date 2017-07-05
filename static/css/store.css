@@ -47,7 +47,7 @@ div.card-block p {
 
 /* только для визуального эффекта */
 
-.bs_btnCardActive {
+.bs-btnCardActive {
     color: #2b2b2b;
 }
 
@@ -123,23 +123,23 @@ div.card-block p {
     display: none;
 }
 
-div.bs_priceInputs {
+div.bs-priceInputs {
     display: inline-block;
     text-align: center;
 }
 
-div.bs_priceInputs input {
+div.bs-priceInputs input {
     max-width: 34%;
 }
 
 
 /* категории */
 
-div.bs_clearFilterCategories {
+div.bs-clearFilterCategories {
     text-align: center;
 }
 
-div.bs_clearFilterCategories>a {
+div.bs-clearFilterCategories>a {
     font-size: 1em;
     text-decoration: none;
     color: #989079;
@@ -148,12 +148,11 @@ div.bs_clearFilterCategories>a {
     height: 100%;
 }
 
-div.bs_clearFilterCategories > a:hover
-{
+div.bs-clearFilterCategories>a:hover {
     background-color: rgba(128, 128, 128, 0.4);
 }
 
-label.bs_label {
+label.bs-label {
     font-size: 13px;
     position: relative;
     display: inline-block;
@@ -162,7 +161,7 @@ label.bs_label {
     cursor: pointer;
 }
 
-label.bs_label:before {
+label.bs-label:before {
     position: absolute;
     bottom: 1px;
     left: 0;
@@ -175,7 +174,7 @@ label.bs_label:before {
     box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, .3), 0 1px 0 0 rgba(255, 255, 255, .8);
 }
 
-input.bs_check[type=checkbox]:checked+label.bs_label:before {
+input.bs-check[type=checkbox]:checked+label.bs-label:before {
     font-size: 15px;
     line-height: 15px;
     content: '\2713';
@@ -184,11 +183,11 @@ input.bs_check[type=checkbox]:checked+label.bs_label:before {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
 }
 
-.checkbox label.bs_label:before {
+.checkbox label.bs-label:before {
     border-radius: 3px;
 }
 
-input.bs_check[type=checkbox] {
+input.bs-check[type=checkbox] {
     display: none;
 }
 

@@ -1,17 +1,16 @@
-
-.bs_user {
+.bs-user {
     margin: 0;
 }
 
-div.bs_profile {
+div.bs-profile {
     float: left;
 }
 
-div.bs_profileImage {
+div.bs-profileImage {
     position: relative;
 }
 
-div.bs_profileImage a {
+div.bs-profileImage a {
     font-size: 1.5em;
     position: absolute;
     top: 0;
@@ -22,7 +21,7 @@ div.bs_profileImage a {
     background-color: #fff;
 }
 
-div.bs_profile img {
+div.bs-profile img {
     max-width: 100%;
     border-radius: 10px;
     max-width: 100%;
@@ -33,11 +32,11 @@ div.bs_profile img {
     outline-style: double;
 }
 
-button.bs_btnLoadImage {
+button.bs-btnLoadImage {
     margin-top: 10px;
 }
 
-div.bs_infoUser {
+div.bs-infoUser {
     display: inline-block;
 }
 
@@ -51,7 +50,7 @@ strong {
     display: block;
 }
 
-strong.bs_aboutSelf {
+strong.bs-aboutSelf {
     display: inline-block;
     float: left;
 }

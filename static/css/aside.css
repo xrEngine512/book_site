@@ -1,21 +1,14 @@
-/* общие стили асайда для всех страниц */
-
-.bs_bgAside
-{
+.bs-bgAside {
     padding: 10px;
-
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0 5px 5px rgba(0,0,0,.3);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
 }
 
-div.bs_titleAsideElem > h5
-{
+div.bs-titleAsideElem>h5 {
     margin: 0;
     padding: 8px;
-
     letter-spacing: 2px;
-
     color: #323444;
     border-bottom: 1px solid #989079;
     border-top-left-radius: 5px;
@@ -25,12 +18,10 @@ div.bs_titleAsideElem > h5
     white-space: nowrap;
 }
 
-div.bs_bodyAsideElem
-{
+div.bs-bodyAsideElem {
     box-sizing: border-box;
     margin-bottom: 20px;
     padding: 10px;
-
     border-right: 1px solid #989079;
     border-bottom: 1px solid #989079;
     border-left: 1px solid #989079;

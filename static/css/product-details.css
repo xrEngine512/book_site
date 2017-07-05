@@ -1,11 +1,11 @@
-img.bs_book {
+img.bs-book {
     outline-width: 10px;
     outline-color: #2c2c2c;
     outline-offset: 3px;
     outline-style: inset;
 }
 
-p.bs_price {
+p.bs-price {
     margin-top: 20px;
 }
 
@@ -13,7 +13,7 @@ p.bs_price {
     text-align: center;
 }
 
-strong.bs_status {
+strong.bs-status {
     color: rgb(39, 176, 23)
 }
 
@@ -21,7 +21,7 @@ strong.bs_status {
     border: 1px solid grey;
 }
 
-h6.bs_head-desc {
+h6.bs-head-desc {
     text-align: left;
 }
 
@@ -31,7 +31,7 @@ p.description {
     text-indent: 20px;
 }
 
-.bs_btn_right {
+.bs-btn_right {
     float: right;
 }
 

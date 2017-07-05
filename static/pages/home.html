@@ -1,29 +1,29 @@
 <link rel="stylesheet" type="text/css" href="/static/css/home.css">
 <link rel="stylesheet" type="text/css" href="/static/css/_style.css">
 
-<section class="bs_section">
+<section class="bs-section">
 
     <div class="container-fluid">
-        <div class="bs_tab">
-            <div class="bs_tab_caption">Новинки</div>
+        <div class="bs-tab">
+            <div class="bs-tab_caption">Новинки</div>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="bs_bgAside">
-                        <div class="bs_titleAsideElem">
+                    <div class="bs-bgAside">
+                        <div class="bs-titleAsideElem">
                             <h5>
                                 <i class="fa fa-thumbs-up" aria-hidden="true">
                                     Популярное</i>
                             </h5>
                         </div>
-                        <div class="bs_bodyAsideElem">
+                        <div class="bs-bodyAsideElem">
                             книги
                         </div>
-                        <div class="bs_titleAsideElem">
+                        <div class="bs-titleAsideElem">
                             <h5>
                                 <i class="fa fa-tags" aria-hidden="true"></i>
                                 Теги</h5>
                         </div>
-                        <div class="bs_bodyAsideElem">
+                        <div class="bs-bodyAsideElem">
                             <span class="label label-primary">Primary</span>
                             <span class="label label-success">Success</span>
                             <span class="label label-info">Info</span>
@@ -34,23 +34,23 @@
                 </div>
                 <div class="col-sm-9">
                     <!-- start carousel -->
-                    <div class="bs_carousel" ng-controller="newsController as newBooks">
+                    <div class="bs-carousel" ng-controller="newsController as newBooks">
                         <div class="slideshow-container">
-                            <div class="mySlides bs_fadeSlide">
+                            <div class="mySlides bs-fadeSlide">
                                 <div class="numbertext">1 / 3</div>
-                                <img class="bs_slideImg" src="/static/img/bg.jpg" style="width:100%">
+                                <img class="bs-slideImg" src="/static/img/bg.jpg" style="width:100%">
                                 <div class="text">Пушкин А.С. Евгений Онегин</div>
                             </div>
 
-                            <div class="mySlides bs_fadeSlide">
+                            <div class="mySlides bs-fadeSlide">
                                 <div class="numbertext">2 / 3</div>
-                                <img class="bs_slideImg" src="/static/img/bg2.jpg" style="width:100%">
+                                <img class="bs-slideImg" src="/static/img/bg2.jpg" style="width:100%">
                                 <div class="text">Толстой Л.В. Война и мир</div>
                             </div>
 
-                            <div class="mySlides bs_fadeSlide">
+                            <div class="mySlides bs-fadeSlide">
                                 <div class="numbertext">3 / 3</div>
-                                <img class="bs_slideImg" src="/static/img/bg3.jpg" style="width:100%">
+                                <img class="bs-slideImg" src="/static/img/bg3.jpg" style="width:100%">
                                 <div class="text">Тургенев И.С. Отцы и дети</div>
                             </div>
 
@@ -71,36 +71,36 @@
             </div>
         </div>
 
-        <div class="bs_tab">
-            <div class="bs_tab_caption">Новости</div>
+        <div class="bs-tab">
+            <div class="bs-tab_caption">Новости</div>
             <div class="row">
                 <div class="col-sm-3">
-                    <div class="bs_bgAside">
-                        <div class="bs_titleAsideElem">
+                    <div class="bs-bgAside">
+                        <div class="bs-titleAsideElem">
                             <h5>
                                 <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                                 Дата новости</h5>
                         </div>
-                        <div class="bs_bodyAsideElem">
-                            <a href="#" class="bs_dates">&ensp;2016</a>
-                            <a href="#" class="bs_dates">&ensp;2015</a>
-                            <a href="#" class="bs_dates">&ensp;2014</a>
+                        <div class="bs-bodyAsideElem">
+                            <a href="#" class="bs-dates">&ensp;2016</a>
+                            <a href="#" class="bs-dates">&ensp;2015</a>
+                            <a href="#" class="bs-dates">&ensp;2014</a>
                         </div>
-                        <div class="bs_titleAsideElem">
+                        <div class="bs-titleAsideElem">
                             <h5>
                                 <i class="fa fa-thumbs-up" aria-hidden="true">
                                     Популярное</i>
                             </h5>
                         </div>
-                        <div class="bs_bodyAsideElem">
+                        <div class="bs-bodyAsideElem">
                             новости
                         </div>
-                        <div class="bs_titleAsideElem">
+                        <div class="bs-titleAsideElem">
                             <h5>
                                 <i class="fa fa-tags" aria-hidden="true"></i>
                                 Теги</h5>
                         </div>
-                        <div class="bs_bodyAsideElem">
+                        <div class="bs-bodyAsideElem">
                             <span class="label label-primary">Primary</span>
                             <span class="label label-success">Success</span>
                             <span class="label label-info">Info</span>
@@ -114,7 +114,7 @@
                     <div ng-controller="paginationCtrl">
                         <div id="content">
                             <div ng-controller="homeController as posts">
-                                <div class="post bs_news" ng-repeat="post in posts.news | startFrom: startingItem() | limitTo: itemsPerPage">
+                                <div class="post bs-news" ng-repeat="post in posts.news | startFrom: startingItem() | limitTo: itemsPerPage">
                                     <dl class="article-info muted">
                                         <dt class="article-info-term">Details</dt>
                                         <dd class="category-name">
@@ -133,7 +133,7 @@
                                         <header>
                                             <h3>{{post.title}}</h3>
                                         </header>
-                                        <article class="bs_newsArticle">{{post.content}}</article>
+                                        <article class="bs-newsArticle">{{post.content}}</article>
                                     </div>
                                     <div class="author-news">
                                         <p class="author">

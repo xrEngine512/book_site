@@ -1,115 +1,93 @@
 /* main group */
-.bs_sortGroup
-{
-    float: right;
 
+.bs-sortGroup {
+    float: right;
     margin-bottom: 10px;
     padding: 7px;
-
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 
+
 /* dropdowns */
-.dropbtn
-{
+
+.dropbtn {
     font-size: 16px;
-
     cursor: pointer;
-
     color: white;
     border: none;
     background-color: #8bc34a;
 }
 
-.dropbtn:hover
-{
+.dropbtn:hover {
     background-color: #3e8e41;
 }
 
-.dropdown-content a
-{
+.dropdown-content a {
     display: block;
-
     text-decoration: none;
-
     color: black;
 }
 
-.dropdown-content a:hover
-{
+.dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-.dropdown
-{
+.dropdown {
     position: relative;
     z-index: 10;
-
     display: inline-block;
 }
 
-.dropdown-content
-{
+.dropdown-content {
     position: absolute;
-
     display: none;
-
     min-width: 160px;
-
     background-color: #f9f9f9;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
 }
 
-.dropdown:hover .dropdown-content
-{
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn
-{
+.dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
 
+
 /* если с помощью скриптов */
+
+
 /* .show {display:block !important;} */
 
+
 /* chips */
-.bs_chip
-{
+
+.bs-chip {
     font-size: 16px;
-
     display: inline-block;
-
     height: 25px;
     padding: 0 15px;
-
     color: #fff;
     border-radius: 20px;
     background-color: #c5d20a;
 }
 
-.bs_chips
-{
+.bs-chips {
     display: inline-block;
-
     margin-left: 10px;
 }
 
-.bs_iconChip
-{
+.bs-iconChip {
     font-size: 16px;
     font-weight: bold;
-
     float: right;
-
     padding-left: 10px;
-
     color: #fff;
 }
 
-.bs_chipsCategories
-{
+.bs-chipsCategories {
     margin-bottom: 10px;
 }

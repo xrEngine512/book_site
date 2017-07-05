@@ -1,4 +1,4 @@
-﻿html, body {
+html, body {
     font-family: "Comic Sans MS", cursive, sans-serif;
     height: 100%;
     margin: 0;
@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     font-family: 'Georgia', sans-serif;
 }
+
 
 /* Хлебные крошки */
 
@@ -28,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Верхняя навигация */
 
-.bs_top-navbar {
+.bs-top-navbar {
     background-color: #2b2b2b;
 }
 
@@ -89,11 +90,11 @@ ul.topnav li a:hover::after {
     letter-spacing: 2px;
 }
 
-.bs_liCart {
+.bs-liCart {
     position: relative;
 }
 
-.bs_liCart .numb {
+.bs-liCart .numb {
     font-size: 14px;
     line-height: 15px;
     position: absolute;
@@ -221,7 +222,7 @@ li.logo-text {
     background-color: #4e3253;
 }
 
-.bs_main-navbar {
+.bs-main-navbar {
     background-color: #6c5770;
 }
 
@@ -237,8 +238,10 @@ ul.navbar li {
     display: inline-block;
 }
 
+
 /* для того чтобы у li не было лишнего отступа */
-ul.navbar li.bs_negativeMargin {
+
+ul.navbar li.bs-negativeMargin {
     margin-right: -.3em;
 }
 
@@ -267,6 +270,7 @@ ul.navbar li.search {
     float: right;
 }
 
+
 /* поддержть проект */
 
 div.supportDiv {
@@ -274,6 +278,7 @@ div.supportDiv {
     width: 256.5px;
     background-color: #3d823d;
 }
+
 
 /* конец поддержать проект */
 
@@ -321,7 +326,7 @@ div.supportDiv {
 
 /* форма поиска */
 
-.bs_search-form {
+.bs-search-form {
     position: absolute;
     z-index: 10;
     top: 60px;
@@ -332,12 +337,12 @@ div.supportDiv {
     background-color: #f29f33;
 }
 
-.bs_search-from-visible {
+.bs-search-from-visible {
     display: inline-flex;
     transition: all ease 1s;
 }
 
-.bs_search-form input {
+.bs-search-form input {
     font-size: 1.3em;
     width: 250px;
     padding: 5px;
@@ -346,7 +351,7 @@ div.supportDiv {
     background-color: #fafafa;
 }
 
-.bs_search-form button {
+.bs-search-form button {
     font-size: 1.3em;
     padding: 5px;
     cursor: pointer;
@@ -356,7 +361,7 @@ div.supportDiv {
     background-color: #eeb013;
 }
 
-.bs_search-form button:hover {
+.bs-search-form button:hover {
     color: #111;
     background-color: #eeb013;
 }
@@ -364,7 +369,7 @@ div.supportDiv {
 
 /* конец формы поиска*/
 
-.bs_parallax_background {
+.bs-parallax_background {
     background-image: url('/static/img/bg3.jpg');
     left: 0;
     right: 0;
@@ -379,7 +384,7 @@ div.supportDiv {
 
 /* начало футера */
 
-footer.bs_footer {
+footer.bs-footer {
     position: fixed;
     bottom: -85px;
     z-index: 3;
@@ -390,11 +395,11 @@ footer.bs_footer {
     height: 100px;
 }
 
-footer.bs_footer a {
+footer.bs-footer a {
     color: #f5f5f5;
 }
 
-footer.bs_footer a:hover {
+footer.bs-footer a:hover {
     text-decoration: none;
     color: #777;
 }

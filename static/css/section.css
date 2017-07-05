@@ -1,54 +1,39 @@
-.bs_section
-{
+.bs-section {
     /* Full height */
     height: 100%;
     padding-top: 35px;
     padding-bottom: 35px;
 }
 
-
-div.bs_tab
-{
+div.bs-tab {
     position: relative;
-
     display: block;
-
     margin-top: 40px;
     padding: 20px;
-
     background-color: #fafafa;
 }
 
-div.bs_tab_caption
-{
+div.bs-tab_caption {
     position: absolute;
     top: -24px;
     left: 0;
-
     padding: 2px 15px;
-
     text-align: center;
-
     color: #2b2b2b;
     background-color: #eeb013;
 }
 
-.bs_tab_add_button
-{
+.bs-tab_add_button {
     position: absolute;
     top: -28px;
     right: 0;
-
     padding: 2px 15px;
-
     text-align: center;
-
     color: #2b2b2b;
     background-color: #fcbe13;
 }
 
-.bs_tab_add_button:before
-{
+.bs-tab_add_button:before {
     content: "";
     position: absolute;
     top: 0;

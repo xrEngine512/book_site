@@ -91,7 +91,7 @@ gApp.controller('navbar', function ($scope, $location, $uibModal, User, CartServ
     };
 
     $scope.searchBook = function () {
-        document.querySelector("#Search").classList.toggle("bs_search-from-visible");
+        document.querySelector("#Search").classList.toggle("bs-search-from-visible");
     };
 
     $scope.isActive = function (viewLocation) {

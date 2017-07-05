@@ -1,4 +1,4 @@
-.bs_delete-comment {
+.bs-delete-comment {
     position: absolute;
     border-radius: 50%;
     background-color: white;
@@ -11,35 +11,35 @@
     cursor: pointer;
 }
 
-.bs_delete-comment-content {
+.bs-delete-comment-content {
     white-space: nowrap;
     overflow: hidden;
 }
 
-.bs_comments-textarea {
+.bs-comments-textarea {
     width: 100%;
     box-sizing: border-box;
 }
 
-.bs_comments-form {
+.bs-comments-form {
     padding: 50px;
     margin-top: 40px;
 }
 
-img.bs_img-photo {
+img.bs-img-photo {
     padding: 8px;
 }
 
-.bs_comments-header {
+.bs-comments-header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.bs_comments-footer {
+.bs-comments-footer {
     text-align: center;
 }
 
-.bs_photo {
+.bs-photo {
     position: absolute;
     top: 50%;
     display: inline-block;
@@ -50,17 +50,17 @@ img.bs_img-photo {
     background-color: #ffeb3b;
 }
 
-.bs_photo:hover {
+.bs-photo:hover {
     cursor: pointer;
     box-shadow: 0 0 5px 5px #cddc39;
 }
 
-.bs_comment {
+.bs-comment {
     position: relative;
     margin-bottom: 30px;
 }
 
-.bs_content {
+.bs-content {
     min-height: 85px;
     margin-left: 115px;
     padding: 10px;
@@ -71,9 +71,9 @@ img.bs_img-photo {
     word-wrap: break-word;
 }
 
-.bs_comments-list {}
+.bs-comments-list {}
 
-.bs_triangle-comment {
+.bs-triangle-comment {
     position: absolute;
     top: calc(50% - 15px);
     display: inline-block;

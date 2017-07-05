@@ -6,19 +6,19 @@
     display: none;
 }
 
-.bs_carousel {
+.bs-carousel {
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
 }
 
-img.bs_slideImg {
+img.bs-slideImg {
     min-height: 450px;
     max-height: 500px;
 }
 
 #pagination {
-  text-align: center;
+    text-align: center;
 }
 
 /* Slideshow container */
@@ -107,7 +107,7 @@ img.bs_slideImg {
 
 /* Fading animation */
 
-.bs_fadeSlide {
+.bs-fadeSlide {
     -webkit-animation-name: fade;
     animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -133,10 +133,9 @@ img.bs_slideImg {
 }
 
 @media screen and (min-width: 1500px) {
-    img.bs_slideImg {
+    img.bs-slideImg {
         max-height: initial;
     }
-
     .slideshow-container {
         max-width: initial;
     }
@@ -148,7 +147,7 @@ img.bs_slideImg {
     }
 }
 
-.bs_newsBooks {
+.bs-newsBooks {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -156,39 +155,39 @@ img.bs_slideImg {
     box-shadow: 0 8px 5px rgba(0, 0, 0, .3);
 }
 
-.bs_newBook {
+.bs-newBook {
     display: inline-block;
     border: 1px solid #8bc34a;
 }
 
-.bs_newBookTitle {
+.bs-newBookTitle {
     text-align: center;
 }
 
-.bs_newBookAuthor {
+.bs-newBookAuthor {
     text-align: center;
 }
 
-a.bs_dates {
+a.bs-dates {
     text-align: start;
     text-decoration: none;
     color: #989079;
     outline: none;
 }
 
-a.bs_dates:hover {
+a.bs-dates:hover {
     color: #322343;
 }
 
-a.bs_dates:before {
+a.bs-dates:before {
     content: '>';
 }
 
-a.bs_dates {
+a.bs-dates {
     display: block;
 }
 
-.bs_news {
+.bs-news {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -220,6 +219,6 @@ a.bs_dates {
     padding: 10px;
 }
 
-article.bs_newsArticle {
+article.bs-newsArticle {
     text-indent: 20px;
 }
