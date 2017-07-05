@@ -27,8 +27,9 @@ router = routers.DefaultRouter()
 router.register(r'blog_entry', BlogViewSet)
 router.register(r'comment', CommentView)
 router.register(r'profile', ProfileViewSet)
+router.register(r'tag', TagViewSet)
 router.register(r'store/book', BookViewSet)
-router.register(r'store/tag', ItemTagViewSet)
+router.register(r'store/genre', GenreViewSet)
 
 
 urlpatterns = [

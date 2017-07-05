@@ -2,6 +2,11 @@ from functools import wraps
 from django.db.models import ForeignKey
 from json import loads as from_json
 from rest_framework.serializers import Field
+from django_filters import BaseInFilter, NumberFilter
+
+
+class NumericInFilter(BaseInFilter, NumberFilter):
+    pass
 
 
 class resolve_foreign_keys(object):
@@ -21,8 +26,11 @@ class resolve_foreign_keys(object):
         return wrapper
 
 
+# FIXME: does not work for ActivationView.activate
 def to_dict(qd):
-    return dict(qd.items())
+    if isinstance(qd, dict):
+        return qd
+    return {k: v[0] if len(v) == 1 else v for k, v in qd.lists()}
 
 
 class resolve_enum_fields(object):
@@ -55,6 +63,16 @@ def resolve_user_profile(fn):
     def wrapper(self, request, *args, **kwargs):
         kwargs['user_profile'] = Profile.objects.get(user=request.user)
         return fn(self, request, *args, **kwargs)
+    return wrapper
+
+
+def fill_kwargs(fn):
+    @wraps(fn)
+    def wrapper(self, request, *args, **kwargs):
+        data = request.query_params if request.method in ('GET',) else request.data
+        kwargs.update(to_dict(data))
+        return fn(self, request, *args, **kwargs)
+
     return wrapper
 
 

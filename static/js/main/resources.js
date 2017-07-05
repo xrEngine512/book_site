@@ -62,17 +62,14 @@ gApp.factory('Blog', function ($resource) {
     return $resource('api/profile/:id/', {}, {});
 }).factory('Books', function ($resource) {
     return $resource('api/store/book/:id/', {}, {
-        save: {
-            method: 'POST',
-            transformRequest: multipartRequest,
-            headers: { 'Content-Type': undefined }
-        },
         update: {
             method: 'PUT',
             transformRequest: multipartRequest,
             headers: { 'Content-Type': undefined }
         }
     });
+}).factory('Genres', function ($resource) {
+    return $resource('api/store/genre/:id/', {}, {});
 }).factory('Comments', function ($resource) {
     return $resource('api/comment/:id/', {}, {
         update: {method: 'PUT'},
@@ -80,13 +77,5 @@ gApp.factory('Blog', function ($resource) {
         remove: {method: 'DELETE', isArray: true}
     });
 }).factory('Tags', function ($resource) {
-    return $resource('api/store/tag/:id/', {}, {});
-});
-
-
-gApp.config(function ($httpProvider) {
-    $httpProvider.defaults.xsrfCookieName = 'csrftoken';
-    $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-}).config(function ($resourceProvider) {
-    $resourceProvider.defaults.stripTrailingSlashes = false;
+    return $resource('api/tag/:id/', {}, {});
 });

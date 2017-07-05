@@ -3,8 +3,9 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.permissions import *
 from store.models import *
-from store.serializers import BookSerializer, ItemTagSerializer
-from common import resolve_foreign_keys, to_dict, resolve_enum_fields
+from store.serializers import BookSerializer, GenreSerializer
+from store.filters import filters, BookFilter
+from common import resolve_foreign_keys
 
 
 class BookPermission(BasePermission):
@@ -21,35 +22,25 @@ class BookPermission(BasePermission):
 
 class BookViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
-    queryset = Book.objects.all()
+    queryset = Book.objects.all().distinct()
     permission_classes = (BookPermission, )
-
-    def list(self, request, *args, **kwargs):
-        return Response(BookSerializer(Book.objects.all(), many=True).data)
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_class = BookFilter
 
     def retrieve(self, request, *args, **kwargs):
-        return Response(BookSerializer(get_object_or_404(Book.objects.all(), pk=kwargs.get('pk'))).data)
-
-    @resolve_foreign_keys(Book)
-    def create(self, request, *args, **kwargs):
-        return Response(BookSerializer(Book.objects.create(**request.data)).data)
+        return Response(self.get_serializer(get_object_or_404(self.get_queryset(), pk=kwargs.get('pk'))).data)
 
     @resolve_foreign_keys(Book)
     def update(self, request, *args, **kwargs):
         data = request.data
-        book = Book.objects.get(pk=data.get('id'))
+        book = self.get_queryset().get(pk=data.get('id'))
         for k, v in data.items():
             setattr(book, k, v)
         book.save()
-        serializer = BookSerializer(book)
-        return Response(serializer.data)
+        return Response(self.get_serializer(book).data)
 
 
-class ItemTagViewSet(viewsets.ReadOnlyModelViewSet):
-    serializer_class = ItemTagSerializer
-    queryset = ItemTag.objects.all()
-
-    @resolve_enum_fields(('tag_class', ItemTag.tag_classes))
-    def list(self, request, *args, **kwargs):
-        return Response(ItemTagSerializer(ItemTag.objects.filter(**to_dict(request.query_params)), many=True).data)
+class GenreViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = GenreSerializer
+    queryset = Genre.objects.all()
 

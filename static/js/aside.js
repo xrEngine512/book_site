@@ -1,14 +1,34 @@
-gApp.controller('asideController', function(filtersFactory, Tags) {
-    Tags.query({tag_class: 'Жанр'}, function (tags) {
-        this.listCategories = tags;
-    }.bind(this));
-
-
-
-    this.addCategoryActiveList = function($event) {
-        if ($event.selected == true)
-            filtersFactory.addCategoryActiveList($event.value);
+gApp.controller('asideController', function($scope, Genres) {
+    /*---- Definitions ----*/
+    this.onSelectionChange = function (senderCategory) {
+        if (senderCategory.selected == true)
+            this.addCategoryActiveList(senderCategory);
         else
-            filtersFactory.closeChipCategory($event.value);
+            this.closeChipCategory(senderCategory);
+    }.bind(this);
+
+    this.addCategoryActiveList = function(category) {
+        if ($scope.listActiveCategories.indexOf(category.id) == -1)
+            $scope.listActiveCategories.push(category.id);
     };
+
+    this.closeChipCategory = function(chipCategory) {
+        var i = $scope.listActiveCategories.indexOf(chipCategory.id);
+        if (i > -1)
+            $scope.listActiveCategories.splice(i, 1);
+    };
+
+    this.clearCategoryActiveList = function () {
+        $scope.listCategories.forEach(function (category) {
+            category.selected = false;
+        });
+        $scope.listActiveCategories.length = 0;
+    };
+
+    /*--- Actions ----*/
+    $scope.listActiveCategories = [];
+
+    Genres.query({}, function (genres) {
+        $scope.listCategories = genres;
+    });
 });

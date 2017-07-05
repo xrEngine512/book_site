@@ -30,6 +30,12 @@ class ProfileSerializerPrivate(serializers.ModelSerializer):
         fields = ('id', 'user', 'photo')
 
 
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = ('id', 'value', 'color', 'comment')
+
+
 class CommentSerializer(serializers.ModelSerializer):
     author = ProfileSerializerPublic()
 

@@ -19,6 +19,8 @@ class Profile(models.Model):
             return
         Profile.objects.create(user=instance)
 
+models.signals.post_save.connect(Profile.on_user_create, sender=User)
+
 
 class Comment(models.Model):
     """Комментарий"""
@@ -31,4 +33,12 @@ class Comment(models.Model):
     text = models.TextField('Текст комментария')
 
 
-models.signals.post_save.connect(Profile.on_user_create, sender=User)
+class Tag(models.Model):
+    """Тег товара"""
+    value = models.TextField('Значение тега')
+    color = models.CharField('HTML цвет', max_length=7, blank=True, null=True)
+    comment = models.TextField('Комментарий', blank=True, default='')
+
+    def __str__(self):
+        return self.value
+
