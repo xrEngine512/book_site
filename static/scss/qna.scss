@@ -1,14 +1,10 @@
-button.accordion
-{
+button.accordion {
     font-size: 15px;
-
     width: 100%;
     padding: 18px;
-
     cursor: pointer;
-    transition: .4s;
+    transition: 0.4s;
     text-align: left;
-
     color: #444;
     border: none;
     outline: none;
@@ -16,51 +12,37 @@ button.accordion
 }
 
 button.accordion.active,
-button.accordion:hover
-{
+button.accordion:hover {
     color: #fff;
     background-color: #a874b1;
 }
 
-button.accordion:hover:after
-{
+button.accordion:hover:after {
     color: #fff;
 }
 
-button.accordion:after
-{
+button.accordion:after {
     font-size: 13px;
-
     float: right;
-
     margin-left: 5px;
-
     content: '\02795';
-
     color: #777;
 }
 
-button.accordion.active:after
-{
+button.accordion.active:after {
     content: '\2796';
-
     color: #fff;
 }
 
-div.panel
-{
+.bs-qna-panel {
     overflow: hidden;
-
     max-height: 500px;
     padding: 0 18px;
-
-    transition: .3s all ease;
-
+    transition: 0.3s all ease;
     opacity: 1;
     background-color: white;
 }
 
-p
-{
+p {
     padding-top: 10px;
 }

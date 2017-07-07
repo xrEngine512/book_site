@@ -1,35 +1,36 @@
 var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    uncss = require('gulp-uncss');
+    cleanCSS = require('gulp-clean-css'),
+    sass = require('gulp-sass'),
+    concatCss = require('gulp-concat-css');
 
 var paths = {
+    styles: ['static/scss/*.scss'],
     scripts: ['static/qna/qna.module.js', 'static/qna/qna.component.js',
         'static/comments/comments.module.js', 'static/comments/comments.component.js',
         'static/js/*.js'
     ]
 };
 
-// неправильно работает в модальных окнах
-/*
-gulp.task('css', function() {
-    return gulp.src('static/libs/bootstrap.min.css')
-        .pipe(uncss({
-            html: ['index.html', 'static/comments/*.html', 'static/qna/*.html',
-                   'static/pages/home.html', 'static/pages/store.html', 'static/pages/contact.html', 'static/pages/about-us.html',
-                   'static/pages/product-details.html', 'static/pages/blog.html', 'static/pages/blog-details.html']
+gulp.task('sass', function() {
+    return gulp.src(paths.styles)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(concatCss('bundle.min.css'))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
         }))
-        .pipe(gulp.dest('static/public/css/'));
-});*/
+        .pipe(gulp.dest('static/generated/css/'));
+});
 
-gulp.task('scripts', function() {
+gulp.task('concat-scripts', function() {
     return gulp.src(paths.scripts)
-        .pipe(concat('scripts.js'))
+        .pipe(concat('bundle.js'))
         .pipe(gulp.dest('static/generated/js'));
 });
 
-gulp.task('build', ['scripts']);
-
-gulp.task('watch-scripts', function() {
+gulp.task('watch', function() {
+    gulp.watch(paths.styles, ['sass']);
     gulp.watch(paths.scripts, ['scripts']);
 });
+
+gulp.task('default', ['sass', 'concat-scripts']);

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="BookStoreApp">
     <head>
         <title>Book store</title>
         <meta charset="utf-8">
-        <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-        <!-- bootstrap 4 -->
-        <link rel="stylesheet" href="/static/libs/bootstrap/dist/css/bootstrap.min.css">
-        <!-- шрифты стили -->
-        <link rel="stylesheet" type="text/css" href="/static/libs/font-awesome/css/font-awesome.min.css">
-        <!-- стили для слайдера -->
-        <link rel="stylesheet" type="text/css" href="/static/libs/angularjs-slider/dist/rzslider.min.css">
-        <!-- шаблон стили -->
-        <link rel="stylesheet" type="text/css" href="/static/css/index.css">
-        <!-- для корзины -->
-        <link rel="stylesheet" type="text/css" href="/static/css/cart-content.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Styles: -->
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="/static/libs/bootstrap/dist/css/bootstrap.min.css">
+        <!-- font-awesome -->
+        <link rel="stylesheet" type="text/css" href="/static/libs/font-awesome/css/font-awesome.min.css">
+        <!-- rzslider -->
+        <link rel="stylesheet" type="text/css" href="/static/libs/angularjs-slider/dist/rzslider.min.css">
+        <!-- bundle styles -->
+        <link rel="stylesheet" type="text/css" href="./static/generated/css/bundle.min.css">
+
+        <!-- Scripts: -->
         <!-- jQuery -->
         <script src="/static/libs/jQuery/dist/jquery.min.js" crossorigin="anonymous"></script>
-        <!-- ангуляр -->
+        <!-- angular -->
         <script src="/static/libs/angular/angular.min.js"></script>
         <script src="/static/libs/angular-route/angular-route.min.js"></script>
         <script src="/static/libs/angular-resource/angular-resource.min.js"></script>
@@ -27,12 +28,12 @@
         <script src="/static/libs/ngstorage/ngStorage.min.js"></script>
         <!-- ui-bootstrap-tpls -->
         <script src="/static/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-        <!-- для слайдера -->
+        <!-- rzslider -->
         <script src="/static/libs/angularjs-slider/dist/rzslider.min.js"></script>
         <!-- tinyMCE -->
         <script src="/static/libs/tinymce/tinymce.min.js"></script>
         <script src="/static/libs/angular-ui-tinymce/src/tinymce.js"></script>
-        <!-- шаблон, основа-->
+        <!-- main script-->
         <script src="/static/js/main/lang-extensions.js"></script>
         <script src="/static/js/main/config.js"></script>
         <script src="/static/js/main/directives.js"></script>
@@ -40,19 +41,19 @@
         <script src="/static/js/main/resources.js"></script>
         <script src="/static/js/main/services.js"></script>
         <script src="/static/js/main/index.js"></script>
-        <!-- карта гугл -->
+        <!-- google map -->
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCIRvXUjoE75h6s2tk5hIftawhWoFI_EeE"></script>
 
-        <!-- скрипты страниц -->
-        <script src="/static/generated/js/scripts.js"></script>
+        <!-- scripts pages -->
+        <script src="/static/generated/js/bundle.js"></script>
 
         <base href="/">
     </head>
-    <div class="bs_parallax_background"></div>
-    <body ng-app="BookStoreApp">
+    <div class="bs-parallax_background"></div>
+    <body>
         <header ng-controller="navbar" id="header">
             <!-- верхняя навигация с соц. ссылками, корзиной, регистрацией и входом-->
-            <div class="bs_top-navbar" id="Topnav">
+            <div class="bs-top-navbar" id="Topnav">
                 <ul class="topnav" id="ulTopnav">
                     <div class="left">
                         <li class="social-icon">
@@ -82,7 +83,7 @@
                         </li>
                     </div>
                     <div class="right">
-                        <li class="bs_liCart">
+                        <li class="bs-liCart">
                             <a href="" ng-click="openCartDialog('lg')">
                                 <span class="fa fa-shopping-cart" aria-hidden="true"></span>
                                 <span class="text-cart">Корзина</span>
@@ -130,7 +131,7 @@
             <!-- конец верхней навигации -->
 
             <!-- основная навигация по сайту-->
-            <nav class="bs_main-navbar" id="Mainnav">
+            <nav class="bs-main-navbar" id="Mainnav">
                 <ul class="navbar" id="ulMainnav">
                     <li class="logo-text">
                         <span>Library 2.1</span>
@@ -138,37 +139,37 @@
                     <li>
                         <img src="/static/img/logo.png" width="60px" height="55px">
                     </li>
-                    <li class="bs_negativeMargin">
+                    <li class="bs-negativeMargin">
                         <a ng-class="{ active: isActive('/home') }" href="home">
                             <span class="fa fa-bullhorn" aria-hidden="true"></span>
                             &nbspДомашняя
                         </a>
                     </li>
-                    <li class="bs_negativeMargin">
+                    <li class="bs-negativeMargin">
                         <a ng-class="{ active: isActive('/store') }" href="store">
                             <span class="fa fa-book" aria-hidden="true"></span>
                             &nbspМагазин
                         </a>
                     </li>
-                    <li class="bs_negativeMargin">
+                    <li class="bs-negativeMargin">
                         <a ng-class="{ active: isActive('/blog') }" href="blog">
                             <span class="fa fa-commenting" aria-hidden="true"></span>
                             &nbspБлог
                         </a>
                     </li>
-                    <li class="bs_negativeMargin">
+                    <li class="bs-negativeMargin">
                         <a ng-class="{ active: isActive('/contact') }" href="contact">
                             <span class="fa fa-volume-control-phone" aria-hidden="true"></span>
                             &nbspКонтакты
                         </a>
                     </li>
-                    <li class="bs_negativeMargin">
+                    <li class="bs-negativeMargin">
                         <a ng-class="{ active: isActive('/qna') }" href="qna">
                             <span class="fa fa-question-circle-o" aria-hidden="true"></span>
                             &nbspQ&A
                         </a>
                     </li>
-                    <li class="bs_negativeMargin">
+                    <li class="bs-negativeMargin">
                         <a ng-class="{ active: isActive('/about-us') }" href="about-us">
                             <span class="fa fa-users" aria-hidden="true"></span>
                             &nbspО нас
@@ -182,7 +183,7 @@
                             <span class="fa fa-search" aria-hidden="true"></span>
                         </a>
                         <!-- форма поиска -->
-                        <div class="bs_search-form" id="Search">
+                        <div class="bs-search-form" id="Search">
                             <input type="text" placeholder="Найти книгу...">
                             <button>Поиск</button>
                         </div>
@@ -210,14 +211,14 @@
         </main>
 
         <!-- пока только шаблон! -->
-        <footer id="footer" class="bs_footer" site-footer>
+        <footer id="footer" class="bs-footer" site-footer>
             <a href="#main">
                 <i class="fa fa-sort-asc" aria-hidden="true"></i>
             </a>
             <br>
             <br>
             <p>
-                © Copyright 2016 Library 2.1
+                © Copyright 2017 Library 2.1
             </p>
         </footer>
 
