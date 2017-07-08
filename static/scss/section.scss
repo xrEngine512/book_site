@@ -1,44 +1,36 @@
+$color-tab-caption: #bfbfbf;
+$color-tab-add-hover: #6161e2;
+
+.bs-container {
+    width: 100%;
+}
+
 .bs-section {
-    /* Full height */
     height: 100%;
-    padding-top: 35px;
-    padding-bottom: 35px;
 }
 
-div.bs-tab {
-    position: relative;
-    display: block;
-    margin-top: 40px;
+.bs-tab {
     padding: 20px;
-    background-color: #fafafa;
 }
 
-div.bs-tab_caption {
-    position: absolute;
-    top: -24px;
-    left: 0;
-    padding: 2px 15px;
+.bs-tab-caption {
+    color: $color-tab-caption;
+    display: block;
+    font-size: 23px;
+    border-left: 5px double $color-tab-caption;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.bs-tab-add-button {
+    font-size: 17px;
+    padding: 5px;
     text-align: center;
-    color: #2b2b2b;
-    background-color: #eeb013;
+    color: $color-tab-caption;
+    display: block;
 }
 
-.bs-tab_add_button {
-    position: absolute;
-    top: -28px;
-    right: 0;
-    padding: 2px 15px;
-    text-align: center;
-    color: #2b2b2b;
-    background-color: #fcbe13;
-}
-
-.bs-tab_add_button:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-width: 16px 16px 0 0;
-    border-style: solid;
-    border-color: #8bc34a transparent;
+.bs-tab-add-button:hover {
+    color: $color-tab-add-hover;
+    text-decoration: none;
 }

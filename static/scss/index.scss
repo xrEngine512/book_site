@@ -1,34 +1,9 @@
-html, body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    height: 100%;
-    margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    overflow: hidden;
-    font-family: 'Georgia', sans-serif;
-}
-
-
-/* Хлебные крошки */
-
-.breadcrumb {
-    margin-bottom: 0;
-    padding: .2rem .1rem;
-    border-radius: 0;
-    background-color: #fff;
-}
-
-.breadcrumb-item+.breadcrumb-item::before {
-    content: '>';
-}
-
-
-/* Конец хлебные крошки*/
-
+$color-nav-background: rgba(0, 0, 0, 0.1);
+$color-nav-link: rgba(0, 0, 0, 0.2);
+$color-nav-link-hover: rgba(0, 0, 0, 0.4);
+$height-background-cover: 500px;
 
 /* Верхняя навигация */
-
 .bs-top-navbar {
     background-color: #2b2b2b;
 }
@@ -219,19 +194,22 @@ li.logo-text {
 /* основная навигация */
 
 .active {
-    background-color: #4e3253;
+    background-color: $color-nav-link;
 }
 
 .bs-main-navbar {
-    background-color: #6c5770;
+    background: url(../../img/bg.jpg) no-repeat center;
+    background-size: cover;
+    height: $height-background-cover;
 }
 
 ul.navbar {
+    border: none;
     margin: 0;
     padding: 0;
     list-style-type: none;
-    /*overflow: hidden;*/
     text-align: center;
+    background-color: $color-nav-background;
 }
 
 ul.navbar li {
@@ -248,7 +226,7 @@ ul.navbar li.bs-negativeMargin {
 ul.navbar li a {
     font-size: 17px;
     display: inline-block;
-    padding: 17px 17px;
+    padding: 17px;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;
@@ -258,7 +236,7 @@ ul.navbar li a {
 }
 
 ul.navbar li a:hover {
-    background-color: #4d4e4e;
+    background-color: $color-nav-link-hover;
 }
 
 ul.navbar li.icon {
@@ -369,7 +347,7 @@ div.supportDiv {
 
 /* конец формы поиска*/
 
-.bs-parallax_background {
+.bs-parallax-background {
     background-image: url('/static/img/bg3.jpg');
     left: 0;
     right: 0;

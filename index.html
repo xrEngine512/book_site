@@ -133,12 +133,6 @@
             <!-- основная навигация по сайту-->
             <nav class="bs-main-navbar" id="Mainnav">
                 <ul class="navbar" id="ulMainnav">
-                    <li class="logo-text">
-                        <span>Library 2.1</span>
-                    </li>
-                    <li>
-                        <img src="/static/img/logo.png" width="60px" height="55px">
-                    </li>
                     <li class="bs-negativeMargin">
                         <a ng-class="{ active: isActive('/home') }" href="home">
                             <span class="fa fa-bullhorn" aria-hidden="true"></span>
@@ -194,17 +188,6 @@
             <!-- конец основной навигации -->
         </header>
         <!-- конец header -->
-
-        <!-- хлебные крошки -->
-        <div class="container-fluid" ng-controller="breadcrumbController">
-            <div class="row">
-                <nav class="breadcrumb">
-                    <a class="breadcrumb-item" href="{{ '/#' + getPath() }}">{{ pathStr() }}</a>
-                    <span class="breadcrumb-item bc-active" href="#">...</span>
-                </nav>
-            </div>
-        </div>
-        <!-- конец хлебные крошки -->
 
         <main id="main" style="margin-bottom: 100px;" site-dynamic-content>
             <div ng-view></div>

@@ -1,7 +1,7 @@
 <section class="bs-section">
-    <div class="container-fluid">
+    <div class="bs-container">
         <div class="bs-tab">
-            <div class="bs-tab_caption">Частые вопросы</div>
+            <div class="bs-tab-caption">Частые вопросы</div>
             <div ng-repeat="question in $ctrl.questions">
                 <button class="accordion" ng-click="isOpen = !isOpen">{{question.title}}</button>
                 <div class="bs-qna-panel" ng-show="isOpen">

@@ -1,37 +1,37 @@
 button.accordion {
     font-size: 15px;
     width: 100%;
-    padding: 18px;
+    padding: 10px;
     cursor: pointer;
-    transition: 0.4s;
+    transition: all 0.3s;
     text-align: left;
-    color: #444;
+    color: #444444;
     border: none;
     outline: none;
-    background-color: #eee;
+    background-color: #eeeeee;
 }
 
 button.accordion.active,
 button.accordion:hover {
-    color: #fff;
-    background-color: #a874b1;
+    color: white;
+    background-color: #a9a2ab;
 }
 
-button.accordion:hover:after {
-    color: #fff;
+button.accordion:hover::after {
+    color: white;
 }
 
-button.accordion:after {
+button.accordion::after {
     font-size: 13px;
     float: right;
     margin-left: 5px;
-    content: '\02795';
-    color: #777;
+    content: "\02795";
+    color: #777777;
 }
 
-button.accordion.active:after {
-    content: '\2796';
-    color: #fff;
+button.accordion.active::after {
+    content: "\2796";
+    color: white;
 }
 
 .bs-qna-panel {

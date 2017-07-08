@@ -1,7 +1,7 @@
 <section class="bs-section">
-    <div id="bs-product" class="container-fluid" ng-controller="productDetailsController">
+    <div id="bs-product" class="bs-container" ng-controller="productDetailsController">
         <div class="bs-tab">
-            <div class="bs-tab_caption">Книга</div>
+            <div class="bs-tab-caption">Книга</div>
             <div class="row">
                 <div class="info-book">
                     <div class="col-md-6">
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="bs-tab">
-            <div class="bs-tab_caption">Комментарии</div>
+            <div class="bs-tab-caption">Комментарии</div>
             <div class="row">
                 <comments-component book="book" app-state="applicationState" ng-if="book"></comments-component>
             </div>

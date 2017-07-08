@@ -1,62 +1,36 @@
 <section class="bs-section">
-    <div class="container-fluid" ng-controller="storeController as store">
+    <div class="bs-container" ng-controller="storeController as store">
         <div class="bs-tab">
-            <div class="bs-tab_caption">Магазин</div>
+            <div class="bs-tab-caption">Магазин</div>
             <div class="row">
                 <div class="col-md-12">
                     <div ng-controller="sortController as sort">
-                        <div class="bs-sortGroup">
+                        <div class="bs-sort-group">
                             <span>Сортировать:
                             </span>
-                            <!-- Есть select стандартный элемент! -->
                             <div class="dropdown">
-                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortRating}}</button>
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortRating}} <i class="fa fa-caret-down" aria-hidden="true"></i></button>
                                 <div id="menuAuthor" class="dropdown-content">
-                                    <!-- полая звезда: <i class="fa fa-star-o" aria-hidden="true"></i> -->
-                                    <!-- на половну заполненная: <i class="fa fa-star-half-o" aria-hidden="true"></i> -->
-                                    <a href="">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </a>
-                                    <a href="">
-                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                    </a>
+                                    <a href="">По возрастанию</a>
+                                    <a href="">По убыванию</a>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortAuthor}}</button>
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openAuthor()">{{sort.sortAuthor}} <i class="fa fa-caret-down" aria-hidden="true"></i></button>
                                 <div id="menuAuthor" class="dropdown-content">
                                     <a href="">[А-Я]</a>
                                     <a href="">[Я-А]</a>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openPrice()">{{sort.sortPrice}}</button>
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openPrice()">{{sort.sortPrice}} <i class="fa fa-caret-down" aria-hidden="true"></i></button>
                                 <div id="menuPrice" class="dropdown-content">
                                     <a href="">По возрастанию</a>
                                     <a href="">По убыванию</a>
                                 </div>
                             </div>
                             <div class="dropdown">
-                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openName()">{{sort.sortName}}</button>
+                                <button type="button" class="dropbtn dropdown-toggle" ng-click="sort.openName()">{{sort.sortName}} <i class="fa fa-caret-down" aria-hidden="true"></i></button>
                                 <div id="menuName" class="dropdown-content">
                                     <a href="">[А-Я]</a>
                                     <a href="">[Я-А]</a>
@@ -144,7 +118,7 @@
                             <img class="img-fluid" src="{{ item.image }}" alt="Card image cap">
                             <div class="card-block">
                                 <a href="store/{{item.id}}">
-                                    <h5>{{ item.name }}</h5>
+                                    <h4>{{ item.name }}</h4>
                                 </a>
                                 <p>{{ item.author.name }}</p>
                                 <p>{{ item.price }}

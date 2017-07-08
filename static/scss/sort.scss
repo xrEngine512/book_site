@@ -1,16 +1,10 @@
-/* main group */
-
-.bs-sortGroup {
-    float: right;
-    margin-bottom: 10px;
+.bs-sort-group {
+    text-align: center;
     padding: 7px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    background-color: #efefef;
 }
-
-
-/* dropdowns */
 
 .dropbtn {
     font-size: 16px;
@@ -18,6 +12,7 @@
     color: white;
     border: none;
     background-color: #8bc34a;
+    padding: 5px;
 }
 
 .dropbtn:hover {
@@ -43,9 +38,8 @@
 .dropdown-content {
     position: absolute;
     display: none;
-    min-width: 160px;
+    min-width: 120px;
     background-color: #f9f9f9;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
 }
 
 .dropdown:hover .dropdown-content {
@@ -55,15 +49,6 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
-
-
-/* если с помощью скриптов */
-
-
-/* .show {display:block !important;} */
-
-
-/* chips */
 
 .bs-chip {
     font-size: 16px;
