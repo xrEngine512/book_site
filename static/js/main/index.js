@@ -30,6 +30,16 @@ gApp.controller('navbar', function ($scope, $location, $uibModal, User, CartServ
         });
     };
 
+    $scope.openLogoutDialog = function (size) {
+        $uibModal.open({
+            animations: $scope.animationsEnabled,
+            templateUrl: '/static/pages/logout.html',
+            controller: 'logoutDialogController',
+            controllerAs: '$logout',
+            size: size
+        });
+    };
+
     // регистрация
     $scope.openRegistrationDialog = function (size) {
         $uibModal.open({
@@ -37,17 +47,6 @@ gApp.controller('navbar', function ($scope, $location, $uibModal, User, CartServ
             templateUrl: '/static/pages/registration.html',
             controller: 'registrationDialogController',
             controllerAs: '$registration',
-            size: size
-        });
-    };
-
-    // логин
-    $scope.openLogoutDialog = function (size) {
-        $uibModal.open({
-            animations: $scope.animationsEnabled,
-            templateUrl: '/static/pages/logout.html',
-            controller: 'logoutDialogController',
-            controllerAs: '$logout',
             size: size
         });
     };
@@ -88,10 +87,6 @@ gApp.controller('navbar', function ($scope, $location, $uibModal, User, CartServ
         } else {
             x.className = "navbar";
         }
-    };
-
-    $scope.searchBook = function () {
-        document.querySelector("#Search").classList.toggle("bs-search-from-visible");
     };
 
     $scope.isActive = function (viewLocation) {

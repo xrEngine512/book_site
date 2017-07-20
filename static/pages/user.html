@@ -1,53 +1,33 @@
 <section>
     <div class="bs-modal-header">
-        <button type="button" class="btn bs-circleButton" ng-click="$user.close()">x</button>
+        <button type="button" class="bs-circle-button bs-circle-button-user" ng-click="$user.close()">&times;</button>
     </div>
 	<div class="bs-container">
 		<div class="bs-tab">
 			<div class="bs-tab-caption">Ваш профиль</div>
-			<div class="row bs-user">
-				<div class="col-sm-12">
+			<div class="row">
+				<div class="col-md-12">
 
-					<div class="col-sm-4 bs-profile">
-						<div class="bs-profileImage">
-							<img src="{{ profile.photo }}" alt="profile photo">
-							<a href="#">x</a>
+					<div class="col-md-5">
+						<div class="thumbnail">
+							<img src="{{ profile.photo }}" alt="Profile photo">
 						</div>
 					</div>
 
-					<div class="col-sm-8 bs-infoUser">
-                        <table>
-                            <tbody>
-                                <th><label for="user_login">Логин: </label></th>
-                                <td><input type="text" name="user_login" value="{{ profile.user.username }}"></td>
-                            </tbody>
-                            <tbody>
-                                <th><label for="user_mail">Почта: </label></th>
-                                <td><input type="email" name="user_mail" value="{{ profile.user.email }}"></td>
-                            </tbody>
-                            <tbody>
-                                <th><label for="user_password">Новый пароль: </label></th>
-                                <td><input type="password" name="user_password" placeholder="Старый пароль">
-                                    <p><input type="password" name="user_password" placeholder="Новый пароль"></p>
-                                </td>
-                            </tbody>
-                        </table>
+					<div class="col-md-7 bs-info-user">
+                        <label for="user_login">Логин: <span>{{ profile.user.username }}</span></label>
+                        <label for="user_mail">Почта: <span>{{ profile.user.email ? profile.user.email : "Отсутствует" }}</span></label>
+                        <label for="user_password">Сменить пароль: </label>
+                        <input type="password" id="user_password" placeholder="Старый пароль...">
+                        <input type="password" placeholder="Новый пароль...">
 					</div>
 
-                    <button class="bs-btn btn-service btn-small btn-setting">Обновить профиль</button>
+                    <button class="bs-update-profile-button">Обновить профиль</button>
 				</div>
 			</div>
 		</div>
 		<div class="bs-tab">
 			<div class="bs-tab-caption">Ваши покупки</div>
-			<div class="row bs-user">
-				<div class="col-sm-12">
-					<img src="/static/img/book.png" width="150px" height="170px">
-					<p>Мяу</p>
-					<p>Пушкин А.С.</p>
-				</div>
-			</div>
 		</div>
-
 	</div>
 </section>

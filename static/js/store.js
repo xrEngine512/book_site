@@ -109,6 +109,10 @@ angular.module('storeModule', ['rzModule'])
         }
     })
     .controller('storeController', function($scope, pagination, Books) {
+        this.searchBook = function () {
+            console.log("TODO: handler search book...");
+        };
+
         this.queryBooks = function (queryArgs) {
             if(!queryArgs)
                 queryArgs = {};

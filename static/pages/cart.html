@@ -1,5 +1,5 @@
 <div class="bs-modal-header">
-    <button type="button" class="btn bs-circleButton" ng-click="close()">x</button>
+    <button type="button" class="bs-circle-button bs-circle-button-cart" ng-click="close()">&times;</button>
 </div>
 <div class="modal-header">
     <h3 class="modal-title">Ваша корзина</h3>
@@ -20,7 +20,7 @@
                 <td align="center"><input type="number" min="0" max="{{ item.in_stock }}" ng-model="item.quantity" ng-change="onBookInCartChange(item)"></td>
                 <td align="center">{{ item.price }} {{ item.currency.name_short }}</td>
                 <td align="center">{{ item.quantity*item.price }} {{ item.currency.name_short }}</td>
-                <td><button class="btn" type="button" ng-click="removeItem($index)">X</button></td>
+                <td><button class="btn" type="button" ng-click="removeItem($index)">&times;</button></td>
             </tr>
         </tbody>
         <tfoot>

@@ -1,56 +1,11 @@
-.bs-user {
-    margin: 0;
+.bs-circle-button-user {
+    top: -20px;
+    right: -25px;
 }
 
-div.bs-profile {
-    float: left;
-}
-
-div.bs-profileImage {
-    position: relative;
-}
-
-div.bs-profileImage a {
-    font-size: 1.5em;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: none;
-    z-index: 10;
-    color: #111;
-    background-color: #fff;
-}
-
-div.bs-profile img {
-    max-width: 100%;
-    border-radius: 10px;
-    max-width: 100%;
-    border-radius: 10px;
-    outline-width: 10px;
-    outline-color: #2c2c2c;
-    outline-offset: 2px;
-    outline-style: double;
-}
-
-button.bs-btnLoadImage {
-    margin-top: 10px;
-}
-
-div.bs-infoUser {
-    display: inline-block;
-}
-
-p.description {
-    font-family: 'gabriola', sans-serif;
-    text-align: left;
-    text-indent: 20px;
-}
-
-strong {
-    display: block;
-}
-
-strong.bs-aboutSelf {
-    display: inline-block;
-    float: left;
+.bs-info-user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

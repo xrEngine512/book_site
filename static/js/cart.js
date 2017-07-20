@@ -17,7 +17,7 @@ gApp.controller('cartControllerModal', function($scope, $uibModalInstance, CartS
     };
 
     $scope.close = function() {
-        $uibModalInstance.dismiss('close');
+        $uibModalInstance.close();
     };
 
     $scope.items = [];

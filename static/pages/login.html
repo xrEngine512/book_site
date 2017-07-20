@@ -1,32 +1,32 @@
-<div class="bs-modalDialog-bg" ng-cloak>
-	<div class="bs-modalDialog" id="login-modal">
+<div class="bs-modal-dialog-bg" ng-cloak>
+	<div class="bs-modal-dialog" id="login-modal">
 		<div class="bs-modal-header">
-			<button type="button" class="btn bs-circleButton" ng-click="$login.close()">x</button>
+			<button type="button" class="bs-circle-button" ng-click="$login.close()">&times;</button>
 		</div>
 		<div class="bs-modal-content">
 			<form>
 				<fieldset>
 					<div class="form-group">
 						<span class="bs-input">
-							<input class="bs-input-field bs-input-account" type="text" id="login" ng-model="$login.username" placeholder="логин">
-							<label class="bs-input-label bs-label-account" for="login">
-								<i class="fa fa-user" aria-hidden="true"></i>
+							<label class="bs-input-label" for="login">
+								<i class="fa fa-user bs-input-label-icon" aria-hidden="true"></i>
 							</label>
+							<input class="bs-input-field bs-input-account" type="text" id="login" ng-model="$login.username" placeholder="логин">
 						</span>
 					</div>
 					<div class="form-group">
 						<span class="bs-input">
-							<input class="bs-input-field bs-input-account" type="password" id="userPassword" ng-model="$login.password" placeholder="пароль">
-							<label class="bs-input-label bs-label-account" for="userPassword">
-								<i class="fa fa-key" aria-hidden="true"></i>
+							<label class="bs-input-label" for="userPassword">
+								<i class="fa fa-key bs-input-label-icon" aria-hidden="true"></i>
 							</label>
+							<input class="bs-input-field bs-input-account" type="password" id="userPassword" ng-model="$login.password" placeholder="пароль">
 						</span>
 					</div>
 					<div class="checkbox" id="login_remember">
 					    <input class="bs-check" id="remember" type="checkbox" name="check" ng-model="$login.remember_me">
 						<label class="bs-label" for="remember">Запомнить меня</label>
 					</div>
-					<button type="submit" class="btn btn-primary bs-btnModal" ng-click="$login.submit()">Вход</button>
+					<button type="submit" class="bs-button-modal" ng-click="$login.submit()">Вход</button>
 				</fieldset>
 			</form>
 		</div>

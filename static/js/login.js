@@ -6,7 +6,7 @@ gApp.controller('loginDialogController', function($rootScope, $scope, $uibModalI
     };
 
     $login.close = function() {
-        $uibModalInstance.dismiss('close');
+        $uibModalInstance.close();
     };
 
     $login.submit = function() {

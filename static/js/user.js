@@ -2,10 +2,13 @@ gApp.controller('userController', function($scope, $uibModalInstance, Profile) {
     var $user = this;
 
     $user.close = function() {
-        $uibModalInstance.dismiss('close');
+        $uibModalInstance.close();
     };
-    if($scope.applicationState.auth.user)
-        Profile.get({user_id: $scope.applicationState.auth.user.id}, function (data) {
+
+    if ($scope.applicationState.auth.user)
+        Profile.get({
+            user_id: $scope.applicationState.auth.user.id
+        }, function(data) {
             $scope.profile = data;
         });
 });

@@ -1,24 +1,53 @@
-/* Книги в виде "card"-элемента */
+$color-background-input-search: #efefef;
+$color-button-search: #6b8ec1;
+$color-button-search-hover: #c3d3de;
 
-.card {
+.bs-search-book {
+    margin: 15px auto;
+}
+
+.bs-search-form {
+    display: flex;
+    width: 330px;
+    margin: auto;
+    justify-content: center;
+}
+
+.bs-search-form-input {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    background-color: $color-background-input-search;
+}
+
+.bs-search-form-button {
+    width: 80px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color: $color-button-search;
+}
+
+.bs-search-form-button:hover {
+    background-color: $color-button-search-hover;
+}
+
+/* Книги в виде "card"-элемента */
+.bs-card-book {
     margin-bottom: 30px;
     padding: 5px;
     padding-bottom: 25px;
     text-align: center;
     border: none;
     border-radius: 10px;
-    background-color: #efefef;
-}
-
-.img-fluid {
-    height: 180px;
+    background-color: $color-background-input-search;
 }
 
 div.card-block p {
     margin: 0;
 }
 
-.btn-card {
+.bs-btn-card {
     font-size: 26px;
     position: absolute;
     left: 50%;
@@ -26,7 +55,6 @@ div.card-block p {
     height: 60px;
     margin-left: -30px;
     padding: 0;
-    transition: background-color 1s;
     color: #fff;
     border: 5px solid #fff;
     border-radius: 50%;
@@ -34,32 +62,25 @@ div.card-block p {
     cursor: pointer;
 }
 
-.btn-card:hover, .btn-card:active {
+.bs-btn-card:hover, .bs-btn-card:active {
     border-color: #fff;
     outline: none;
     background-color: #a874b1;
 }
 
-.btn-card:focus {
+.bs-btn-card:focus {
     outline: none;
 }
 
-.btn-card:visited {
+.bs-btn-card:visited {
     /* когда добавлен элемент в корзину */
 }
-
 
 /* только для визуального эффекта */
 
 .bs-btnCardActive {
     color: #2b2b2b;
 }
-
-.img-fluid {
-    width: 100%;
-    border-radius: 10px;
-}
-
 
 /* Конец книги в виде "карт"-элемента */
 

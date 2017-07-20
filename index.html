@@ -49,7 +49,6 @@
 
         <base href="/">
     </head>
-    <div class="bs-parallax_background"></div>
     <body>
         <header ng-controller="navbar" id="header">
             <!-- верхняя навигация с соц. ссылками, корзиной, регистрацией и входом-->
@@ -91,7 +90,7 @@
                             <span class="numb">{{numberBooks}}</span>
                         </li>
                         <li id="btn-user" style="display: none">
-                            <a href="" ng-click="openUser('lg')">
+                            <a href="" ng-click="openUser('md')">
                                 <span class="fa fa-user" aria-hidden="true"></span>
                                 <span class="text-user">{{ current_username }}</span>
                             </a>
@@ -171,17 +170,6 @@
                     </li>
                     <li class="icon">
                         <a href="javascript:void(0);" style="font-size:15px;" ng-click="openNavbar()">☰</a>
-                    </li>
-                    <li class="search">
-                        <a href="javascript:void(0);" ng-click="searchBook()">
-                            <span class="fa fa-search" aria-hidden="true"></span>
-                        </a>
-                        <!-- форма поиска -->
-                        <div class="bs-search-form" id="Search">
-                            <input type="text" placeholder="Найти книгу...">
-                            <button>Поиск</button>
-                        </div>
-                        <!-- конец формы поиска -->
                     </li>
                 </ul>
             </nav>

@@ -1,10 +1,12 @@
-/* не особо то и работает тут*/
+$color-close-modal-dialog-button: #898E8C;
+$color-modal-form-items: #4F84C4;
+$color-modal-form-items-hover: #526d8e;
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none;
 }
 
-.bs-modalDialog-bg {
+.bs-modal-dialog-bg {
     position: fixed;
     top: 0;
     right: 0;
@@ -13,7 +15,7 @@
     background: rgba(0, 0, 0, .6);
 }
 
-.bs-modalDialog {
+.bs-modal-dialog {
     position: fixed;
     left: 50%;
     width: 320px;
@@ -23,22 +25,28 @@
     background: white;
 }
 
-.bs-circleButton {
-    font-size: 1.3em;
+.bs-circle-button {
+    border: 4px solid white;
+    font-size: 2em;
     position: absolute;
-    top: -23px;
-    right: -23px;
+    top: -30px;
+    right: -35px;
     width: 45px;
     height: 45px;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 45%;
     outline: 0;
-    background-color: #8bc34a;
-    color: white;
+    background-color: $color-close-modal-dialog-button;
+    color: #fff;
 }
 
-.bs-circleButton:focus {
+.bs-circle-button:focus {
     outline: 0;
+}
+
+.bs-circle-button-cart {
+    top: -20px;
+    right: -25px;
 }
 
 .bs-modal-header {
@@ -55,7 +63,7 @@
     margin-left: 5px;
 }
 
-label.bs-label {
+.bs-label {
     font-size: 13px;
     position: relative;
     display: inline-block;
@@ -64,7 +72,7 @@ label.bs-label {
     cursor: pointer;
 }
 
-label.bs-label:before {
+.bs-label::before {
     position: absolute;
     bottom: 1px;
     left: 0;
@@ -85,7 +93,7 @@ input.bs-check[type=checkbox]:checked+label.bs-label:before {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
 }
 
-.checkbox label.bs-label:before {
+.checkbox .bs-label::before {
     border-radius: 3px;
 }
 
@@ -98,111 +106,50 @@ input.bs-check[type=checkbox] {
     text-align: center;
 }
 
-.bs-btnModal {
+.bs-button-modal {
     width: 100%;
     margin: 10px auto;
     padding: 8px 0;
     text-align: center;
     border: none;
     border-radius: 0;
-    background-color: #20b4ea;
+    background-color: $color-modal-form-items;
+    color: white;
 }
 
-
-/* input */
+.bs-button-modal:hover {
+    background-color: $color-modal-form-items-hover;
+}
 
 .bs-input {
-    position: relative;
-    display: inline-block;
-    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    height: 50px;
 }
 
 .bs-input-label {
-    position: relative;
-    display: inline-block;
     min-width: 50px;
-    padding: 15px;
-    text-align: center;
-    color: #111;
-    background-color: #20b4ea;
+    color: white;
+    background-color: $color-modal-form-items;
+    display: flex;
+    height: 100%;
+
+    .bs-input-label-icon {
+        margin: auto;
+    }
 }
 
 .bs-input-field {
-    font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 150%;
-    font-weight: 400;
-    position: relative;
-    max-width: 230px;
-    padding: 9px;
-    color: #fff;
+    outline: none;
+    padding-left: 20px;
+    width: 100%;
     border: none;
     border-radius: 0;
-    background: #f3efef;
-    -webkit-appearance: none;
+    background-color: #f3efef;
 }
 
-.bs-label-account {
-    float: left;
-}
-
-.bs-input-account {
-    display: block;
-    float: right;
-}
-
-
-/*Псевдоэлементы*/
-
-
-/*Псевдоклассы*/
-
-.bs-input-account:focus {
-    color: #105f7b;
-    outline: none;
-}
-
-.bs-input-account:focus+.bs-label-account>.fa-user {
-    -webkit-animation: icon-scale .3s forwards;
-    animation: icon-scale .3s forwards;
-}
-
-.bs-input-account:focus+.bs-label-account>.fa-key {
-    -webkit-animation: icon-scale .3s forwards;
-    animation: icon-scale .3s forwards;
-}
-
-
-/*Валидация*/
-
-input.ng-invalid {
+.ng-invalid {
     border-color: #e20909;
 }
-
-@-webkit-keyframes icon-scale {
-    50% {
-        -webkit-transform: scale(1.3);
-    }
-    75% {
-        -webkit-transform: scale(1.4);
-    }
-    100% {
-        -webkit-transform: scale(1.5);
-        color: #fff;
-    }
-}
-
-@keyframes icon-scale {
-    50% {
-        transform: scale(1.3);
-    }
-    75% {
-        transform: scale(1.4);
-    }
-    100% {
-        transform: scale(1.5);
-        color: #fff;
-    }
-}
-
-
-/* end input */

@@ -3,9 +3,9 @@
         <div class="bs-tab">
             <div class="bs-tab-caption">Частые вопросы</div>
             <div ng-repeat="question in $ctrl.questions">
-                <button class="accordion" ng-click="isOpen = !isOpen">{{question.title}}</button>
+                <button class="bs-accordion" ng-click="isOpen = !isOpen">{{ question.title }}<i class="fa fa-caret-down pull-right" aria-hidden="true"></i></button>
                 <div class="bs-qna-panel" ng-show="isOpen">
-                    <p>{{question.content}}</p>
+                    <p class="bs-qna-panel-text">{{ question.content }}</p>
                 </div>
             </div>
         </div>

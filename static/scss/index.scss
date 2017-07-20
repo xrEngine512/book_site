@@ -70,20 +70,19 @@ ul.topnav li a:hover::after {
 }
 
 .bs-liCart .numb {
-    font-size: 14px;
-    line-height: 15px;
+    line-height: 14px;
     position: absolute;
     z-index: 10;
     top: 0;
-    right: -4px;
-    width: 15px;
-    height: 15px;
+    right: -6px;
+    width: 16px;
+    height: 16px;
     margin: 1px auto;
-    padding: 0 0 0 2px;
+    padding: 1px 0 0 2px;
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: #fff;
     border-radius: 50%;
-    background: rgb(238, 176, 19);
+    background: #eeb013;
 }
 
 ul.topnav {
@@ -243,21 +242,12 @@ ul.navbar li.icon {
     display: none;
 }
 
-ul.navbar li.search {
-    position: relative;
-    float: right;
-}
-
-
 /* поддержть проект */
-
 div.supportDiv {
     display: none;
     width: 256.5px;
     background-color: #3d823d;
 }
-
-
 /* конец поддержать проект */
 
 @media screen and (max-width:680px) {
@@ -297,71 +287,9 @@ div.supportDiv {
         min-width: 550px;
     }
 }
-
-
 /* конец основной навигации */
 
-
-/* форма поиска */
-
-.bs-search-form {
-    position: absolute;
-    z-index: 10;
-    top: 60px;
-    right: 0;
-    display: none;
-    box-sizing: border-box;
-    transition: all ease 1s;
-    background-color: #f29f33;
-}
-
-.bs-search-from-visible {
-    display: inline-flex;
-    transition: all ease 1s;
-}
-
-.bs-search-form input {
-    font-size: 1.3em;
-    width: 250px;
-    padding: 5px;
-    color: #2b2b2b;
-    border: none;
-    background-color: #fafafa;
-}
-
-.bs-search-form button {
-    font-size: 1.3em;
-    padding: 5px;
-    cursor: pointer;
-    transition: .5s all ease;
-    color: #fafafa;
-    border: none;
-    background-color: #eeb013;
-}
-
-.bs-search-form button:hover {
-    color: #111;
-    background-color: #eeb013;
-}
-
-
-/* конец формы поиска*/
-
-.bs-parallax-background {
-    background-image: url('/static/img/bg3.jpg');
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    position: fixed;
-    transform: translateZ(0);
-    z-index: -1000;
-    pointer-events: none;
-}
-
-
 /* начало футера */
-
 footer.bs-footer {
     position: fixed;
     bottom: -85px;
@@ -381,6 +309,4 @@ footer.bs-footer a:hover {
     text-decoration: none;
     color: #777;
 }
-
-
 /* конец футера */

@@ -3,7 +3,7 @@ gApp.controller('registrationDialogController', function($scope, $uibModalInstan
     var $registration = this;
 
     $registration.close = function() {
-        $uibModalInstance.dismiss('close');
+        $uibModalInstance.close();
     };
 
     $registration.submit = function () {

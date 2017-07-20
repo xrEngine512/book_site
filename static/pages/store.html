@@ -38,6 +38,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="bs-search-book">
+                        <div class="bs-search-form" id="SearchBook">
+                            <input class="bs-search-form-input" type="text" placeholder="Найти книгу...">
+                            <button class="bs-search-form-button" type="button" ng-click="store.searchBook()">
+                                <i class="fa fa-search" aria-hidden="true"></i> Поиск
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="bs-bgAside">
@@ -113,9 +121,9 @@
                 </div>
                 <!-- книги -->
                 <div class="col-sm-6 col-md-8 col-lg-9" ng-controller="booksController">
-                    <div class="col-sm-12 col-md-6 col-lg-3" ng-repeat="item in products">
-                        <div class="card">
-                            <img class="img-fluid" src="{{ item.image }}" alt="Card image cap">
+                    <div class="col-sm-12 col-md-4" ng-repeat="item in products">
+                        <div class="bs-card-book">
+                            <img class="img-responsive bs-img" src="{{ item.image }}" alt="Card image cap">
                             <div class="card-block">
                                 <a href="store/{{item.id}}">
                                     <h4>{{ item.name }}</h4>
@@ -128,7 +136,7 @@
                                     <!-- заменить на звезды -->
                                     Рейтинг: {{ item.rating }}
                                 </p>
-                                <button class="btn-card" ng-click="addToCart(item)">
+                                <button class="bs-btn-card" ng-click="addToCart(item)">
                                     <i class="fa" ng-class="isActive(item) == false ? 'fa-cart-arrow-down bs-btnCardActive' : 'fa-cart-plus'"></i>
                                 </button>
                             </div>

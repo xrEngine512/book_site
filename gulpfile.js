@@ -30,7 +30,7 @@ gulp.task('concat-scripts', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.styles, ['sass']);
-    gulp.watch(paths.scripts, ['scripts']);
+    gulp.watch(paths.scripts, ['concat-scripts']);
 });
 
 gulp.task('default', ['sass', 'concat-scripts']);

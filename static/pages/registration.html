@@ -1,7 +1,7 @@
-<div class="bs-modalDialog-bg" ng-cloak>
-	<div class="bs-modalDialog">
+<div class="bs-modal-dialog-bg" ng-cloak>
+	<div class="bs-modal-dialog">
 		<div class="bs-modal-header">
-			<button type="button" class="btn bs-circleButton" ng-click="$registration.close()">x</button>
+			<button type="button" class="bs-circle-button" ng-click="$registration.close()">&times;</button>
 		</div>
 		<div class="bs-modal-content">
 			<form name="registrationForm" novalidate>
@@ -26,7 +26,7 @@
 						<input type="password" id="password_confirm" class="form-control" ng-model="password_confirm" equal="account.password" required>
 					</div>
 
-					<button type="submit" ng-click="$registration.submit()" ng-disabled="registrationForm.$invalid" class="btn btn-primary bs-btnModal">Регистрация</button>
+					<button type="submit" ng-click="$registration.submit()" ng-disabled="registrationForm.$invalid" class="bs-button-modal">Регистрация</button>
 				</fieldset>
 			</form>
 		</div>

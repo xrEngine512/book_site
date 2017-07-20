@@ -1,7 +1,3 @@
-/**
- * Created by islam on 14.01.17.
- */
-
 var gApp = angular.module('BookStoreApp', ['ngRoute', 'ngAnimate', 'ngSanitize',
                                            'ngResource', 'ngStorage', 'ui.bootstrap', 'ui.tinymce',
                                            'storeModule', 'qnaModule', 'commentsModule']);
