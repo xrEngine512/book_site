@@ -1,92 +1,50 @@
-img.bs-avatar {
-    vertical-align: bottom;
+.bs-blog-caption {
+    .bs-blog-caption-header {
+        font-weight: 400;
+        font-size: 24px;
+    }
 }
 
-.bs-blog-entry-read-more {
-    font-weight: bold;
-    float: left;
-    padding: 15px;
-    color: #3f3f3f;
-    background-color: rgb(250, 224, 255);
+.bs-blog-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .bs-blog-author {
+        margin: auto 10px auto 0;
+    }
+
+    .bs-blog-author-name {
+        font-size: 19px;
+        letter-spacing: 1px;
+        vertical-align: middle;
+    }
+
+    .bs-blog-time {
+        margin: auto 0;
+        font-size: 15px;
+    }
 }
 
-.bs-blog-entry-read-more:hover {
-    text-decoration: none;
-    background: rgba(20, 20, 20, .1);
-}
-
-.bs-blog-entry-read-more span {
-    visibility: hidden;
-    margin-left: 10px;
-}
-
-.bs-blog-entry-read-more:hover span {
-    visibility: visible;
-}
-
-.bs-blog-entry-date {
-    float: right;
-    padding: 15px;
-}
-
-.bs-blog-entry-item {
-    width: 47%;
-    margin-right: 20px;
-    margin-bottom: 15px;
-}
-
-.bs-blog-entry-header {
-    font-style: italic;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.bs-blog-entry-description {
-    font-size: medium;
-    overflow: hidden;
-    min-height: 25px;
-    padding: 15px;
-    text-overflow: ellipsis;
+.bs-blog-description {
+    margin-top: 10px;
+    font-size: 15px;
     text-indent: 25px;
 }
 
-.bs-blog-entry-author {
-    font-size: x-small;
-    height: 32px;
-}
+.bs-blog-read-more {
+    margin-top: 25px;
+    margin-bottom: 18px;
 
-.bs-blog-entry-author div {
-    padding-left: 0;
-}
-
-.bs-blog-entry-author a {
-    font-size: 2em;
-    text-decoration: none;
-}
-
-.bs-blog-entry {
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-.bs-blog-entry #description-container {
-    padding-left: 0;
-}
-
-@media screen and (max-width: 575px) {
-    .bs-blog-entry {
-        margin-top: 15px;
+    .bs-blog-read-more-link {
+        padding: 14px 10px;
+        color: black;
+        border: 1px solid black;
     }
-}
 
-@media screen and (max-width: 767px) {
-    .bs-blog-entry-item {
-        width: 100% !important;
-    }
-}
-
-@media screen and (max-width: 985px) {
-    .bs-blog-entry-item {
-        width: 46%;
+    .bs-blog-read-more-link:hover {
+        color: black;
+        text-decoration: none;
+        background-color: #f5f5f5;
     }
 }

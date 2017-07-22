@@ -2,70 +2,42 @@
     <div class="bs-container">
         <div class="bs-tab">
             <div class="bs-tab-caption">Блог</div>
-            <a ng-if="applicationState.auth.isAuthenticated()" href="blog/0" class="bs-tab-add-button">Добавить</a>
             <div class="row">
                 <div class="col-md-3 col-sm-5">
-                    <div class="bs-bgAside">
-                        <div class="bs-titleAsideElem">
-                            <h5>
-                                <i class="fa fa-thumbs-up" aria-hidden="true">
-                                    Популярное</i>
-                            </h5>
-                        </div>
-                        <div class="bs-bodyAsideElem">
-                            Блог посты
-                        </div>
-                        <div class="bs-titleAsideElem">
-                            <h5>
-                                <i class="fa fa-tags" aria-hidden="true"></i>
-                                Теги</h5>
-                        </div>
-                        <div class="bs-bodyAsideElem">
-                            <span class="label label-primary">Primary</span>
-                            <span class="label label-success">Success</span>
-                            <span class="label label-info">Info</span>
-                            <span class="label label-warning">Warning</span>
-                            <span class="label label-danger">Danger</span>
-                        </div>
-                    </div>
+                    Автор:
+                    <a ng-if="applicationState.auth.isAuthenticated()" href="blog/0" class="bs-tab-add-button">Добавить пост</a>
+                    <!-- TODO: Here is a place for a photo of the author -->
                 </div>
                 <!-- blog posts -->
                 <div class="col-md-9 col-sm-7">
-                    <div class="bs-article" ng-repeat="entry in blog_entries">
-                        <article class="col-md-5 col-sm-12 bs-blog-entry bs-blog-entry-item">
-                            <header class="bs-blog-entry-header">
-                                <h2>
-                                    {{ entry.header }}
-                                </h2>
-                            </header>
-                            <section>
-                                <div class="row">
-                                    <img class="col-xs-12 col-sm-12 bs-blog-entry-preview" src="{{ entry.image }}">
-                                    <div class="col-sm-12" id="description-container">
-                                        <div class="bs-blog-entry-description" ng-bind-html="entry.text"></div>
-
-                                    </div>
+                    <article class="col-md-12 thumbnail" ng-repeat="entry in blog_entries">
+                        <img class="bs-img" src="{{ entry.image }}" alt="Image for the blog post">
+                        <div class="caption bs-blog-caption">
+                            <h3 class="bs-blog-caption-header">
+                                {{ entry.header }}
+                            </h3>
+                            <div class="bs-blog-info">
+                                <div class="bs-blog-author">
+                                    <img class="img-thumbnail img-circle" src="{{ entry.author.photo }}" width="58px" height="58px">
+                                    <a class="bs-blog-author-name" href="">{{ entry.author.user.username }}</a>
                                 </div>
-                                <div class="row bs-blog-entry-footer">
-                                    <a class="bs-blog-entry-read-more" href="blog/{{ entry.id }}">
-                                        Читать дальше&nbsp;<i class="fa fa-arrow-right"></i>
-                                    </a>
-                                    <section class="col-xs-12 col-sm-12 bs-blog-entry-date">
-                                        <div class="col-xs-5 col-sm-5 bs-blog-entry-author">
-                                            <img class="bs-avatar" src="/static/img/avatar32x32.png">
-                                            <a href="">{{ entry.author.username }}</a>
-                                        </div>
-                                        <div class="col-xs-7 col-sm-7">
-                                            <i class="fa fa-calendar"></i>
-                                            <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
-                                                {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
-                                            </time>
-                                        </div>
-                                    </section>
+                                <div class="bs-blog-time">
+                                    <i class="fa fa-calendar"></i>
+                                    <time datetime="{{ entry.creationDateTime | date:'yyyy-MM-dd' }}">
+                                        {{ entry.creationDateTime | date:'EEE, d MMM y г.' }}
+                                    </time>
                                 </div>
-                            </section>
-                        </article>
-                    </div>
+                            </div>
+                            <div class="bs-blog-description" id="description-container">
+                                <div ng-bind-html="entry.text"></div>
+                            </div>
+                            <div class="bs-blog-read-more">
+                                <a class="bs-blog-read-more-link" href="blog/{{ entry.id }}">
+                                    Читать дальше&nbsp;<i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
                 <!-- end blog posts -->
             </div>
