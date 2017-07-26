@@ -10,15 +10,17 @@
                 </div>
                 <!-- blog posts -->
                 <div class="col-md-9 col-sm-7">
-                    <article class="col-md-12 thumbnail" ng-repeat="entry in blog_entries">
-                        <img class="bs-img" src="{{ entry.image }}" alt="Image for the blog post">
-                        <div class="caption bs-blog-caption">
+                    <article class="col-md-12 bs-article" ng-repeat="entry in blog_entries">
+                        <div class="bs-article-img">
+                            <img src="{{ entry.image }}" alt="Image for the blog post" width="100%" height="100%">
+                        </div>
+                        <div class="bs-blog-caption">
                             <h3 class="bs-blog-caption-header">
                                 {{ entry.header }}
                             </h3>
                             <div class="bs-blog-info">
                                 <div class="bs-blog-author">
-                                    <img class="img-thumbnail img-circle" src="{{ entry.author.photo }}" width="58px" height="58px">
+                                    <img class="img-thumbnail img-circle" src="{{ entry.author.photo }}" width="50px" height="50px">
                                     <a class="bs-blog-author-name" href="">{{ entry.author.user.username }}</a>
                                 </div>
                                 <div class="bs-blog-time">

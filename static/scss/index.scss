@@ -189,6 +189,132 @@ li.logo-text {
 
 /* конец logo */
 
+.mySlides {
+    display: none;
+}
+
+.bs-carousel {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 26px;
+    margin-left: 15px;
+    width: 42%;
+    float: left;
+}
+
+img.bs-slideImg {
+    height: 350px;
+    max-height: 350px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+.next, .prev {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    cursor: pointer;
+    color: #ffffff !important;
+    border-radius: 0 3px 3px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next:hover, .prev:hover {
+    color: #ffffff;
+    background-color: $color-nav-link-hover;
+    text-decoration: none;
+}
+
+.text {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 15px;
+}
+
+.numbertext {
+    position: absolute;
+    top: 0;
+    padding: 8px 12px;
+    color: #f2f2f2;
+    font-size: 12px;
+}
+
+.dot {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: 0 2px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #bbb;
+}
+
+.activeSlide,
+.dot:hover {
+    background-color: #8bc34a !important;
+}
+
+.bs-fadeSlide {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    img.bs-slideImg {
+        max-height: initial;
+    }
+
+    .slideshow-container {
+        max-width: initial;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .next,
+    .prev,
+    .text {
+        font-size: 11px;
+    }
+}
 
 /* основная навигация */
 

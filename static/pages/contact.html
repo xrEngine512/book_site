@@ -1,64 +1,55 @@
 <!-- валидация нужна -->
 <section class="bs-section">
     <div class="bs-contact" ng-controller="contactController">
-       <div class="bs-container">
-        <div class="bs-tab">
-            <div class="bs-tab-caption">Наши контакты</div>
-            <div class="row ">    
+        <div class="bs-container">
+            <div class="bs-tab">
+                <div class="bs-tab-caption">Наши контакты</div>
                 <div class="col-sm-6 bs-map">
                     <div id="googleMap"></div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="bs-contactData">
+                    <div class="bs-contact-data">
                         <h3 class="text-center">Контактные данные: </h3>
-                        <p class="text-center"> <em>Свяжитесь с нами, если есть вопросы!</em></p>
-                        <p> <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p class="text-center">
+                            <em>Свяжитесь с нами, если есть вопросы!</em>
+                        </p>
+                        <p>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
                             Адрес: г. Владимир
                         </p>
-                        <p> <i class="fa fa-phone" aria-hidden="true"></i>
-                            Телефон: 846289783
+                        <p>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            Телефон: 84628978371
                         </p>
                         <p>
                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                            Почта: library2.1@.com
+                            Почта: library2.1@gmail.com
                         </p>
                     </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="bs-tab">
-            <div class="bs-tab-caption">Свяжитесь с нами</div>
-            <div class="row">
-                <div class="col-sm-offset-3 col-sm-6">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
+                    <div class="bs-contact-inputs">
+                        <div class="form-group bs-contact-input">
                             <div class="input-group">
                                 <span class="input-group-addon" id="nameInput"><i class="fa fa-user" aria-hidden="true"></i></span>
                                 <input type="text" class="form-control" placeholder="Имя" aria-describedby="nameInput" required>
                             </div>
                         </div>
-                        <div class="col-sm-6 form-group">
+                        <div class="form-group bs-contact-input">
                             <div class="input-group">
                                 <span class="input-group-addon" id="emailInput"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                                 <input type="email" class="form-control" placeholder="Почта" aria-describedby="emailInput" required>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12">
+                    <div>
+                        <div class="bs-contact-textarea">
                             <textarea class="form-control" id="comments" name="comments" placeholder="Комментарий" rows="5"></textarea>
                         </div>
                     </div>
-                    <div class="row">
+                    <div>
                         <button class="bs-button-send" type="submit">Послать</button>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-</div>
 </section>

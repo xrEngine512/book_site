@@ -172,6 +172,34 @@
                         <a href="javascript:void(0);" style="font-size:15px;" ng-click="openNavbar()">☰</a>
                     </li>
                 </ul>
+                <div class="bs-carousel">
+                    <!-- start carousel -->
+                    <div ng-controller="newsController as newBooks">
+                        <div class="slideshow-container">
+                            <div class="mySlides bs-fadeSlide">
+                                <div class="numbertext">1 / 3</div>
+                                <img class="bs-slideImg" src="/static/img/new-book-1.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides bs-fadeSlide">
+                                <div class="numbertext">2 / 3</div>
+                                <img class="bs-slideImg" src="/static/img/new-book-2.jpg" style="width:100%">
+                            </div>
+                            <div class="mySlides bs-fadeSlide">
+                                <div class="numbertext">3 / 3</div>
+                                <img class="bs-slideImg" src="/static/img/new-book-3.jpg" style="width:100%">
+                            </div>
+                            <a class="prev" ng-click="newBooks.plusSlides(-1)">&#10094;</a>
+                            <a class="next" ng-click="newBooks.plusSlides(1)">&#10095;</a>
+                        </div>
+                        <div class="bs-slideshow-dots">
+                            <span class="dot" ng-click="newBooks.currentSlide(1)"></span>
+                            <span class="dot" ng-click="newBooks.currentSlide(2)"></span>
+                            <span class="dot" ng-click="newBooks.currentSlide(3)"></span>
+                        </div>
+                    </div>
+
+                    <!-- end carousel -->
+                </div>
             </nav>
             <!-- конец основной навигации -->
         </header>

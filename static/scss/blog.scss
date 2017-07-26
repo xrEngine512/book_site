@@ -1,3 +1,14 @@
+.bs-article {
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.bs-article-img {
+    margin-top: 15px;
+    max-height: 400px;
+}
+
 .bs-blog-caption {
     .bs-blog-caption-header {
         font-weight: 400;
@@ -27,14 +38,18 @@
 }
 
 .bs-blog-description {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 15px;
     text-indent: 25px;
 }
 
+.bs-blog-description p::after {
+    content: "...";
+}
+
 .bs-blog-read-more {
-    margin-top: 25px;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
+    text-align: right;
 
     .bs-blog-read-more-link {
         padding: 14px 10px;
