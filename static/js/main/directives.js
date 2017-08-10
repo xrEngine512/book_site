@@ -1,7 +1,3 @@
-/**
- * Created by islam on 11.06.16.
- */
-
 function scrollTop() {
     var top = 0;
     if (typeof(window.pageYOffset) == "number") {
@@ -26,6 +22,7 @@ function handleNavigationBar(navigationBar) {
         document.getElementById("search-bar").style.marginTop = "0";    //TODO: here too
     }
 }
+
 function handleFooter(footer) {
     var footerFactor = Math.max((scrollTop() + $(window).height()) - $(document).height(), -85);
     footer.attr('style', 'bottom : ' + '{}px;'.format(footerFactor));
@@ -56,7 +53,8 @@ gApp.directive('siteDynamicContent', function ($interval) {
         window.addEventListener("scroll", handler);
         window.addEventListener("resize", handler);
     }
-}).directive('fileUpload', function () {
+})
+.directive('fileUpload', function () {
     return {
         scope: true,        //create a new scope
         link: function (scope, el, attrs) {
@@ -74,7 +72,8 @@ gApp.directive('siteDynamicContent', function ($interval) {
             });
         }
     };
-}).directive('equal', function () {
+})
+.directive('equal', function () {
     return {
         require: 'ngModel',
         scope: {

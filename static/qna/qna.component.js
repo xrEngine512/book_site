@@ -2,16 +2,22 @@ angular.
 module('qnaModule').
 component('qnaComponent', {
 	templateUrl: '/static/qna/qna.template.html',
-	controller: ['$http', 
-		function qnaController($http) {
+	controller: [
+		function qnaController() {
 			var self = this;
 
-			$http.get('/static/json/qna.json').then(function(response) {
-                self.questions = response.data;
-            });
+            self.questions = [
+				{
+					"title": "Кофе он или оно?",
+					"content": "Он"
+				},
+				{
+					"title": "Никишечкин любит нейронные сети?",
+					"content": "Нет"
+				}
+			];
 
 			self.isOpen = false;
 		}
 	]
 });
-

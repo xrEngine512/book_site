@@ -35,8 +35,7 @@ $color-button-search-hover: #c3d3de;
 /* Книги в виде "card"-элемента */
 .bs-card-book {
     margin-bottom: 30px;
-    padding: 5px;
-    padding-bottom: 25px;
+    padding: 5px 5px 25px;
     text-align: center;
     border: none;
     border-radius: 10px;
@@ -62,7 +61,8 @@ div.card-block p {
     cursor: pointer;
 }
 
-.bs-btn-card:hover, .bs-btn-card:active {
+.bs-btn-card:active,
+.bs-btn-card:hover {
     border-color: #fff;
     outline: none;
     background-color: rgba(0, 0, 0, 0.3);
@@ -77,21 +77,17 @@ div.card-block p {
 }
 
 /* только для визуального эффекта */
-
 .bs-btnCardActive {
     color: #2b2b2b;
 }
-
 /* Конец книги в виде "карт"-элемента */
 
-
 /* Пагинация */
-
 .pagination {
     display: inline-block;
 }
 
-.pagination:after {
+.pagination::after {
     display: table;
     clear: both;
     content: ' ';
@@ -105,23 +101,19 @@ div.card-block p {
     text-align: center;
 }
 
-.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
+.page-item.active .page-link,
+.page-item.active .page-link:focus,
+.page-item.active .page-link:hover {
     z-index: 2;
     cursor: default;
     color: #fff;
     border-color: #5ab15a;
     background-color: #5ab15a;
 }
-
-
 /* Конец пагинации */
 
-
 /* Aside: категории, ползунок цены, корзина */
-
-
 /* слайдер цены */
-
 .rzslider .rz-pointer {
     z-index: 3;
     top: -7px;
@@ -144,7 +136,7 @@ div.card-block p {
     background: #8bc34a;
 }
 
-.rzslider .rz-pointer:after {
+.rzslider .rz-pointer::after {
     display: none;
 }
 
@@ -157,24 +149,10 @@ div.bs-priceInputs input {
     max-width: 34%;
 }
 
-
 /* категории */
-
 div.bs-clearFilterCategories {
     text-align: center;
-}
-
-div.bs-clearFilterCategories>a {
-    font-size: 1em;
-    text-decoration: none;
-    color: #989079;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-div.bs-clearFilterCategories>a:hover {
-    background-color: rgba(128, 128, 128, 0.4);
+    font-weight: 700;
 }
 
 label.bs-label {
@@ -186,7 +164,7 @@ label.bs-label {
     cursor: pointer;
 }
 
-label.bs-label:before {
+label.bs-label::before {
     position: absolute;
     bottom: 1px;
     left: 0;
@@ -195,10 +173,10 @@ label.bs-label:before {
     height: 16px;
     margin-right: 10px;
     content: '';
-    background-color: #e0ded5;
+    background-color: #dddddd;
 }
 
-input.bs-check[type=checkbox]:checked+label.bs-label:before {
+input.bs-check[type=checkbox]:checked+label.bs-label::before {
     font-size: 15px;
     line-height: 15px;
     content: '\2713';
@@ -207,16 +185,12 @@ input.bs-check[type=checkbox]:checked+label.bs-label:before {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
 }
 
-.checkbox label.bs-label:before {
+.checkbox label.bs-label::before {
     border-radius: 3px;
 }
 
 input.bs-check[type=checkbox] {
     display: none;
 }
-
-
 /* корзина */
-
-
 /* Конец aside: категории, ползунок цены, корзина */

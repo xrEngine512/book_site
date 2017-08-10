@@ -1,7 +1,3 @@
-/**
- * Created by islam on 23.08.16.
- */
-
 function multipartRequest(data) {
     var formData = new FormData();
     for (var field in data)

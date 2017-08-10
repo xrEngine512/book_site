@@ -1,27 +1,19 @@
-.bs-bgAside {
+.bs-bg-aside {
     padding: 10px;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
-div.bs-titleAsideElem>h5 {
+.bs-title-aside-elem > h5 {
     margin: 0;
     padding: 8px;
     letter-spacing: 2px;
     color: #323444;
-    border-bottom: 1px solid #989079;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: #cddc39;
-    overflow: hidden;
-    white-space: nowrap;
+    background-color: #dddddd;
 }
 
-div.bs-bodyAsideElem {
-    box-sizing: border-box;
+.bs-body-aside-elem {
     margin-bottom: 20px;
     padding: 10px;
-    border-right: 1px solid #989079;
-    border-bottom: 1px solid #989079;
-    border-left: 1px solid #989079;
+    background-color: #efefef;
 }

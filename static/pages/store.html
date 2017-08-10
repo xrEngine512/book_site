@@ -48,15 +48,15 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="bs-bgAside">
+                    <div class="bs-bg-aside">
                         <!-- жанр -->
                         <div ng-controller="asideController as aside">
-                            <div class="bs-titleAsideElem">
+                            <div class="bs-title-aside-elem">
                                 <h5>
                                     <i class="fa fa-bookmark" aria-hidden="true"></i>
                                     Жанр</h5>
                             </div>
-                            <div class="bs-bodyAsideElem">
+                            <div class="bs-body-aside-elem">
                                 <div ng-repeat="category in listCategories">
                                     <div class="checkbox">
                                         <input class="bs-check" id="{{category.id}}" type="checkbox" name="check" value="{{category.selected}}" ng-model="category.selected" ng-change="aside.onSelectionChange(category)">
@@ -89,12 +89,12 @@
 
                         </div>
                         <!-- цена -->
-                        <div class="bs-titleAsideElem">
+                        <div class="bs-title-aside-elem">
                             <h5>
                                 <i class="fa fa-rub" aria-hidden="true"></i>
                                 Цена</h5>
                         </div>
-                        <div class="bs-bodyAsideElem" ng-controller="sliderController">
+                        <div class="bs-body-aside-elem" ng-controller="sliderController">
                             <rzslider rz-slider-model="slider.minValue" rz-slider-high="slider.maxValue"
                                       rz-slider-options="slider.options">
                             </rzslider>
@@ -109,12 +109,12 @@
                             </div>
                         </div>
                         <!-- теги -->
-                        <div class="bs-titleAsideElem">
+                        <div class="bs-title-aside-elem">
                             <h5>
                                 <i class="fa fa-tags" aria-hidden="true"></i>
                                 Теги</h5>
                         </div>
-                        <div class="bs-bodyAsideElem" ng-controller="tagsController as ctrl">
+                        <div class="bs-body-aside-elem" ng-controller="tagsController as ctrl">
                             <span class="label label-primary" style="background-color: {{ tag.color }}; margin-right: 5px;" ng-repeat="tag in ctrl.tags">{{ tag.value }}</span>
                         </div>
                     </div>

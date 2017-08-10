@@ -1,10 +1,6 @@
 .bs-map {
     background-color: #8bc34a;
-    padding: 10px;
-}
-
-.bs-contact {
-    margin: auto;
+    padding: 5px;
 }
 
 #googleMap {
@@ -16,8 +12,14 @@
     background-color: #ffffff;
 }
 
-.bs-button-send {
-    margin-right: 15px;
+.bs-button-send-wrapper {
+    text-align: right;
+    margin-top: 10px;
+
+    .bs-button-send {
+        background-color: #8bc34a;
+        border-color: #8bc34a;
+    }
 }
 
 .bs-contact-inputs {

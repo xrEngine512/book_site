@@ -4,13 +4,19 @@
             <div class="bs-tab-caption">Книга</div>
             <div class="row">
                 <div class="info-book">
-                    <div class="col-md-6">
-                        <img class="bs-book" src="{{ book.image }}">
-                        <p class="bs-price">Цена: {{book.price}} {{ book.currency.name_short }}</p>
-                        <p>На складе:<strong class="bs-status">{{ book.in_stock }}</strong>
-                        </p>
+                    <div class="col-md-4">
+                        <img class="bs-book" src="{{ book.image }}" width="250px" height="300px">
+                        <p class="bs-price"><strong>Цена: {{book.price}} {{ book.currency.name_short }}</strong></p>
+                        <p class="bs-status">На складе:<strong> {{ book.in_stock }}</strong></p>
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label for="quantity">Количество:</label>
+                                <input type="number" class="form-control" name="quantity" min="1" max="{{ book.in_stock }}" ng-model="quantity">
+                            </div>
+                            <button class="btn btn-success" ng-click="addToCart();">Купить</button>
+                        </form>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <h4>{{book.name}}</h4>
                         <h4>{{book.author.name}}</h4>
                         <table>
@@ -39,21 +45,11 @@
                                 <td>{{ book.year }}</td>
                             </tr>
                         </table>
-                        <h6 class="bs-head-desc">Описание:</h6>
-                        <p class="description">{{ book.description }}</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="offset-md-6 col-md-6">
-                    <form class="form-inline">
-                        <div class="form-group">
-                            <label for="quantity">Количество:</label>
-                            <input type="number" class="form-control" name="quantity" min="1" max="{{ book.in_stock }}" ng-model="quantity">
-                        </div>
-                        <button class="bs-btn btn-small btn-service btn-cart br-8 pull-right" type="submit"
-                                ng-click="addToCart();">Купить</button>
-                    </form>
+                    <div class="col-md-5">
+                        <h4>Описание:</h4>
+                        <p class="bs-description">{{ book.description }}</p>
+                    </div>
                 </div>
             </div>
         </div>

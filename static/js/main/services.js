@@ -1,7 +1,3 @@
-/**
- * Created by islam on 14.01.17.
- */
-
 gApp.factory('CartService', function ($localStorage) {
     if (!('cartItems' in $localStorage))
         $localStorage.cartItems = {};
