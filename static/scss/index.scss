@@ -341,13 +341,6 @@ ul.navbar li {
     display: inline-block;
 }
 
-
-/* для того чтобы у li не было лишнего отступа */
-
-ul.navbar li.bs-negativeMargin {
-    margin-right: -.3em;
-}
-
 ul.navbar li a {
     font-size: 17px;
     display: inline-block;

@@ -2,6 +2,7 @@
 main_app/__pycache__/
 .idea/
 logs/
+package-lock.json
 uwsgi.ini
 uwsgi_params
 static/libs/
